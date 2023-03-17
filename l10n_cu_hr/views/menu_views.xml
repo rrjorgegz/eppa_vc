@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <menuitem name="Companies"
+                  action="base.action_res_company_form"
+                  id="menu_res_company_2"
+                  parent="hr.menu_hr_root"
+                  sequence="70"/>
+
+        <menuitem name="Paper Format Config"
+                  action="base.paper_format_action"
+                  id="menu_formato_papel"
+                  parent="hr.menu_human_resources_configuration"
+                  sequence="80"/>
+    </data>
+</odoo>

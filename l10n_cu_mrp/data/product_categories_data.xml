@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cp1" model="product.category">
+            <field name="name">Pan</field>
+        </record>
+        <record id="cp2" model="product.category">
+            <field name="name">Pastas</field>
+        </record>
+        <record id="cp3" model="product.category">
+            <field name="name">Reposteria</field>
+        </record>
+        <record id="cp4" model="product.category">
+            <field name="name">Galleta</field>
+        </record>
+        <record id="cp5" model="product.category">
+            <field name="name">Hielo</field>
+        </record>
+        <record id="cp6" model="product.category">
+            <field name="name">Conservas</field>
+        </record>
+        <record id="cp7" model="product.category">
+            <field name="name">Panquesito</field>
+        </record>
+        <record id="cp8" model="product.category">
+            <field name="name">Panque Villa Clara</field>
+        </record>
+        <record id="cp9" model="product.category">
+            <field name="name">Otros productos</field>
+        </record>
+
+        <record id="sp1" model="product.category">
+            <field name="parent_id" ref="cp1"/>
+            <field name="name">Pan de Poblacion</field>
+        </record>
+        <record id="sp2" model="product.category">
+            <field name="parent_id" ref="cp1"/>
+            <field name="name">Pan Corteza Dura</field>
+        </record>
+        <record id="sp3" model="product.category">
+            <field name="parent_id" ref="cp1"/>
+            <field name="name">Pan Corteza Suave</field>
+        </record>
+        <record id="sp4" model="product.category">
+            <field name="parent_id" ref="cp1"/>
+            <field name="name">Pan Semi Suave</field>
+        </record>
+        <record id="sp5" model="product.category">
+            <field name="parent_id" ref="cp1"/>
+            <field name="name">Pan C/Semi Dura</field>
+        </record>
+        <record id="sp6" model="product.category">
+            <field name="parent_id" ref="cp2"/>
+            <field name="name">Coditos</field>
+        </record>
+        <record id="sp7" model="product.category">
+            <field name="parent_id" ref="cp2"/>
+            <field name="name">Fideos</field>
+        </record>
+        <record id="sp8" model="product.category">
+            <field name="parent_id" ref="cp3"/>
+            <field name="name">Bizcochos</field>
+        </record>
+        <record id="sp9" model="product.category">
+            <field name="parent_id" ref="cp3"/>
+            <field name="name">Pastel</field>
+        </record>
+        <record id="sp10" model="product.category">
+            <field name="parent_id" ref="cp3"/>
+            <field name="name">Reposteria</field>
+        </record>
+        <record id="sp11" model="product.category">
+            <field name="parent_id" ref="cp4"/>
+            <field name="name">Galletas de sal</field>
+        </record>
+        <record id="sp12" model="product.category">
+            <field name="parent_id" ref="cp4"/>
+            <field name="name">Galletas de Brilla</field>
+        </record>
+        <record id="sp13" model="product.category">
+            <field name="parent_id" ref="cp6"/>
+            <field name="name">Conserva de Frutas</field>
+        </record>
+        <record id="sp14" model="product.category">
+            <field name="parent_id" ref="cp6"/>
+            <field name="name">Conservas de Tomate</field>
+        </record>
+        <record id="sp15" model="product.category">
+            <field name="parent_id" ref="cp7"/>
+            <field name="name">Panques</field>
+        </record>
+        <record id="sp16" model="product.category">
+            <field name="parent_id" ref="cp9"/>
+            <field name="name">Barquillo</field>
+        </record>
+        <record id="sp17" model="product.category">
+            <field name="parent_id" ref="cp9"/>
+            <field name="name">Gofio</field>
+        </record>
+        <record id="sp18" model="product.category">
+            <field name="parent_id" ref="cp9"/>
+            <field name="name">Helados</field>
+        </record>
+        <record id="sp19" model="product.category">
+            <field name="parent_id" ref="cp9"/>
+            <field name="name">Pizza</field>
+        </record>
+        <record id="sp20" model="product.category">
+            <field name="parent_id" ref="cp9"/>
+            <field name="name">Sorgo</field>
+        </record>
+        <record id="sp21" model="product.category">
+            <field name="parent_id" ref="cp9"/>
+            <field name="name">Vinagre</field>
+        </record>
+
+        <record id="lm1" model="product.category">
+            <field name="name">Combustibles y Lubricantes</field>
+        </record>
+        <record id="lm2" model="product.category">
+            <field name="name">Energía Eléctrica</field>
+        </record>
+        <record id="lm3" model="product.category">
+            <field name="name">Agua</field>
+        </record>
+
+    </data>
+</odoo>

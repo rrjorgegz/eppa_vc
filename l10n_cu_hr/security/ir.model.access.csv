@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_user_occupational_category,Usuario Occupational Category,model_l10n_cu_hr_occupational_category,hr.group_hr_user,1,0,0,0
+access_admin_occupational_category,Administrador Occupational Category,model_l10n_cu_hr_occupational_category,hr.group_hr_manager,1,1,1,1
+access_user_scale_group,Usuario Scale Group,model_l10n_cu_hr_scale_group,hr.group_hr_user,1,0,0,0
+access_admin_scale_group,Administrador Scale Group,model_l10n_cu_hr_scale_group,hr.group_hr_manager,1,1,1,1
+access_user_paperformat,Usuario Paper Format,base.model_report_paperformat,hr.group_hr_user,1,0,0,0
+access_admin_paperformat,Administrador Paper Format,base.model_report_paperformat,hr.group_hr_manager,1,1,1,1

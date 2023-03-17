@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="l10n_cu_mrp_mrp_bom_form_view_inherited" model="ir.ui.view">
+            <field name="name">mrp.bom.form</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button class="oe_stat_button" name="%(open_salario_obrero)d" type="action" icon="fa-usd">
+                        <field string="Wage of the Worker" name="salario_count" widget="statinfo"/>
+                    </button>
+                    <button class="oe_stat_button" name="%(open_concepto_gastos)d" type="action" icon="fa-usd">
+                        <field string="Concept of Expenses" name="concepto_count" widget="statinfo"/>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='product_id']" position="before">
+                    <field name="metodo"/>
+                    <field name="descripcion"/>
+                    <label for="weight"/>
+                    <div class="o_row no-gutters d-flex">
+                        <field name="weight"/>
+                        <span class='text-bf'>Kg</span>
+                    </div>
+                    <label for="produccion"/>
+                    <div class="o_row no-gutters d-flex">
+                        <field name="produccion"/>
+                        <span class='text-bf'>Kg</span>
+                    </div>
+                </xpath>
+                <xpath expr="/form/sheet/group/group/div/field[@name='product_qty']" position="after">
+
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="forma_c"/>
+                    <field name="confeccionado_por"/>
+                    <field name="aprobado_por"/>
+                    <field name="mrp_dep_id"/>
+                    <field name="prod_unit_id"/>
+                </xpath>
+                <xpath expr="//field[@name='bom_line_ids']" position="after">
+                    <group>
+
+                        <label for="total"/>
+                        <div class="o_row no-gutters d-flex">
+                            <field name="total" readonly="1"/>
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="l10n_cu_mrp_mrp_bom_tree_view_inherited">
+            <field name="name">mrp.bom.tree.inherited</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="company_id" position="after">
+                    <field name="metodo"/>
+                    <field name="descripcion" invisible="1"/>
+                    <field name="total" readonly="1"/>
+                    <field name="confeccionado_por"/>
+                    <field name="aprobado_por"/>
+                    <field name="mrp_dep_id"/>
+                    <field name="prod_unit_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_produccion_municipio"/>
+        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_produccion_provincia"/>
+        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_planificacion_municipio"/>
+        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_planificacion_provincia"/>
+        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_contabilidad_municipio"/>
+        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_contabilidad_provincia"/>
+    </data>
+</odoo>

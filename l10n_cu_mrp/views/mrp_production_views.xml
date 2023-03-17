@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mrp_production_form_view_inherit" model="ir.ui.view">
+            <field name="name">mrp.production.form.inherit</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='bom_id']" position="after">
+
+                    <label for="produccion"/>
+                    <div class="o_row no-gutters d-flex">
+                        <field name="produccion"/>
+                        <span class='text-bf'>Kg</span>
+                    </div>
+                    <label for="weight"/>
+                    <div class="o_row no-gutters d-flex">
+                        <field name="weight"/>
+                        <span class='text-bf'>Kg</span>
+                    </div>
+                    <field name="total" readonly="True"/>
+                </xpath>
+                <field name="show_details_visible" position="after">
+                    <field name="indice_consumo" readonly="True"/>
+                    <field name="indice_consumo_plan" readonly="True"/>
+                    <field name="consumo_plan" readonly="True"/>
+                    <field name="porciento" readonly="True" decoration-danger="porciento > 100"/>
+                    <field name="cost"/>
+                    <field name="total_cost" readonly="True" sum="Total Cost"/>
+
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

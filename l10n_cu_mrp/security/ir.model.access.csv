@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_user_commercialization,Usuario Form of Commercialization,model_l10n_cu_mrp_commercialization,mrp.group_mrp_user,1,1,1,1
+access_admin_commercialization,Administrador Form of Commercialization,model_l10n_cu_mrp_commercialization,mrp.group_mrp_manager,1,1,1,1
+access_user_concept_expenses,Usuario Concept de Expenses,model_l10n_cu_mrp_concept_expenses,mrp.group_mrp_user,1,1,1,1
+access_admin_concept_expenses,Administrador Concept de Expenses,model_l10n_cu_mrp_concept_expenses,mrp.group_mrp_manager,1,1,1,1
+access_user_concept_expenses_production,Usuario Concept de Expenses Production,model_l10n_cu_mrp_concept_expenses_production,mrp.group_mrp_user,1,1,1,1
+access_admin_concept_expenses_production,Administrador Concept de Expenses Production,model_l10n_cu_mrp_concept_expenses_production,mrp.group_mrp_manager,1,1,1,1
+access_user_forces_work,Usuario It forces of Work,model_l10n_cu_mrp_forces_work,mrp.group_mrp_user,1,1,1,1
+access_admin_forces_work,Administrador It forces of Work,model_l10n_cu_mrp_forces_work,mrp.group_mrp_manager,1,1,1,1
+access_user_wage_worker,Usuario Wage of the Worker,model_l10n_cu_mrp_wage_worker,mrp.group_mrp_user,1,1,1,1
+access_admin_wage_worker,Administrador Wage of the Worker,model_l10n_cu_mrp_wage_worker,mrp.group_mrp_manager,1,1,1,1
+access_user_production_unit,Usuario Production Unit,model_production_unit,mrp.group_mrp_user,1,1,1,1
+access_admin_production_unit,Administrador Production Unit,model_production_unit,mrp.group_mrp_manager,1,1,1,1
+access_user_mrp_department,Usuario Mrp Department,model_mrp_department,mrp.group_mrp_user,1,1,1,1
+access_admin_mrp_department,Administrador Mrp Department,model_mrp_department,mrp.group_mrp_manager,1,1,1,1

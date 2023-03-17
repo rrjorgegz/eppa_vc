@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_assets_common_eppa" inherit_id="web.report_assets_common">
+        <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/asset_styles_company_report.scss"
+              position="before">
+            <link href="/l10n_cu_eppa/static/src/css/link_eppa.css" rel="stylesheet" type="text/css"/>
+        </link>
+    </template>
+
+</odoo>

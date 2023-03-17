@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_model_form_inherited" model="ir.ui.view">
+            <field name="name">hr_job_form_employee</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <group name="recruitment">
+                        <field name="scale_group_id"/>
+                        <field name="category_id"/>
+                </group>
+            </field>
+        </record>
+
+        <record id="view_hr_job_tree_inherited" model="ir.ui.view">
+            <field name="name">hr.job.tree</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_tree"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="state">
+                        <field name="scale_group_id"/>
+                        <field name="category_id"/>
+                    </field>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_job_view_kanban_inherited" model="ir.ui.view">
+            <field name="name">hr.job.kanban</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.hr_job_view_kanban"/>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="department_id">
+                        <field name="scale_group_id"/>
+                        <field name="category_id"/>
+                    </field>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_job_filter" model="ir.ui.view">
+            <field name="name">hr.job.search</field>
+            <field name="model">hr.job</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Job Position"/>
+                    <field name="department_id" operator="child_of">
+                        <field name="scale_group_id" string='Scale Group'/>
+                        <field name="category_id" string='Occupational Category'/>
+                    </field>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

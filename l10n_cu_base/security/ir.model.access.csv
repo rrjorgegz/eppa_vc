@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_user_res_municipality,Usuario Municipality,model_l10n_cu_base_res_municipality,base.group_user,1,1,1,1
+access_user_res_organism,Usuario Organism,model_res_organism,base.group_user,1,1,1,1
+access_user_res_partner_rating,Usuario Partner Rating,model_res_partner_rating,base.group_user,1,1,1,1
+
+

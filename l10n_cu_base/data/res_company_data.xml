@@ -1,0 +1,27 @@
+<odoo>
+    <data noupdate="0">
+
+        <record id="base.main_partner" model="res.partner">
+            <field name="name">Empresa Provincial Productora de Alimentos</field>
+            <field name="company_id" eval="None"/>
+            <field name="is_company" eval="True"/>
+            <field name="street"></field>
+            <field name="city">Santa Clara</field>
+            <field name="state_id" ref="state_vcl"></field>
+            <field name="country_id" ref="base.cu"></field>
+            <field name="zip"></field>
+            <field name="phone"></field>
+            <field name="email">informatica@ettvc.co.cu</field>
+            <field name="website">www.eppavc.co.cu</field>
+        </record>
+
+        <record id="base.main_company" model="res.company">
+            <field name="name">Empresa Provincial Productora de Alimentos</field>
+            <field name="partner_id" ref="base.main_partner"/>
+            <field name="currency_id" ref="base.CUP"/>
+            <field name="paperformat_id" ref="base.paperformat_us"/>
+            <field name="code">00</field>
+        </record>
+
+    </data>
+</odoo>

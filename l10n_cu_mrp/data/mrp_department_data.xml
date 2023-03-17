@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="mrp_department_produccion" model="mrp.department">
+			<field name="name">Producción</field>
+		</record>
+        <record id="mrp_department_planificacion" model="mrp.department">
+			<field name="name">Planificación</field>
+		</record>
+    </data>
+</odoo>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="scg_1_1" model="l10n_cu_hr.scale_group">
+            <field name="name">I</field>
+            <field name="salary">1910.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_2" model="l10n_cu_hr.scale_group">
+            <field name="name">II</field>
+            <field name="salary">2000.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_3" model="l10n_cu_hr.scale_group">
+            <field name="name">III</field>
+            <field name="salary">2090.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_4" model="l10n_cu_hr.scale_group">
+            <field name="name">IV</field>
+            <field name="salary">2200.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_5" model="l10n_cu_hr.scale_group">
+            <field name="name">V</field>
+            <field name="salary">2310.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_6" model="l10n_cu_hr.scale_group">
+            <field name="name">VI</field>
+            <field name="salary">2415.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_7" model="l10n_cu_hr.scale_group">
+            <field name="name">VII</field>
+            <field name="salary">2555.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_8" model="l10n_cu_hr.scale_group">
+            <field name="name">VIII</field>
+            <field name="salary">2690.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_9" model="l10n_cu_hr.scale_group">
+            <field name="name">IX</field>
+            <field name="salary">2825.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_10" model="l10n_cu_hr.scale_group">
+            <field name="name">X</field>
+            <field name="salary">2965.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_11" model="l10n_cu_hr.scale_group">
+            <field name="name">XI</field>
+            <field name="salary">3100.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_12" model="l10n_cu_hr.scale_group">
+            <field name="name">XII</field>
+            <field name="salary">3280.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_13" model="l10n_cu_hr.scale_group">
+            <field name="name">XIII</field>
+            <field name="salary">3465.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_14" model="l10n_cu_hr.scale_group">
+            <field name="name">XIV</field>
+            <field name="salary">3645.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_15" model="l10n_cu_hr.scale_group">
+            <field name="name">XV</field>
+            <field name="salary">3825.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_16" model="l10n_cu_hr.scale_group">
+            <field name="name">XVI</field>
+            <field name="salary">4010.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_17" model="l10n_cu_hr.scale_group">
+            <field name="name">XVII</field>
+            <field name="salary">4190.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_18" model="l10n_cu_hr.scale_group">
+            <field name="name">XVIII</field>
+            <field name="salary">4375.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_19" model="l10n_cu_hr.scale_group">
+            <field name="name">XIX</field>
+            <field name="salary">4600.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_20" model="l10n_cu_hr.scale_group">
+            <field name="name">XX</field>
+            <field name="salary">4825.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_21" model="l10n_cu_hr.scale_group">
+            <field name="name">XXI</field>
+            <field name="salary">5055.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_22" model="l10n_cu_hr.scale_group">
+            <field name="name">XXII</field>
+            <field name="salary">5285.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_23" model="l10n_cu_hr.scale_group">
+            <field name="name">XXIII</field>
+            <field name="salary">5510.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_1_24" model="l10n_cu_hr.scale_group">
+            <field name="name">XXIV</field>
+            <field name="salary">5735.00</field>
+            <field name="hour">40</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+
+
+        <record id="scg_2_1" model="l10n_cu_hr.scale_group">
+            <field name="name">I</field>
+            <field name="salary">2100.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_2" model="l10n_cu_hr.scale_group">
+            <field name="name">II</field>
+            <field name="salary">2200.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_3" model="l10n_cu_hr.scale_group">
+            <field name="name">III</field>
+            <field name="salary">2300.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_4" model="l10n_cu_hr.scale_group">
+            <field name="name">IV</field>
+            <field name="salary">2420.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_5" model="l10n_cu_hr.scale_group">
+            <field name="name">V</field>
+            <field name="salary">2540.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_6" model="l10n_cu_hr.scale_group">
+            <field name="name">VI</field>
+            <field name="salary">2660.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_7" model="l10n_cu_hr.scale_group">
+            <field name="name">VII</field>
+            <field name="salary">2810.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_8" model="l10n_cu_hr.scale_group">
+            <field name="name">VIII</field>
+            <field name="salary">2960.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_9" model="l10n_cu_hr.scale_group">
+            <field name="name">IX</field>
+            <field name="salary">3110.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_10" model="l10n_cu_hr.scale_group">
+            <field name="name">X</field>
+            <field name="salary">3260.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_11" model="l10n_cu_hr.scale_group">
+            <field name="name">XI</field>
+            <field name="salary">3410.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_12" model="l10n_cu_hr.scale_group">
+            <field name="name">XII</field>
+            <field name="salary">3610.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_13" model="l10n_cu_hr.scale_group">
+            <field name="name">XIII</field>
+            <field name="salary">3810.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_14" model="l10n_cu_hr.scale_group">
+            <field name="name">XIV</field>
+            <field name="salary">4010.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_15" model="l10n_cu_hr.scale_group">
+            <field name="name">XV</field>
+            <field name="salary">4210.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_16" model="l10n_cu_hr.scale_group">
+            <field name="name">XVI</field>
+            <field name="salary">4410.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_17" model="l10n_cu_hr.scale_group">
+            <field name="name">XVII</field>
+            <field name="salary">4610.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_18" model="l10n_cu_hr.scale_group">
+            <field name="name">XVIII</field>
+            <field name="salary">4810.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_19" model="l10n_cu_hr.scale_group">
+            <field name="name">XIX</field>
+            <field name="salary">5060.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_20" model="l10n_cu_hr.scale_group">
+            <field name="name">XX</field>
+            <field name="salary">5310.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_21" model="l10n_cu_hr.scale_group">
+            <field name="name">XXI</field>
+            <field name="salary">5560.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_22" model="l10n_cu_hr.scale_group">
+            <field name="name">XXII</field>
+            <field name="salary">5810.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_23" model="l10n_cu_hr.scale_group">
+            <field name="name">XXIII</field>
+            <field name="salary">6060.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+        <record id="scg_2_24" model="l10n_cu_hr.scale_group">
+            <field name="name">XXIV</field>
+            <field name="salary">6310.00</field>
+            <field name="hour">44</field>
+            <field name="currency">70</field>
+            <field name="category">A</field>
+        </record>
+
+    </data>
+</odoo>

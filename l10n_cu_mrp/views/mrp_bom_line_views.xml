@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mrp_bom_form_view">
+            <field name="name">mrp.bom.form</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='bom_product_template_attribute_value_ids']" position="before">
+                    <field name="promedio"/>
+                    <field name="indice_consumo"/>
+                    <field name="standard_price"/>
+                    <field name="total_importe" readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mrp_bom_line_view_form">
+            <field name="name">mrp.bom.line.view.form</field>
+            <field name="model">mrp.bom.line</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_line_view_form"/>
+            <field name="arch" type="xml">
+                <field name="bom_product_template_attribute_value_ids" position="before">
+                    <group>
+                        <field name="promedio"/>
+                        <field name="indice_consumo"/>
+                        <field name="standard_price"/>
+                        <field name="total_importe" readonly="True"/>
+                    </group>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

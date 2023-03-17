@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_partner_rating_view_form" model="ir.ui.view">
+            <field name="name">res_partner_rating_view_form</field>
+            <field name="model">res.partner.rating</field>
+            <field name="arch" type="xml">
+                <form string="res_partner_rating_form">
+                    <sheet>
+                        <group>
+                            <field name="code" placeholder="Code"/>
+                            <field name="name" placeholder="Name"/>
+                            <field name="active"/>
+                            <field name="dependency"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="res_partner_rating_view_tree" model="ir.ui.view">
+            <field name="name">res_partner_rating_view_tree</field>
+            <field name="model">res.partner.rating</field>
+            <field name="arch" type="xml">
+                <tree string="res_partner_rating_tree">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="active"/>
+                    <field name="dependency"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_res_partner_rating" model="ir.actions.act_window">
+            <field name="name">Rating</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner.rating</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help"></field>
+        </record>
+
+        <menuitem id="menu_res_partner_rating"
+                  action="action_res_partner_rating"
+                  parent="contacts.res_partner_menu_config"
+                  sequence="60"/>
+    </data>
+</odoo>

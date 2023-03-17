@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="concept_expenses" model="decimal.precision">
+            <field name="name">Concept of Expenses</field>
+            <field name="digits" eval="5"/>
+        </record>
+        <record id="ic" model="decimal.precision">
+            <field name="name">Index of Consumption</field>
+            <field name="digits" eval="5"/>
+        </record>
+
+    </data>
+    <data>
+        <record id="product.decimal_product_uom" model="decimal.precision">
+            <field name="digits" eval="5"/>
+        </record>
+         <record id="product.decimal_price" model="decimal.precision">
+            <field name="digits" eval="5"/>
+        </record>
+         <record id="product.decimal_discount" model="decimal.precision">
+            <field name="digits" eval="5"/>
+        </record>
+         <record id="product.decimal_stock_weight" model="decimal.precision">
+            <field name="digits" eval="5"/>
+        </record>
+         <record id="product.decimal_volume" model="decimal.precision">
+            <field name="digits" eval="5"/>
+        </record>
+
+    </data>
+</odoo>

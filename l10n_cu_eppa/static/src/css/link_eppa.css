@@ -1,0 +1,19 @@
+.titles {
+    text-transform: uppercase;
+}
+
+.blue {
+    background-color: blue;
+
+}
+
+.red {
+    background-color: red;
+}
+div{
+    /*font-family: "Times New Roman", Times, serif;*/
+    font-size: 9px;
+}
+table, th, td {
+    padding: 0.1px ;
+}

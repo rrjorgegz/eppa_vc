@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="occupational_category_form_view" model="ir.ui.view">
+            <field name="name">Occupational Category</field>
+            <field name="model">l10n_cu_hr.occupational_category</field>
+            <field name="arch" type="xml">
+                <form string="Occupational Category">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="occupational_category_tree_view" model="ir.ui.view">
+            <field name="name">Occupational Category</field>
+            <field name="model">l10n_cu_hr.occupational_category</field>
+            <field name="arch" type="xml">
+                <tree string="Occupational Category">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="occupational_category_graph_view" model="ir.ui.view">
+            <field name="name">Occupational Category</field>
+            <field name="model">l10n_cu_hr.occupational_category</field>
+            <field name="arch" type="xml">
+                <graph string="Occupational Category">
+                    <field name="name"/>
+                    <field name="code" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="occupational_category_pivot_view" model="ir.ui.view">
+            <field name="name">Occupational Category</field>
+            <field name="model">l10n_cu_hr.occupational_category</field>
+            <field name="arch" type="xml">
+                <pivot string="Occupational Category">
+                    <field name="name" type="row"/>
+                    <field name="code" type="row"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="occupational_category_search_view" model="ir.ui.view">
+            <field name="name">Occupational Category</field>
+            <field name="model">l10n_cu_hr.occupational_category</field>
+            <field name="arch" type="xml">
+                <search string="Occupational Category">
+                    <group expand="1" string="Group By">
+                        <field name="name"/>
+                        <field name="code"/>
+                        <filter string="Group By Name" name="name" context="{'group_by':'name'}"/>
+                        <filter string="Group By Code" name="code" context="{'group_by':'code'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="occupational_category_kanban_view" model="ir.ui.view">
+            <field name="name">Occupational Category</field>
+            <field name="model">l10n_cu_hr.occupational_category</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_res_partner_kanban">
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title oe_partner_heading">
+                                        <field name="name"/>
+                                    </strong>
+                                    <div>
+                                        <span>Code :</span>
+                                        <field name="code"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="occupational_category_act_window" model="ir.actions.act_window">
+            <field name="name">Occupational Category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_cu_hr.occupational_category</field>
+            <field name="view_mode">kanban,tree,form,graph,pivot</field>
+            <field name="context">{"search_default_code":""}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Click here to add new Occupational Category.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Occupational Category" id="occupational_category_menu" parent="hr.menu_hr_department_tree"
+                  sequence="20" action="occupational_category_act_window"/>
+
+    </data>
+</odoo>

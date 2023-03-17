@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_users_form_view_inherited" model="ir.ui.view">
+            <field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='access_rights']" position="inside">
+                    <group string="Multi Production Unit">
+                        <field string="Allowed Production Unit" name="prod_unit_ids" widget="many2many_tags"
+                               options="{'no_create': True}"/>
+                        <field string="Default Production Unit" name="prod_unit_id"/>
+                    </group>
+                    <group string="Multi Mrp Department">
+                        <field string="Allowed Mrp Department" name="mrp_dep_ids" widget="many2many_tags"
+                               options="{'no_create': True}"/>
+                        <field string="Default Mrp Department" name="mrp_dep_id"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

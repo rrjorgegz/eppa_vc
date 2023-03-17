@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+       <record id="mrp_department_form_view" model="ir.ui.view">
+            <field name="name">mrp.department.form</field>
+            <field name="model">mrp.department</field>
+            <field name="arch" type="xml">
+                <form string="Mrp Department">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mrp_department_tree_view" model="ir.ui.view">
+            <field name="name">mrp.department.tree</field>
+            <field name="model">mrp.department</field>
+            <field name="arch" type="xml">
+                <tree string="Mrp Department">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mrp_department_act_window" model="ir.actions.act_window">
+            <field name="name">Mrp Department</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.department</field> 
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click here to add new Mrp Department.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Mrp Department" id="mrp_department_menu" parent="mrp.menu_mrp_configuration" action="mrp_department_act_window"/>
+
+    </data>
+</odoo>

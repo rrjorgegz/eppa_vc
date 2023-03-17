@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="consumption_index_categories_view_wizards" model="ir.ui.view">
+        <field name="name">Consumption Index for Categories Wizards</field>
+        <field name="model">l10n_cu_eppa.consumption_index_categories_wizards</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="date"/>
+                        <field name="is_todos_company"/>
+                        <field name="company_id"
+                               attrs="{'invisible': [('is_todos_company', '=', 'todos')], 'required': [('is_todos_company', '=', 'uno')]}"/>
+
+                    </group>
+                    <group>
+                        <field name="start"/>
+                        <field name="end"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="is_todos"/>
+                        <field name="product_tmpl_id"
+                               attrs="{'invisible': [('is_todos', '=', 'todos')], 'required': [('is_todos', '=', 'uno')]}"/>
+                        <field name="is_category"/>
+                        <field name="category_id"
+                               attrs="{'invisible': [('is_category', '=', 'todos')], 'required': [('is_category', '=', 'uno')]}"/>
+                    </group>
+                    <group>
+                        <field name="commercialization_id"/>
+                        <field name="is_todos_prod_unit"/>
+                        <field name="prod_unit_id"
+                               attrs="{'invisible': [('is_todos_prod_unit', '=', 'todos')], 'required': [('is_todos_prod_unit', '=', 'uno')]}"/>
+
+                    </group>
+                </group>
+                <footer>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    <button string="See Report" name="get_report" type="object" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="consumption_index_categories_action" model="ir.actions.act_window">
+        <field name="name">Consumption Index for Categories</field>
+        <field name="res_model">l10n_cu_eppa.consumption_index_categories_wizards</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="consumption_index_categories_view_wizards"/>
+        <field name="binding_model_id" ref="model_l10n_cu_eppa_consumption_index_categories_wizards"/>
+        <field name="target">new</field>
+    </record>
+    <menuitem name="Consumption Index for Categories" id="menu_consumption_index_categories"
+              parent="mrp.menu_mrp_reporting"
+              action="consumption_index_categories_action" sequence="20"/>
+
+</odoo>

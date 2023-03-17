@@ -1,0 +1,1500 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cu_mrp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20201114\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-01 17:58+0000\n"
+"PO-Revision-Date: 2023-03-01 17:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__concepto_count
+msgid "# Concept of Expenses"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__salario_count
+msgid "# Labor Wage"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.l10n_cu_mrp_mrp_bom_form_view_inherited
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.mrp_production_form_view_inherit
+msgid "<span class=\"text-bf\">Kg</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "<span groups=\"base.group_multi_currency\">Currency :</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.wage_worker_kanban_view
+msgid "<span>Basic wage :</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "<span>Coefficient :</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_kanban_view
+msgid "<span>Expense Wage :</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_kanban_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_kanban_view
+msgid "<span>Expenses :</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_kanban_view
+msgid "<span>Norma of Time :</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_kanban_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_kanban_view
+msgid "<span>Price :</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_kanban_view
+msgid "<span>Quantity of Workers :</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.wage_worker_kanban_view
+msgid "<span>Total :</span>"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__a1
+msgid "A1"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__a2
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__a2
+msgid "A2"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.view_users_form_view_inherited
+msgid "Allowed Mrp Department"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.view_users_form_view_inherited
+msgid "Allowed Production Unit"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__aprobado_por
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__aprobado_por
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__aprobado_por
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__aprobado_por
+msgid "Approved for"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:uom.category,name:l10n_cu_mrp.product_uom_categ_area
+msgid "Area"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__salario_basico
+msgid "Basic wage"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__salario_basico
+msgid "Basic wage = Total / a1 * a2"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model,name:l10n_cu_mrp.model_mrp_bom
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__mrp_bom_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__mrp_bom_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__mrp_bom_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__mrp_bom_id
+msgid "Bill of Material"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model,name:l10n_cu_mrp.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_product_product__purchase_ok
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_product_template__purchase_ok
+msgid "Can be Purchased"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_product_product__sale_ok
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_product_template__sale_ok
+msgid "Can be Sold"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom_line__total_importe
+msgid "Care Total"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__category
+msgid "Category of the worker s position"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:uom.uom,name:l10n_cu_mrp.product_uom_centena
+msgid "Centena"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__child_ids
+msgid "Child Bill of Material"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__child_ids
+msgid "Child Production Unit"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.actions.act_window,help:l10n_cu_mrp.concept_expenses_production_act_window
+msgid "Click here to add new Concept of Expenses Production."
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.actions.act_window,help:l10n_cu_mrp.concept_expenses_act_window
+msgid "Click here to add new Concept of Expenses."
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.actions.act_window,help:l10n_cu_mrp.commercialization_act_window
+msgid "Click here to add new Form of Commercialization."
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.actions.act_window,help:l10n_cu_mrp.forces_work_act_window
+msgid "Click here to add new It forces of Work."
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.actions.act_window,help:l10n_cu_mrp.mrp_department_act_window
+msgid "Click here to add new Mrp Department."
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.actions.act_window,help:l10n_cu_mrp.production_unit_act_window
+msgid "Click here to add new Production Unit."
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.actions.act_window,help:l10n_cu_mrp.wage_worker_act_window
+msgid "Click here to add new Wage of the Worker."
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__rop_cal_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__rop_cal_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__rop_cal_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__rop_cal_dv
+msgid "Clothes and Footwear (DV)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__rop_cal_gd
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__rop_cal_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__rop_cal_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__rop_cal_gd
+msgid "Clothes and Footwear (Direct workers) (GD)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__rop_cal_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__rop_cal_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__rop_cal_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__rop_cal_ga
+msgid "Clothes and Footwear (GA)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization__code
+msgid "Code"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_alimentos_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_alimentos_ga
+msgid "Coef A GA"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_arr_equi_gd
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_arr_equi_gd
+msgid "Coef A GD"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_com_lubi_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_com_lubi_ga
+msgid "Coef CL D&A"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_com_lub_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_com_lub_dv
+msgid "Coef CL D&V"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_dep_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_dep_ga
+msgid "Coef D D&A"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_dep_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_dep_dv
+msgid "Coef D D&V"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_dep_gd
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_dep_gd
+msgid "Coef D GD"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_depre_ip
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_depre_ip
+msgid "Coef D GI"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_ene_ele_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_ene_ele_ga
+msgid "Coef EE D&A"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_ene_ele_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_ene_ele_dv
+msgid "Coef EE D&V"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_mant_rep_ip
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_mant_rep_ip
+msgid "Coef M&R GI"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_otros_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_otros_ga
+msgid "Coef O D&A"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_otro_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_otro_dv
+msgid "Coef O D&V"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_otro_gd
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_otro_gd
+msgid "Coef O GD"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_otros_ip
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_otros_ip
+msgid "Coef O GI "
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_rop_cal_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_rop_cal_dv
+msgid "Coef R&C D&V"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_rop_cal_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_rop_cal_ga
+msgid "Coef R&C GA"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_rop_cal_gd
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_rop_cal_gd
+msgid "Coef R&C GD"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef
+msgid "Coef Total"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_rop_cal_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_rop_cal_dv
+msgid ""
+"Coefficient of Clothes and Footwear of Depreciation  in Expenses of "
+"Distribution and Sales"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_rop_cal_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_rop_cal_gd
+msgid "Coefficient of Clothes and Footwear of Direct Expenses"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_rop_cal_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_rop_cal_ga
+msgid ""
+"Coefficient of Clothes and Footwear of General Expenses and of "
+"Administration"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_dep_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_dep_dv
+msgid "Coefficient of Depreciation  in Expenses of Distribution and Sales"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_dep_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_dep_gd
+msgid "Coefficient of Depreciation of Direct Expenses"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_depre_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_depre_ip
+msgid "Coefficient of Depreciation of Expenses Indirectos"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_ene_ele_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_ene_ele_dv
+msgid "Coefficient of Electric Power  in Expenses of Distribution and Sales"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_ene_ele_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_ene_ele_ga
+msgid ""
+"Coefficient of Electric Power in General Expenses and of Administration"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_alimentos_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_alimentos_ga
+msgid "Coefficient of Foods of General Expenses and of Administration"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_com_lub_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_com_lub_dv
+msgid ""
+"Coefficient of Fuels and Lubricant in Expenses of Distribution and Sales"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_com_lubi_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_com_lubi_ga
+msgid ""
+"Coefficient of Fuels and Lubricant in General Expenses and of Administration"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_arr_equi_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_arr_equi_gd
+msgid "Coefficient of Lease of Teams (GD) of Direct Expenses"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_mant_rep_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_mant_rep_ip
+msgid "Coefficient of Maintinance and Repair of Expenses Indirectos"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_otro_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_otro_dv
+msgid "Coefficient of Others  in Expenses of Distribution and Sales"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_otros_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_otros_ga
+msgid "Coefficient of Others in General Expenses and of Administration"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_otro_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_otro_gd
+msgid "Coefficient of Others of Direct Expenses"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_otros_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_otros_ip
+msgid "Coefficient of Others of Expenses Indirectos"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef_dep_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef_dep_ga
+msgid "Coefficient of depreciation in General Expenses and of Administration"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__forma_c
+msgid "Commercialization"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__company_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__company_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__company_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__company_id
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__concept_expenses_id
+msgid "Concept Expenses"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.actions.act_window,name:l10n_cu_mrp.concept_expenses_act_window
+#: model:ir.actions.act_window,name:l10n_cu_mrp.open_concepto_gastos
+#: model:ir.model,name:l10n_cu_mrp.model_l10n_cu_mrp_concept_expenses
+#: model:ir.ui.menu,name:l10n_cu_mrp.concept_expenses_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_pivot_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_tree_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.l10n_cu_mrp_mrp_bom_form_view_inherited
+msgid "Concept of Expenses"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.actions.act_window,name:l10n_cu_mrp.concept_expenses_production_act_window
+#: model:ir.ui.menu,name:l10n_cu_mrp.concept_expenses_production_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_pivot_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_tree_view
+msgid "Concept of Expenses Production"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model,name:l10n_cu_mrp.model_l10n_cu_mrp_concept_expenses_production
+msgid "Concept of Expenses in Production"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_stock_move__consumo_plan
+msgid "Consumption PLAN"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_stock_move__consumo_plan
+msgid "Consumption Plan"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__con_ub
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__con_ub
+msgid "Contribution to the Social Security"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__con_ub
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__con_ub
+msgid "Contribution to the Social Security (UB)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:uom.category,name:l10n_cu_mrp.product_uom_corriente
+msgid "Corriente"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__total
+msgid "Cost"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_production__total
+msgid "Cost of Production"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_stock_move__cost
+msgid "Cost per unit"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_stock_move__cost
+msgid "Cost per unit of the Product"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_department__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization__create_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__create_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__create_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__create_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__create_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_department__create_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization__currency_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__currency_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__currency_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__currency_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:uom.uom,name:l10n_cu_mrp.product_uom_decena
+msgid "Decena"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.view_users_form_view_inherited
+msgid "Default Mrp Department"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.view_users_form_view_inherited
+msgid "Default Production Unit"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__dep_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__dep_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__dep_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__dep_dv
+msgid "Depreciation (DV)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__dep_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__dep_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__dep_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__dep_ga
+msgid "Depreciation (GA)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__dep_gd
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__dep_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__dep_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__dep_gd
+msgid "Depreciation (GD)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__depre_ip
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__depre_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__depre_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__depre_ip
+msgid "Depreciation (IP)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__descripcion
+msgid "Description"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields.selection,name:l10n_cu_mrp.selection__mrp_bom__metodo__directo
+msgid "Direct"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom_line__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_department__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_production__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_product_template__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_res_users__display_name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_stock_move__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields.selection,name:l10n_cu_mrp.selection__l10n_cu_mrp_concept_expenses_production__state__done
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "Done"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields.selection,name:l10n_cu_mrp.selection__l10n_cu_mrp_concept_expenses_production__state__draft
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "Draft"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__energia_mp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__energia_mp
+msgid "Electric Power"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__ene_ele_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__ene_ele_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__ene_ele_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__ene_ele_dv
+msgid "Electric Power (DV)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__ene_ele_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__ene_ele_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__ene_ele_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__ene_ele_ga
+msgid "Electric Power (GA)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__energia_mp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__energia_mp
+msgid "Electric Power (MP)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__gasto_salario
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_search_view
+msgid "Expense Wage"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__gasto_salario
+msgid "Expense Wage in the Force of Work"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.ui.menu,name:l10n_cu_mrp.menu_gastos
+msgid "Expenses"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_ba
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_ba
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_ba
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_ba
+msgid "Expenses Bancarios"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_tc
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_tc
+msgid "Expenses Totales o Costo of Producción"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_tc
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_tc
+msgid "Expenses Totals o Cost of Production"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "Expenses of Distribution and Sales"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_dv
+msgid "Expenses of Distribution and Sales (DV)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_dv
+msgid "Expenses of Distribution and Sales (GA)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "Expenses of Force of Work"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gasto_ft
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gasto_ft
+msgid "Expenses of Force of Work (FT)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gasto_ft
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gasto_ft
+msgid "Expenses of Force of Work (GD)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__alimentos_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__alimentos_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__alimentos_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__alimentos_ga
+msgid "Foods (GA)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model,name:l10n_cu_mrp.model_l10n_cu_mrp_forces_work
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__fuerza_ids
+msgid "Forces of Work"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.actions.act_window,name:l10n_cu_mrp.commercialization_act_window
+#: model:ir.model,name:l10n_cu_mrp.model_l10n_cu_mrp_commercialization
+#: model:ir.model.fields,help:l10n_cu_mrp.field_mrp_bom__forma_c
+#: model:ir.ui.menu,name:l10n_cu_mrp.commercialization_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.commercialization_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.commercialization_graph_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.commercialization_pivot_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.commercialization_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.commercialization_tree_view
+msgid "Form of Commercialization"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__lubicante_mp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__lubicante_mp
+msgid "Fuels and Lubricant"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__com_lub_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__com_lub_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__com_lub_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__com_lub_dv
+msgid "Fuels and Lubricant (DV)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__com_lubi_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__com_lubi_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__com_lubi_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__com_lubi_ga
+msgid "Fuels and Lubricant (GA)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__lubicante_mp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__lubicante_mp
+msgid "Fuels and Lubricant (MP)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.wage_worker_form_view
+msgid "Fuerza de Trabajo"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "General Expenses and Administration"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_ga
+msgid "General Expenses and of Administration (GA)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.commercialization_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.commercialization_search_view
+msgid "Group By Code"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.commercialization_search_view
+msgid "Group By Name"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom_line__indice_consumo
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_stock_move__indice_consumo
+msgid "IC"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_stock_move__indice_consumo_plan
+msgid "IC PLAN"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom_line__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_department__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_production__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_product_template__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_res_users__id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_stock_move__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__impuesto_ub
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__impuesto_ub
+msgid "Imposed Use of the Force of Work"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__impuesto_ub
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__impuesto_ub
+msgid "Imposed Use of the Force of Work (UB)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_mrp_bom_line__standard_price
+msgid ""
+"In Standard Price & AVCO: value of the product (automatically computed in AVCO).\n"
+"        In FIFO: value of the last unit that left the stock (automatically computed).\n"
+"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
+"        Used to compute margins on sale orders."
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_mrp_bom_line__indice_consumo
+msgid "Index of Consumption"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_stock_move__indice_consumo_plan
+msgid "Index of Consumption Plan"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_stock_move__indice_consumo
+msgid "Index of Consumption Real"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "Indirect Expenses of Production"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_ip
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__gastos_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__gastos_ip
+msgid "Indirect Expenses of Production (IP)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.actions.act_window,name:l10n_cu_mrp.forces_work_act_window
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_graph_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_pivot_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_tree_view
+msgid "It forces of Work"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__job
+msgid "Job Position"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:uom.uom,name:l10n_cu_mrp.product_uom_kw
+msgid "Kw"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:uom.uom,name:l10n_cu_mrp.product_uom_kwh
+msgid "Kw/h"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom_line____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_department____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_production____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_product_template____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_res_users____last_update
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_stock_move____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_department__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization__write_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__write_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__write_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__write_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__write_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_department__write_date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__arr_equi_gd
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__arr_equi_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__arr_equi_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__arr_equi_gd
+msgid "Lease of Teams (GD)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__confeccionado_por
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__confeccionado_por
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__confeccionado_por
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__confeccionado_por
+msgid "Made for"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__mant_rep_ip
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__mant_rep_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__mant_rep_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__mant_rep_ip
+msgid "Maintinance and Repair (IP)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__margen_ub
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__margen_ub
+msgid "Margin Utility s/ it Bases Authorized %"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__margen_ub
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__margen_ub
+msgid "Margin Utility s/ it Bases Authorized % (UB)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__materias_pf
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__materias_pf
+msgid "Matter Prevails and Fundamintal Materials"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__materias_pf
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__materias_pf
+msgid "Matter Prevails and Fundamintal Materials (MP)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__materias_p
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__materias_p
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "Matter Prevails and Materials"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__materias_p
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__materias_p
+msgid "Matter Prevails and Materials (MP)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__metodo
+msgid "Method"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.actions.act_window,name:l10n_cu_mrp.mrp_department_act_window
+#: model:ir.ui.menu,name:l10n_cu_mrp.mrp_department_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.mrp_department_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.mrp_department_tree_view
+msgid "Mrp Department"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model,name:l10n_cu_mrp.model_mrp_department
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_product_product__mrp_dep_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_product_template__mrp_dep_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_res_users__mrp_dep_id
+msgid "Mrp Despartment"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_res_users__mrp_dep_ids
+msgid "Mrp Despartments"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.view_users_form_view_inherited
+msgid "Multi Mrp Department"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.view_users_form_view_inherited
+msgid "Multi Production Unit"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_commercialization__name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_department__name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__name
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.commercialization_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.mrp_department_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.production_unit_form_view
+msgid "Name"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__name
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__name
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__name
+msgid "Name of the Worker s Wage"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields.selection,name:l10n_cu_mrp.selection__mrp_bom__metodo__none
+msgid "None"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_search_view
+msgid "Norma of Time"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__norma_tiempo
+msgid "Norma of Time (h)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__norma_tiempo
+msgid "Norma of Time (h) for the elaboration of a product"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__category
+msgid "Occupational Category"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.wage_worker_form_view
+msgid "Ocupaciones"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otros_gd
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otros_gd
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "Other Direct Expenses"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otros_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otros_gd
+msgid "Other Direct Expenses (GD)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otro_dv
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otro_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otro_dv
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otro_dv
+msgid "Others (DV)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otros_ga
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otros_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otros_ga
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otros_ga
+msgid "Others (GA)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otro_gd
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otro_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otro_gd
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otro_gd
+msgid "Others (GD)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otros_ip
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otros_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__otros_ip
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__otros_ip
+msgid "Others (IP)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__mrp_bom_id
+msgid "Parent Bill of Material"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__parent_id
+msgid "Parent Production Unit"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_mrp_bom_line__promedio
+#: model:ir.model.fields,help:l10n_cu_mrp.field_stock_move__porciento
+msgid "Percent"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.ui.menu,name:l10n_cu_mrp.menu_precision_decimal
+msgid "Precisión decimal"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__precio1
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__precio1
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__precio1
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__precio1
+msgid "Price / 100"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__precio
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__precio
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__precio
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__precio
+msgid "Price: "
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_kanban_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_kanban_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.wage_worker_kanban_view
+msgid "Product"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model,name:l10n_cu_mrp.model_product_template
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__product_tmpl_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__product_tmpl_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__product_tmpl_id
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__product_tmpl_id
+msgid "Product Template"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__produccion
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_production__produccion
+msgid "Production"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model,name:l10n_cu_mrp.model_mrp_production
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__mrp_production_id
+msgid "Production Order"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.actions.act_window,name:l10n_cu_mrp.production_unit_act_window
+#: model:ir.model,name:l10n_cu_mrp.model_production_unit
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_res_users__prod_unit_id
+#: model:ir.ui.menu,name:l10n_cu_mrp.production_unit_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.production_unit_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.production_unit_tree_view
+msgid "Production Unit"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_res_users__prod_unit_ids
+msgid "Production Units"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__cant_trabajadores
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_search_view
+msgid "Quantity of Workers"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__cant_trabajadores
+msgid "Quantity of Workers for the elaboration of a product"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__name
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__name
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "Reference"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_form_view
+msgid "Results"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__revisado_por
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__revisado_por
+msgid "Revised for"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:uom.uom,name:l10n_cu_mrp.product_uom_saco
+msgid "Saco"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__grupo_escala
+msgid "Scale Group"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__grupo_escala
+msgid "Scale Group of the worker"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__date
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__date
+msgid "Scheduled Date"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom_line__standard_price
+msgid "Standard Price"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__state
+msgid "State"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__est_pc
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__est_pc
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__est_pc
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__est_pc
+msgid "Stimulation in Convertible Pesos"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model,name:l10n_cu_mrp.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__subtotal_ge
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__subtotal_ge
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__subtotal_ge
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__subtotal_ge
+msgid "Subtotal (Expenses of Elaboration)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.constraint,message:l10n_cu_mrp.constraint_l10n_cu_mrp_commercialization_currency_id_uniq
+msgid "The Form of Commercialization must be unique!"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.constraint,message:l10n_cu_mrp.constraint_mrp_department_name_uniq
+msgid "The name of Mrp Despartment must be unique!"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.constraint,message:l10n_cu_mrp.constraint_production_unit_name_uniq
+msgid "The name of Production Unit must be unique!"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__total_salario
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__total_salario
+msgid "Total"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.mrp_production_form_view_inherit
+msgid "Total Cost"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_stock_move__total_cost
+msgid "Total Cost per unit"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_stock_move__total_cost
+msgid "Total cost of the weight of the Product"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model,name:l10n_cu_mrp.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__vac_ft
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__vac_ft
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__vac_ft
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__vac_ft
+msgid "Vacations (FT)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_wage_worker__a1
+msgid "Volumen de Producción"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.actions.act_window,name:l10n_cu_mrp.open_salario_obrero
+#: model:ir.actions.act_window,name:l10n_cu_mrp.wage_worker_act_window
+#: model:ir.model,name:l10n_cu_mrp.model_l10n_cu_mrp_wage_worker
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__salario
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__salario
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__salario_id
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__salario_id
+#: model:ir.ui.menu,name:l10n_cu_mrp.wage_worker_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.l10n_cu_mrp_mrp_bom_form_view_inherited
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.wage_worker_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.wage_worker_graph_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.wage_worker_pivot_view
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.wage_worker_tree_view
+msgid "Wage of the Worker"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__salario_hora
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.forces_work_search_view
+msgid "Wage/Hour"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_forces_work__salario_hora
+msgid "Wage/Hour for the elaboration of a product"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__sal_ft
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__sal_ft
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__sal_ft
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__sal_ft
+msgid "Wages (FT)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_production_unit__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__agua_mp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__agua_mp
+msgid "Water"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__agua_mp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__agua_mp
+msgid "Water (MP)"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_bom__weight
+#: model:ir.model.fields,field_description:l10n_cu_mrp.field_mrp_production__weight
+msgid "Weight"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses__coef
+#: model:ir.model.fields,help:l10n_cu_mrp.field_l10n_cu_mrp_concept_expenses_production__coef
+msgid "add of those Coefficient "
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_production_view_graph
+msgid "concept_expenses_production_view_graph"
+msgstr ""
+
+#. module: l10n_cu_mrp
+#: model_terms:ir.ui.view,arch_db:l10n_cu_mrp.concept_expenses_view_graph
+msgid "concept_expenses_view_graph"
+msgstr ""

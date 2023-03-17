@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <menuitem name="Expenses" id="menu_gastos" parent="mrp.menu_mrp_root" sequence="40"/>
+        <menuitem name="Precisión decimal" id="menu_precision_decimal" parent="mrp.menu_mrp_configuration"
+                  action="base.action_decimal_precision_form" sequence="50"/>
+    </data>
+</odoo>

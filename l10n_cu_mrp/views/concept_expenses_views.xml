@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="concept_expenses_form_view" model="ir.ui.view">
+            <field name="name">Concept of Expenses</field>
+            <field name="model">l10n_cu_mrp.concept_expenses</field>
+            <field name="arch" type="xml">
+                <form string="Concept of Expenses">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Reference"/>
+                            </h1>
+
+                        </div>
+                        <group>
+                            <group>
+                                <field name="mrp_bom_id"/>
+                                <field name="salario"/>
+                            </group>
+                            <group>
+                                <label for="product_tmpl_id"/>
+                                <div class="o_row no-gutters d-flex">
+                                    <field name="product_tmpl_id" readonly="1"/>
+                                    <span groups="base.group_multi_currency">Currency :</span>
+                                    <field name="currency_id"/>
+                                </div>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <group string="Matter Prevails and Materials">
+                            <group>
+                                <white-space/>
+                                <field name="materias_p"/>
+                                <field name="materias_pf"/>
+                            </group>
+                            <group>
+                                <white-space/>
+                                <field name="lubicante_mp"/>
+                                <field name="energia_mp"/>
+                                <field name="agua_mp"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Other Direct Expenses" name="otros_gastos_directos">
+                                <group>
+                                    <group>
+                                        <field name="otros_gd"/>
+                                        <label for="coef_dep_gd"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="dep_gd"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_dep_gd"/>
+                                        </div>
+                                        <label for="coef_arr_equi_gd"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="arr_equi_gd"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_arr_equi_gd"/>
+                                        </div>
+                                    </group>
+                                    <group>
+                                        <label for="coef_rop_cal_gd"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="rop_cal_gd"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_rop_cal_gd"/>
+                                        </div>
+                                        <label for="coef_otro_gd"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="otro_gd"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_otro_gd"/>
+                                        </div>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Expenses of Force of Work" name="fuerza_trabajo">
+                                <group>
+                                    <group>
+                                        <white-space/>
+                                        <field name="gasto_ft"/>
+                                        <field name="sal_ft"/>
+                                    </group>
+                                    <group>
+                                        <white-space/>
+                                        <field name="vac_ft"/>
+                                        <field name="est_pc"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Indirect Expenses of Production" name="indirecto_produccion">
+                                <group>
+                                    <group>
+                                        <label for="gastos_ip"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="gastos_ip"/>
+                                        </div>
+                                        <label for="depre_ip"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="depre_ip"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_depre_ip"/>
+                                        </div>
+                                    </group>
+                                    <group>
+                                        <label for="mant_rep_ip"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="mant_rep_ip"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_mant_rep_ip"/>
+                                        </div>
+                                        <label for="otros_ip"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="otros_ip"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_otros_ip"/>
+                                        </div>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="General Expenses and Administration" name="general_administracion">
+
+                                <group>
+                                    <group>
+                                        <label for="gastos_ga"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="gastos_ga"/>
+                                        </div>
+                                        <label for="com_lubi_ga"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="com_lubi_ga"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_com_lubi_ga"/>
+                                        </div>
+                                        <label for="ene_ele_ga"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="ene_ele_ga"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_ene_ele_ga"/>
+                                        </div>
+                                        <label for="dep_ga"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="dep_ga"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_dep_ga"/>
+                                        </div>
+                                    </group>
+                                    <group>
+                                        <label for="alimentos_ga"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="alimentos_ga"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_alimentos_ga"/>
+                                        </div>
+                                        <label for="rop_cal_ga"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="rop_cal_ga"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_rop_cal_ga"/>
+                                        </div>
+                                        <label for="otros_ga"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="otros_ga"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_otros_ga"/>
+                                        </div>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Expenses of Distribution and Sales" name="distribucion_venta">
+                                <group>
+                                    <group>
+                                        <label for="gastos_dv"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="gastos_dv"/>
+                                        </div>
+                                        <label for="com_lub_dv"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="com_lub_dv"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_com_lub_dv"/>
+                                        </div>
+                                        <label for="ene_ele_dv"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="ene_ele_dv"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_ene_ele_dv"/>
+                                        </div>
+                                    </group>
+                                    <group>
+                                        <!--                                        <white-space/>-->
+                                        <label for="dep_dv"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="dep_dv"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_dep_dv"/>
+                                        </div>
+                                        <label for="rop_cal_dv"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="rop_cal_dv"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_rop_cal_dv"/>
+                                        </div>
+                                        <label for="otro_dv"/>
+                                        <div class="o_row no-gutters d-flex">
+                                            <field name="otro_dv"/>
+                                            <span>Coefficient :</span>
+                                            <field name="coef_otro_dv"/>
+                                        </div>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                        <group string="Results">
+                            <group>
+                                <white-space/>
+                                <field name="subtotal_ge"/>
+                                <field name="gastos_ba"/>
+                                <field name="gastos_tc"/>
+                                <field name="margen_ub"/>
+                                <field name="impuesto_ub"/>
+                            </group>
+                            <group>
+                                <white-space/>
+                                <field name="coef"/>
+                                <field name="con_ub"/>
+                                <field name="precio"/>
+                                <field name="precio1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="confeccionado_por"/>
+                            </group>
+                            <group>
+                                <field name="revisado_por"/>
+                            </group>
+                            <group>
+                                <field name="aprobado_por"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="concept_expenses_tree_view" model="ir.ui.view">
+            <field name="name">Concept of Expenses</field>
+            <field name="model">l10n_cu_mrp.concept_expenses</field>
+            <field name="arch" type="xml">
+                <tree string="Concept of Expenses">
+                    <field name="name"/>
+                    <field name="product_tmpl_id"/>
+                    <field name="currency_id"/>
+                    <field name="materias_p"/>
+                    <field name="subtotal_ge"/>
+                    <field name="gasto_ft"/>
+                    <field name="gastos_tc"/>
+                    <field name="precio"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="concept_expenses_pivot_view" model="ir.ui.view">
+            <field name="name">Concept of Expenses</field>
+            <field name="model">l10n_cu_mrp.concept_expenses</field>
+            <field name="arch" type="xml">
+                <pivot string="Concept of Expenses">
+                    <field name="product_tmpl_id" type="row"/>
+                    <field name="currency_id" type="row"/>
+                    <field name="materias_p" type="measure"/>
+                    <field name="subtotal_ge" type="measure"/>
+                    <field name="gasto_ft" type="measure"/>
+                    <field name="gastos_tc" type="measure"/>
+                    <field name="precio" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="concept_expenses_view_graph" model="ir.ui.view">
+            <field name="name">Concept of Expenses</field>
+            <field name="model">l10n_cu_mrp.concept_expenses</field>
+            <field name="arch" type="xml">
+                <graph string="concept_expenses_view_graph">
+                    <field name="product_tmpl_id"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="concept_expenses_kanban_view" model="ir.ui.view">
+            <field name="name">Concept of Expenses</field>
+            <field name="model">l10n_cu_mrp.concept_expenses</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_res_partner_kanban">
+                                <div class="o_kanban_image">
+                                    <img t-att-src="kanban_image('product.template', 'image_128', record.id.raw_value)"
+                                         alt="Product" class="o_image_64_contain"/>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title oe_partner_heading">
+                                        <field name="name"/>
+                                    </strong>
+                                    <div>
+                                        <field name="product_tmpl_id"/>
+                                    </div>
+                                    <div>
+                                        <span>Price :</span>
+                                        <field name="precio"/>
+                                    </div>
+                                    <div>
+                                        <span>Expenses :</span>
+                                        <field name="gastos_tc"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="concept_expenses_act_window" model="ir.actions.act_window">
+            <field name="name">Concept of Expenses</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_cu_mrp.concept_expenses</field>
+            <field name="view_mode">kanban,tree,form,graph,pivot</field>
+            <field name="context">{"search_default_name":""}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Click here to add new Concept of Expenses.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Concept of Expenses" id="concept_expenses_menu" parent="menu_gastos"
+                  action="concept_expenses_act_window" sequence="40"/>
+
+        <record id="open_concepto_gastos" model="ir.actions.act_window">
+            <field name="context">{'default_mrp_bom_id': active_id, 'search_default_mrp_bom_id': active_id}</field>
+            <field name="name">Concept of Expenses</field>
+            <field name="res_model">l10n_cu_mrp.concept_expenses</field>
+        </record>
+    </data>
+</odoo>

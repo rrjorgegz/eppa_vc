@@ -1,0 +1,1235 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cu_eppa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20201114\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-22 11:10+0000\n"
+"PO-Revision-Date: 2022-12-22 11:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "\"WAGE OF THE WORKERS OF THE PRODUCTION\""
+msgstr "\"SALARIO DE LOS OBREROS DE LA PRODUCCIÓN\""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "% CUMP."
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "% of Used Capacity:"
+msgstr "% de Capacidad Utilizada:"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.report,print_report_name:l10n_cu_eppa.action_report_mrp_bom
+msgid "'Bill of Material'"
+msgstr "'Lista de Materiales'"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.report,print_report_name:l10n_cu_eppa.action_report_concept_expenses
+msgid "'Concept de Expenses'"
+msgstr "'Concepto de Gastos'"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.report,print_report_name:l10n_cu_eppa.action_report_wage_worker
+msgid "'Wage of the Worker'"
+msgstr "'Salario Obrero'"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "1.1"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "1.2"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "1.3"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "1.4"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "10"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "11"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "12"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "13"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "14"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "3.1"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "3.2"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "3.3"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "3.4"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "4.1"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "4.2"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "4.3"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "4.4"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "4.5"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "5.1"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "5.2"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "5.3"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "6.1"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "6.2"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "6.3"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "6.4"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "6.5"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "6.6"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "7.1"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "7.2"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "7.3"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "7.4"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "7.5"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid ""
+"<span class=\"page\"/>\n"
+"                                        <span>of</span>\n"
+"                                        <span class=\"topage\"/>"
+msgstr ""
+"<span class=\"page\"/>\n"
+"                                        <span>de</span>\n"
+"                                        <span class=\"topage\"/>"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "<span>Director</span>"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "<span>Esp. Contab. y Costos</span>"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "<span>J Económico</span>"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid ""
+"<strong>\n"
+"                                        Basic Wage :\n"
+"                                    </strong>"
+msgstr ""
+"<strong>\n"
+"                                        Salario Básico :\n"
+"                                    </strong>"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consolidated_wizards__is_todos_company__uno
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_categories_wizards__is_todos_company__uno
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_companies_wizards__is_todos_company__uno
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_ingredients_wizards__is_todos_company__uno
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_products_wizards__is_todos_company__uno
+msgid "A Company"
+msgstr "Una Compañía"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "ACCORDING TO RECORD COST"
+msgstr "SEGÚN FICHA COSTO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "AMOUNT TOTAL"
+msgstr "CANTIDADES FÍSICAS"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "APPROVED FOR"
+msgstr "APROBADO"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_categories_wizards__is_category__todos
+msgid "All the Category"
+msgstr "Todas las Categorías"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consolidated_wizards__is_todos_company__todos
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_categories_wizards__is_todos_company__todos
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_companies_wizards__is_todos_company__todos
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_ingredients_wizards__is_todos_company__todos
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_products_wizards__is_todos_company__todos
+msgid "All the Companies"
+msgstr "Todas las Compañías"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_categories_wizards__is_todos__todos
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_companies_wizards__is_ingredient__todos
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_ingredients_wizards__is_ingredient__todos
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_products_wizards__is_ingredient__todos
+msgid "All the Ingredients"
+msgstr "Todos los Ingredientes"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_ingredients_wizards__is_product__todos
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_products_wizards__is_product__todos
+msgid "All the Products"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_categories_wizards__is_category__uno
+msgid "An Category"
+msgstr "Una Categoría"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_categories_wizards__is_todos__uno
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_companies_wizards__is_ingredient__uno
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_ingredients_wizards__is_ingredient__uno
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_products_wizards__is_ingredient__uno
+msgid "An Ingredient"
+msgstr "Un Ingrediente"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_ingredients_wizards__is_product__uno
+#: model:ir.model.fields.selection,name:l10n_cu_eppa.selection__l10n_cu_eppa_consumption_index_products_wizards__is_product__uno
+msgid "An Product"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Bank expenses"
+msgstr "Gastos Bancarios"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.report,name:l10n_cu_eppa.action_report_mrp_bom
+msgid "Bill of Material"
+msgstr "Lista de Materiales"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "CAT. OCCUPATIONAL"
+msgstr "CAT. OCUPACIONAL"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+msgid "CATEGORY"
+msgstr "CATEGORÍA"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "CENTER INFORMED"
+msgstr "CETRO INFORMADO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "CODE"
+msgstr "CÓDIGO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "COMMERCIALIZATION FORM:"
+msgstr "FORMA DE COMERCIALIZACIÓN"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "COMPANY :"
+msgstr "EMPRESA :"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid ""
+"COMPARATIVE ANALYSIS OF THE PRODUCTS FOR\n"
+"                                        ACTIVITIES AND\n"
+"                                        FOR PRODUCTS"
+msgstr ""
+"ANÁLISIS COMPARATIVO DE LOS COSTOS UNITARIOS POR ACTIVIDADES Y POR PRODUCTO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "CONCEPTS OF EXPENSES"
+msgstr "CONCEPTO DE GASTOS"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "CONSUMPTION PLAN"
+msgstr "CONSUMO PLAN"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "CONSUMPTION REAL"
+msgstr "CONSUMO REAL"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "COST TOTAL"
+msgstr "COSTO TOTAL"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated_view_wizards
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories_view_wizards
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies_view_wizards
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients_view_wizards
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products_view_wizards
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__category_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__category_id
+msgid "Category"
+msgstr "Categoría"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Clothes and Footwear"
+msgstr "Ropa y Calzado"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Clothes and Footwear (Direct Workers)"
+msgstr "Ropa y Calzado (Trabajadores Directos)"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Code :"
+msgstr "Código :"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__commercialization_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__commercialization_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__commercialization_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__commercialization_id
+msgid "Commercialization"
+msgstr "Comercialización"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__company_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__company_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__company_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__company_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.report,name:l10n_cu_eppa.action_report_concept_expenses
+msgid "Concept de Expenses"
+msgstr "Concepto de Gastos"
+
+#. module: l10n_cu_eppa
+#: model:ir.model,name:l10n_cu_eppa.model_l10n_cu_eppa_consolidated_wizards
+msgid "Consolidated Wizards"
+msgstr "Consolidado"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.act_window,name:l10n_cu_eppa.consumption_index_categories_action
+#: model:ir.actions.report,name:l10n_cu_eppa.action_report_consumption_index_categories
+#: model:ir.actions.report,print_report_name:l10n_cu_eppa.action_report_consumption_index_categories
+#: model:ir.model,name:l10n_cu_eppa.model_report_l10n_cu_eppa_consumption_index_categories
+#: model:ir.ui.menu,name:l10n_cu_eppa.menu_consumption_index_categories
+msgid "Consumption Index for Categories"
+msgstr "Índice de Consumo por Categorías"
+
+#. module: l10n_cu_eppa
+#: model:ir.model,name:l10n_cu_eppa.model_l10n_cu_eppa_consumption_index_categories_wizards
+msgid "Consumption Index for Categories Wizards"
+msgstr "Índice de Consumo por Categorías"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.act_window,name:l10n_cu_eppa.consumption_index_companies_action
+#: model:ir.actions.report,name:l10n_cu_eppa.action_report_consumption_index_companies
+#: model:ir.actions.report,print_report_name:l10n_cu_eppa.action_report_consumption_index_companies
+#: model:ir.model,name:l10n_cu_eppa.model_report_l10n_cu_eppa_consumption_index_companies
+#: model:ir.ui.menu,name:l10n_cu_eppa.menu_consumption_index_companies
+msgid "Consumption Index for Companies"
+msgstr "Índice de Consumo por Compañías"
+
+#. module: l10n_cu_eppa
+#: model:ir.model,name:l10n_cu_eppa.model_l10n_cu_eppa_consumption_index_companies_wizards
+msgid "Consumption Index for Companies Wizards"
+msgstr "Índice de Consumo por Compañías"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.act_window,name:l10n_cu_eppa.consumption_index_ingredients_action
+#: model:ir.actions.report,name:l10n_cu_eppa.action_report_consumption_index_ingredients
+#: model:ir.actions.report,print_report_name:l10n_cu_eppa.action_report_consumption_index_ingredients
+#: model:ir.model,name:l10n_cu_eppa.model_report_l10n_cu_eppa_consumption_index_ingredients
+#: model:ir.ui.menu,name:l10n_cu_eppa.menu_consumption_index_ingredients
+msgid "Consumption Index for Ingredients"
+msgstr "Índice de Consumo por Ingredientes"
+
+#. module: l10n_cu_eppa
+#: model:ir.model,name:l10n_cu_eppa.model_l10n_cu_eppa_consumption_index_ingredients_wizards
+msgid "Consumption Index for Ingredients Wizards"
+msgstr "Índice de Consumo por Ingredientes"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.act_window,name:l10n_cu_eppa.consumption_index_products_action
+#: model:ir.actions.report,name:l10n_cu_eppa.action_report_consumption_index_products
+#: model:ir.actions.report,print_report_name:l10n_cu_eppa.action_report_consumption_index_products
+#: model:ir.model,name:l10n_cu_eppa.model_report_l10n_cu_eppa_consumption_index_products
+#: model:ir.ui.menu,name:l10n_cu_eppa.menu_consumption_index_products
+msgid "Consumption Index for Products"
+msgstr "Índice de Consumo por Productos"
+
+#. module: l10n_cu_eppa
+#: model:ir.model,name:l10n_cu_eppa.model_l10n_cu_eppa_consumption_index_products_wizards
+msgid "Consumption Index for Products Wizards"
+msgstr "Índice de Consumo por Productos"
+
+#. module: l10n_cu_eppa
+#: model:res.groups,name:l10n_cu_eppa.group_eppa_contabilidad_municipio
+msgid "Contabilidad Municipio"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model:res.groups,name:l10n_cu_eppa.group_eppa_contabilidad_provincia
+msgid "Contabilidad Provincia"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Contribution to the Social Security"
+msgstr "Contribución a la Seguridad Social"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__create_uid
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__create_date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__create_date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__create_date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__create_date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Currency Components:"
+msgstr "Componentes en Divisas:"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "DATE"
+msgstr "FECHA"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "DESCRIPTION"
+msgstr "DESCRIPCIÓN"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "DESCRIPTION OF THE PRODUCT OR SERVICE :"
+msgstr "DESCRIPCIÓN DEL PRODUCTO :"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "DETAIL: PRODUCTS AND ACTIVITIES"
+msgstr "DETALLES : PRODUCTOS Y ACTIVIDADES"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "DISINTEGRATION OF THE FUNDAMENTAL INPUTS"
+msgstr "DESAGREGACIÓN DE LOS INSUMOS FUNDAMENTALES"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Depreciation"
+msgstr "Depreciación"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__display_name
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__display_name
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__display_name
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__display_name
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__display_name
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consolidated__display_name
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_categories__display_name
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_companies__display_name
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_ingredients__display_name
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_products__display_name
+msgid "Display Name"
+msgstr "Nombre de Despliegue"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "EMISSION DATE :"
+msgstr "FECHA DE EMISIÓN :"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "END :"
+msgstr "HASTA :"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "EPPA"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "EXCESS OR DEFECT"
+msgstr "EXCESO O DEFECTO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "EXPENSE WAGE"
+msgstr "GASTO DE SALARIO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "EXPENSES DIRECT WAGES"
+msgstr "GASTOS SALARIOS DIRECTOS"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "EXPENSES OF MATTER PREVAIL"
+msgstr "GASTOS DE MATERIA PRIMA"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Electric Power"
+msgstr "Energía Eléctrica"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Empresa Provincial Productora de Alimentos VC"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__end
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__end
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__end
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__end
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__end
+msgid "End"
+msgstr "Hasta"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Expenses of Distribution and Sales"
+msgstr "Gastos de Distribución y Ventas"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Expenses of Force of Work"
+msgstr "Gastos de Fuerza de Trabajo"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "FIRMA"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Foods"
+msgstr "Alimentos"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__commercialization_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__commercialization_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__commercialization_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__commercialization_id
+msgid "Form of Commercialization"
+msgstr "Forma de Comercialización"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Fuel and Lubricant"
+msgstr "Combustible y Lubricante"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Fuels and Lubricant"
+msgstr "Combustibles y Lubricantes"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "General expenses and of Administration"
+msgstr "Gastos Generales y de Administración"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consolidated__id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_categories__id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_companies__id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_ingredients__id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_products__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "INDEX PLAN"
+msgstr "ÍNDICE PLAN"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "INDEX REAL"
+msgstr "ÍNDICE REAL"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "INDIRECT EXPENSES"
+msgstr "GASTOS INDIRECTOS"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "INFORMED MONTH"
+msgstr "MES INFORMADO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+msgid "INGREDIENT"
+msgstr "INGREDIENTE"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid ""
+"IT REGISTERS TO DETERMINE THE PRICE AND THEIR COMPONENT IN CONVERTIBLE MONEY"
+msgstr "FICHA PARA DETERMINAR EL PRECIO Y SU COMPONENTE EN PESOS CONVERTIBLE"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Imposed Use of the Force of Work"
+msgstr "Impuesto Utilización de la Fuerza de Trabajo"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Indirect expenses of Production"
+msgstr "Gastos Indirectos de Producción"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__ingredient_tmpl_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__ingredient_tmpl_id
+msgid "Ingredient"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Installed Capacity:"
+msgstr "Capacidad Instalada:"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "JOB"
+msgstr "OCUPACIONES"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "LINE"
+msgstr "FILA"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards____last_update
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards____last_update
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards____last_update
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards____last_update
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards____last_update
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consolidated____last_update
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_categories____last_update
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_companies____last_update
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_ingredients____last_update
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_report_l10n_cu_eppa_consumption_index_products____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación en"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__write_uid
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__write_uid
+msgid "Last Updated by"
+msgstr "Última Actualización por"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__write_date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__write_date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__write_date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__write_date
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización en"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Lease of Teams"
+msgstr "Arrendamiento de Equipos"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Level of Production:"
+msgstr "Nivel de Producción:"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "Logo"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "MADE FOR"
+msgstr "CONFECCIONADO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Maintenance and Repair"
+msgstr "Mantenimiento y Reparación"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Margin Utility s / it Bases Authorized %"
+msgstr "Margen Utilidad s/ Base Autorizada %"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Matter Prevails and Fundamental Materials"
+msgstr "Materia Prima y Materiales Fundamentales"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Matter Prevails and Materials"
+msgstr "Materia Prima y Materiales"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.act_window,name:l10n_cu_eppa.consolidated_action
+#: model:ir.actions.report,name:l10n_cu_eppa.action_report_consolidated
+#: model:ir.actions.report,print_report_name:l10n_cu_eppa.action_report_consolidated
+#: model:ir.model,name:l10n_cu_eppa.model_report_l10n_cu_eppa_consolidated
+#: model:ir.ui.menu,name:l10n_cu_eppa.menu_consolidated
+msgid "Model AC-03"
+msgstr "Modelo AC-03"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "N. CONS. ADJUSTED"
+msgstr "N. CONS. AJUSTADA"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "NAME AND LAST NAMES"
+msgstr "NOMBRE Y APELLIDOS"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "NEW PRICE"
+msgstr "NUEVO PRECIO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "NEW TOTAL AMOUNT"
+msgstr "NUEVO IMPORTE TOTAL"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "NORMA OF CONSUMPTION"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "NORMA TIME (h)"
+msgstr "NORMA DE TIEMPO (h)"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "OF IT :"
+msgstr "DE ELLO :"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "ORGANISM :"
+msgstr "ORGANISMO :"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Other Direct Expenses"
+msgstr "Otros Gastos Directos"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Others"
+msgstr "Otros"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "PAGE No."
+msgstr "HOJA No."
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "PHYSICAL QUANTITIES:"
+msgstr "CANTIDADES FÍSICAS"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "POSITION"
+msgstr "POSICIÓN"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "PREVIOUS PRICE"
+msgstr "PRECIO ANTERIOR"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "PRODUCT"
+msgstr "PRODUCTO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "PRODUCTION"
+msgstr "PRODUCCIÓN"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "PRODUCTION UF"
+msgstr "PRODUCCIÓN UF"
+
+#. module: l10n_cu_eppa
+#: model:res.groups,name:l10n_cu_eppa.group_eppa_planificacion_municipio
+msgid "Planificación Municipio"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model:res.groups,name:l10n_cu_eppa.group_eppa_planificacion_provincia
+msgid "Planificación Provincia"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Price:"
+msgstr "Precio :"
+
+#. module: l10n_cu_eppa
+#: model:res.groups,name:l10n_cu_eppa.group_eppa_produccion_municipio
+msgid "Producción Municipio"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model:res.groups,name:l10n_cu_eppa.group_eppa_produccion_provincia
+msgid "Producción Provincia"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__product_tmpl_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__product_tmpl_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__product_tmpl_id
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__product_tmpl_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__product_tmpl_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__product_tmpl_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__ingredient_tmpl_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__product_tmpl_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__ingredient_tmpl_id
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__product_tmpl_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "QTY. OF WORKERS"
+msgstr "CANT. DE TRABAJADORES"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "REAL"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "REMOVE OF THE EXPENSES OF"
+msgstr "DESGLOSE DE LOS GASTOS DE"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "REVISED FOR"
+msgstr "REVISADO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "SCALE GROUP"
+msgstr "GRUPO ESCALA"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "SIGNS"
+msgstr "FIRMA"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "START :"
+msgstr "DESDE :"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated_view_wizards
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories_view_wizards
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies_view_wizards
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients_view_wizards
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products_view_wizards
+msgid "See Report"
+msgstr "Ver Reporte"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__is_category
+msgid "Select Category"
+msgstr "Selecciona la Categoría"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__is_todos_company
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__is_todos_company
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__is_todos_company
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__is_todos_company
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__is_todos_company
+msgid "Select Companies"
+msgstr "Selecciona las Compañías"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__is_todos
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__is_ingredient
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__is_ingredient
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__is_ingredient
+msgid "Select Ingredients"
+msgstr "Selecciona los Ingredientes"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__is_product
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__is_product
+msgid "Select Products"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__start
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__start
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__start
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__start
+#: model:ir.model.fields,field_description:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__start
+msgid "Start"
+msgstr "Inicio"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Stimulation in Convertible Money"
+msgstr "Estimulación en Pesos Convertibles"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Subtotal (Expenses of Elaboration)"
+msgstr "Subtotal (Gastos de Elaboración)"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "TELEPHONE"
+msgstr "TÉLEFONO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "TOTAL"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "TOTAL UNITARY"
+msgstr "TOTAL UNITARIO"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "TTA"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__is_category
+msgid "To select Category"
+msgstr "Selecciona la Categoría"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consolidated_wizards__is_todos_company
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__is_todos_company
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__is_todos_company
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__is_todos_company
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__is_todos_company
+msgid "To select Companies"
+msgstr "Selecciona la Compañía"
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__is_product
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__is_product
+msgid "To select Product"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_categories_wizards__is_todos
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_companies_wizards__is_ingredient
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_ingredients_wizards__is_ingredient
+#: model:ir.model.fields,help:l10n_cu_eppa.field_l10n_cu_eppa_consumption_index_products_wizards__is_ingredient
+msgid "To select ingredients"
+msgstr "Selecciona los Ingredientes"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "Total"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Total Expenses or Cost of Production"
+msgstr "Gastos Totales o Costo de Producción"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "UM"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "UM :"
+msgstr ""
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.mrp_bom
+msgid "UNIT OF MEASURE:"
+msgstr "UNIDAD DE MEDIDA"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "UNIT OF VALUE :"
+msgstr "UNIDAD DE VALOR"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consolidated
+msgid "VARIATION"
+msgstr "VARIACIÓN"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Vacations"
+msgstr "Vacaciones"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Volume of Production for the Record of Cost :"
+msgstr "Volumen de Producción para la Ficha de Costo:"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.wage_worker
+msgid "WAGE / HOUR"
+msgstr "SALARIO / HORA"
+
+#. module: l10n_cu_eppa
+#: model:ir.actions.report,name:l10n_cu_eppa.action_report_wage_worker
+msgid "Wage of the Worker"
+msgstr "Salario Obrero"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Wages"
+msgstr "Salario"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.concept_expenses
+msgid "Water"
+msgstr "Agua"
+
+#. module: l10n_cu_eppa
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_categories
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_companies
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_ingredients
+#: model_terms:ir.ui.view,arch_db:l10n_cu_eppa.consumption_index_products
+msgid "of"
+msgstr "de"

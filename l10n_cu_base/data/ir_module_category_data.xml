@@ -1,0 +1,30 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="module_category_system_costs" model="ir.module.category">
+            <field name="name">EPPA</field>
+            <field name="sequence">11</field>
+            <field name="visible" eval="1"/>
+            <field name="parent_id" ref="base.module_category_manufacturing"/>
+        </record>
+
+        <record id="module_category_produccion" model="ir.module.category">
+            <field name="name">Producción</field>
+            <field name="sequence">16</field>
+            <field name="parent_id" ref="l10n_cu_base.module_category_system_costs"/>
+        </record>
+
+        <record id="module_category_planificacion" model="ir.module.category">
+            <field name="name">Planificación</field>
+            <field name="sequence">17</field>
+            <field name="parent_id" ref="l10n_cu_base.module_category_system_costs"/>
+        </record>
+
+        <record id="module_category_contabilidad" model="ir.module.category">
+            <field name="name">Contabilidad</field>
+            <field name="sequence">18</field>
+            <field name="parent_id" ref="l10n_cu_base.module_category_system_costs"/>
+        </record>
+
+    </data>
+</odoo>

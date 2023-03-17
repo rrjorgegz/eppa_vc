@@ -1,0 +1,25 @@
+<odoo>
+    <data noupdate="1">
+        <record id="base.CUP" model="res.currency">
+            <field name="active" eval="True"/>
+            <field name="rounding">1</field>
+            <field name="position">after</field>
+        </record>
+
+        <record id="MLC" model="res.currency">
+            <field name="name">MLC</field>
+            <field name="symbol">$</field>
+            <field name="rounding">24</field>
+            <field name="active" eval="True"/>
+            <field name="currency_unit_label">Peso Convertible</field>
+            <field name="currency_subunit_label">Centavos</field>
+        </record>
+
+        <record id="base.USD" model="res.currency">
+            <field name="active" eval="False"/>
+        </record>
+        <record id="base.EUR" model="res.currency">
+            <field name="active" eval="False"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_consumption_index_categories" model="ir.actions.report">
+        <field name="name">Consumption Index for Categories</field>
+        <field name="model">report.l10n_cu_eppa.consumption_index_categories</field>
+        <!--        <field name="report_type">qweb-pdf</field>-->
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">l10n_cu_eppa.consumption_index_categories</field>
+        <field name="report_file">l10n_cu_eppa.consumption_index_categories</field>
+        <field name="print_report_name">Consumption Index for Categories</field>
+        <field name="binding_model_id" ref="model_report_l10n_cu_eppa_consumption_index_categories"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="consumption_index_categories">
+        <t t-call="web.html_container">
+            <t t-set="company" t-value="company_id"/>
+            <t t-call="web.basic_layout">
+                <header class="header">
+                    <style>
+                    </style>
+                    <div>
+                        <p class="text-center">
+                            <table class="table text-center">
+                                <thead>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="5" style="width: 60px;	height: 80px;">
+                                            <img t-if="company_id.logo" t-att-src="image_data_uri(company_id.logo)"
+                                                 alt="Logo" style="width: 60px;	height: 80px;"/>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3">
+                                            <t t-esc="company_id.name.upper()"/>
+                                        </th>
+                                        <th style="width:  10px;">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <span class="page"/>
+                                                </li>
+                                                <li class="list-inline-item">of</li>
+                                                <li class="list-inline-item">
+                                                    <span class="topage"/>
+                                                </li>
+                                            </ul>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">
+                                            <t t-esc="description.upper()"/>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">EMISSION DATE :
+                                            <t t-esc="date"/>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>COMMERCIALIZATION FORM:
+                                            <t t-esc="commercialization_id.name"/>
+                                        </th>
+                                        <th>START :
+                                            <t t-esc="start"/>
+                                        </th>
+                                        <th>END :
+                                            <t t-esc="end"/>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </div>
+                </header>
+                <body class="body">
+                    <div class="row mt32 mb32">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>CATEGORY</th>
+                                    <th>INDEX PLAN</th>
+                                    <th>CONSUMPTION PLAN</th>
+                                    <th>CONSUMPTION REAL</th>
+                                    <th>INDEX REAL</th>
+                                    <th>EXCESS OR DEFECT</th>
+                                    <th>% CUMP.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <div class="page">
+
+                                </div>
+                            </tbody>
+                        </table>
+                    </div>
+                </body>
+                <footer class="footer">
+
+                </footer>
+            </t>
+        </t>
+    </template>
+</odoo>

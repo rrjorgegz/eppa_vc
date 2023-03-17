@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_mrp_bom" model="ir.actions.report">
+            <field name="name">Bill of Material</field>
+            <field name="model">mrp.bom</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">l10n_cu_eppa.mrp_bom</field>
+            <field name="report_file">l10n_cu_eppa.mrp_bom</field>
+            <field name="print_report_name">'Bill of Material'</field>
+            <field name="binding_model_id" ref="mrp.model_mrp_bom"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="mrp_bom">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+                        <div>
+                            <p class="text-center">
+                                DISINTEGRATION OF THE FUNDAMENTAL INPUTS
+                            </p>
+                            <br/>
+                            <p>
+                                DESCRIPTION OF THE PRODUCT OR SERVICE :
+                                <t t-esc="o.product_tmpl_id.name"/>
+                            </p>
+                            <p class="text-center">
+                                COMPANY :
+                                <t t-esc="o.company_id.name"/>
+                            </p>
+                            <table width="100%" class="o_mrp_bom_expandable">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <p>
+                                                UNIT OF MEASURE:
+                                                <t t-esc="o.product_uom_id.name"/>
+                                            </p>
+                                        </th>
+                                        <th>
+                                            <p>
+                                                PHYSICAL QUANTITIES:
+                                                <t t-esc="'{0:.5f}'.format(float(o.product_qty))"/>
+                                            </p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+
+                        </div>
+                        <div class="row mt32 mb32">
+                            <table width="100%" class="table table-bordered o_mrp_bom_expandable">
+                                <thead>
+                                    <tr>
+                                        <th>CODE</th>
+                                        <th>DESCRIPTION</th>
+                                        <th>TTA</th>
+                                        <th>UM</th>
+                                        <th>NORMA OF CONSUMPTION</th>
+                                        <th>PREVIOUS PRICE</th>
+                                        <th>AMOUNT TOTAL</th>
+                                        <th>N. CONS. ADJUSTED</th>
+                                        <th>NEW PRICE</th>
+                                        <th>NEW TOTAL AMOUNT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <div class="page">
+                                        <t t-foreach="o.bom_line_ids" t-as="mat">
+                                            <tr>
+                                                <th>
+                                                    <t t-esc="mat.product_tmpl_id.default_code"/>
+                                                </th>
+                                                <th>
+                                                    <t t-esc="mat.product_tmpl_id.name"/>
+                                                </th>
+                                                <th/>
+                                                <th>
+                                                    <t t-esc="mat.product_tmpl_id.uom_id.name"/>
+                                                </th>
+                                                <th/>
+                                                <th/>
+                                                <th/>
+                                                <th>
+                                                    <t t-esc="'{0:.5f}'.format(float(mat.product_qty))"/>
+                                                </th>
+                                                <th>
+                                                    <t t-esc="'{0:.5f}'.format(float(mat.standard_price))"/>
+                                                </th>
+                                                <th>
+                                                    <t t-set="total_imp"
+                                                       t-value="mat.product_qty * mat.standard_price"/>
+                                                    <t t-esc="'{0:.5f}'.format(float(total_imp))"/>
+                                                </th>
+                                            </tr>
+                                        </t>
+                                    </div>
+                                    <tr>
+                                        <th colspan="8"/>
+                                        <th>
+                                            <h3>Total</h3>
+                                        </th>
+                                        <th>
+                                            <t t-esc="'{0:.5f}'.format(o.total)" widget="monetary"/>$
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="aprobado_por">
+                            <table width="100%" class="table table-bordered o_mrp_bom_expandable">
+                                <thead>
+                                    <tr>
+                                        <th>MADE FOR</th>
+                                        <th>SIGNS</th>
+                                        <th>POSITION</th>
+                                        <th>TELEPHONE</th>
+                                        <th>DATE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <t t-esc="o.confeccionado_por.name"/>
+                                        </th>
+                                        <th/>
+                                        <th>
+                                            <t t-esc="o.confeccionado_por.job_id.name"/>
+                                        </th>
+                                        <th>
+                                            <t t-esc="o.confeccionado_por.phone"/>
+                                        </th>
+                                        <th rowspan="5">
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4"/>
+                                    </tr>
+                                    <tr>
+                                        <th>APPROVED FOR</th>
+                                        <th>FIRMA</th>
+                                        <th>SIGNS</th>
+                                        <th>TELEPHONE</th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <t t-esc="o.aprobado_por.name"/>
+                                        </th>
+                                        <th/>
+                                        <th>
+                                            <t t-esc="o.aprobado_por.job_id.name"/>
+                                        </th>
+                                        <th>
+                                            <t t-esc="o.aprobado_por.phone"/>
+                                        </th>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="scale_group_form_view" model="ir.ui.view">
+            <field name="name">Scale Group</field>
+            <field name="model">l10n_cu_hr.scale_group</field>
+            <field name="arch" type="xml">
+                <form string="Scale Group">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="hour"/>
+                                <field name="hourly_rate"/>
+                            </group>
+                            <group>
+                                <field name="salary"/>
+                                <field name="currency"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="scale_group_tree_view" model="ir.ui.view">
+            <field name="name">Scale Group</field>
+            <field name="model">l10n_cu_hr.scale_group</field>
+            <field name="arch" type="xml">
+                <tree string="Scale Group">
+                    <field name="name"/>
+                    <field name="hour"/>
+                    <field name="hourly_rate"/>
+                    <field name="salary"/>
+                    <field name="currency"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="scale_group_graph_view" model="ir.ui.view">
+            <field name="name">Scale Group</field>
+            <field name="model">l10n_cu_hr.scale_group</field>
+            <field name="arch" type="xml">
+                <graph string="Scale Group">
+                    <field name="name"/>
+                    <field name="hour"/>
+                    <field name="currency"/>
+                    <field name="hourly_rate"/>
+                    <field name="salary" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="scale_group_pivot_view" model="ir.ui.view">
+            <field name="name">Scale Group</field>
+            <field name="model">l10n_cu_hr.scale_group</field>
+            <field name="arch" type="xml">
+                <pivot string="Scale Group">
+                    <field name="name" type="row"/>
+                    <field name="hour" type="measure"/>
+                    <field name="salary" type="measure"/>
+                    <field name="currency" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="scale_group_search_view" model="ir.ui.view">
+            <field name="name">Scale Group</field>
+            <field name="model">l10n_cu_hr.scale_group</field>
+            <field name="arch" type="xml">
+                <search string="Scale Group">
+                    <group expand="1" string="Group By">
+                        <field name="name"/>
+                        <field name="hour"/>
+                        <field name="hourly_rate"/>
+                        <field name="salary"/>
+                        <filter string="Group By Name" name="name" context="{'group_by':'name'}"/>
+                        <filter string="Group By Wage" name="salary" context="{'group_by':'salary'}"/>
+                        <filter string="Group By Hour" name="hour" context="{'group_by':'hour'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="scale_group_kanban_view" model="ir.ui.view">
+            <field name="name">Scale Group</field>
+            <field name="model">l10n_cu_hr.scale_group</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_res_partner_kanban">
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title oe_partner_heading">
+                                        <field name="name"/>
+                                    </strong>
+                                    <div>
+                                        <span>Hour :</span>
+                                        <field name="hour"/>
+                                    </div>
+                                    <div>
+                                        <span>Salary :</span>
+                                        <field name="salary"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="scale_group_act_window" model="ir.actions.act_window">
+            <field name="name">Scale Group</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_cu_hr.scale_group</field>
+            <field name="view_mode">kanban,tree,form,graph,pivot</field>
+            <field name="context">{"search_default_example_field":1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Click here to add new Scale Group.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Scale Group" id="scale_group_menu" parent="hr.menu_hr_department_tree"
+                  sequence="20" action="scale_group_act_window"/>
+
+    </data>
+</odoo>

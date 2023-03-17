@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="consumption_index_products_view_wizards" model="ir.ui.view">
+        <field name="name">Consumption Index for Products Wizards</field>
+        <field name="model">l10n_cu_eppa.consumption_index_products_wizards</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="date"/>
+                        <field name="is_todos_company"/>
+                        <field name="company_id"
+                               attrs="{'invisible': [('is_todos_company', '=', 'todos')], 'required': [('is_todos_company', '=', 'uno')]}"/>
+
+                    </group>
+                    <group>
+                        <field name="start"/>
+                        <field name="end"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="is_product"/>
+                        <field name="product_tmpl_id"
+                               attrs="{'invisible': [('is_product', '=', 'todos')], 'required': [('is_product', '=', 'uno')]}"/>
+
+                        <field name="is_ingredient"/>
+                        <field name="ingredient_tmpl_id"
+                               attrs="{'invisible': [('is_ingredient', '=', 'todos')], 'required': [('is_ingredient', '=', 'uno')]}"/>
+                    </group>
+                    <group>
+                        <field name="commercialization_id"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    <button string="See Report" name="get_report" type="object" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="consumption_index_products_action" model="ir.actions.act_window">
+        <field name="name">Consumption Index for Products</field>
+        <field name="res_model">l10n_cu_eppa.consumption_index_products_wizards</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="consumption_index_products_view_wizards"/>
+        <field name="binding_model_id" ref="model_l10n_cu_eppa_consumption_index_products_wizards"/>
+        <field name="target">new</field>
+    </record>
+    <menuitem name="Consumption Index for Products" id="menu_consumption_index_products"
+              parent="mrp.menu_mrp_reporting"
+              action="consumption_index_products_action" sequence="50"/>
+
+</odoo>

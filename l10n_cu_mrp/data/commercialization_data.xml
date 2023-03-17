@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="MN" model="l10n_cu_mrp.commercialization">
+            <field name="name">Moneda Nacional</field>
+            <field name="code">MN</field>
+            <field name="currency_id" ref="base.CUP"/>
+        </record>
+
+        <record id="MLC" model="l10n_cu_mrp.commercialization">
+            <field name="name">Moneda Libremente Convertible</field>
+            <field name="code">MLC</field>
+            <field name="currency_id" ref="l10n_cu_base.MLC"/>
+        </record>
+
+        <record id="USD" model="l10n_cu_mrp.commercialization">
+            <field name="name">Divisa</field>
+            <field name="code">USD</field>
+            <field name="currency_id" ref="base.USD"/>
+        </record>
+    </data>
+</odoo>

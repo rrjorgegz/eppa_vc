@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="consolidated_view_wizards" model="ir.ui.view">
+        <field name="name">Model AC-03 Wizards</field>
+        <field name="model">l10n_cu_eppa.consolidated_wizards</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="date"/>
+                        <field name="is_todos_company"/>
+                        <field name="company_id"
+                               attrs="{'invisible': [('is_todos_company', '=', 'todos')], 'required': [('is_todos_company', '=', 'uno')]}"/>
+                    </group>
+                    <group>
+                        <field name="start"/>
+                        <field name="end"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="currency_id"/>
+                    </group>
+                    <group/>
+                </group>
+
+                <footer>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    <button string="See Report" name="get_report" type="object" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="consolidated_action" model="ir.actions.act_window">
+        <field name="name">Model AC-03</field>
+        <field name="res_model">l10n_cu_eppa.consolidated_wizards</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="consolidated_view_wizards"/>
+        <field name="binding_model_id" ref="model_l10n_cu_eppa_consolidated_wizards"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem name="Model AC-03" id="menu_consolidated"
+              parent="mrp.menu_mrp_reporting"
+              action="consolidated_action" sequence="60"/>
+
+</odoo>

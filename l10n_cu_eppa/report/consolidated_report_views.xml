@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_consolidated" model="ir.actions.report">
+        <field name="name">Model AC-03</field>
+        <field name="model">report.l10n_cu_eppa.consolidated</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">l10n_cu_eppa.consolidated</field>
+        <field name="report_file">l10n_cu_eppa.consolidated</field>
+        <field name="print_report_name">Model AC-03</field>
+        <field name="binding_model_id" ref="model_report_l10n_cu_eppa_consolidated"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="consolidated">
+        <t t-call="web.html_container">
+            <t t-set="company" t-value="company_id"/>
+            <t t-set="o" t-value="company"/>
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.basic_layout">
+                    <link href="/l10n_cu_eppa/static/src/css/link_eppa.css" rel="stylesheet" type="text/css"/>
+
+                    <div class="header text-center">
+                        <table class="table text-center table-bordered">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">
+                                        <t t-esc="company_id.name.upper()"/>
+                                        <t t-esc="description.upper()"/>
+                                    </th>
+                                    <th rowspan="2" colspan="4">COMPARATIVE ANALYSIS OF THE PRODUCTS FOR
+                                        ACTIVITIES AND
+                                        FOR PRODUCTS
+                                    </th>
+                                    <th colspan="3">CENTER INFORMED</th>
+                                    <th colspan="3">INFORMED MONTH</th>
+                                    <th colspan="3">PAGE No.</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="3">
+                                        <t t-esc="doc['company'].upper()"/>
+                                    </th>
+                                    <th colspan="3">
+                                        <t t-esc="date"/>
+                                    </th>
+                                    <th colspan="3">
+                                        <span class="page"/>
+                                        <span>of</span>
+                                        <span class="topage"/>
+                                    </th>
+                                </tr>
+
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="body text-center">
+                        <table class="table text-center table-bordered">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">DETAIL: PRODUCTS AND ACTIVITIES</th>
+                                    <th rowspan="2">PRODUCTION UF</th>
+                                    <th colspan="3">EXPENSES OF MATTER PREVAIL</th>
+                                    <th colspan="3">EXPENSES DIRECT WAGES</th>
+                                    <th colspan="3">INDIRECT EXPENSES</th>
+                                    <th colspan="3">COST TOTAL</th>
+                                </tr>
+                                <tr>
+                                    <th>REAL</th>
+                                    <th>ACCORDING TO RECORD COST</th>
+                                    <th>VARIATION</th>
+                                    <th>REAL</th>
+                                    <th>ACCORDING TO RECORD COST</th>
+                                    <th>VARIATION</th>
+                                    <th>REAL</th>
+                                    <th>ACCORDING TO RECORD COST</th>
+                                    <th>VARIATION</th>
+                                    <th>REAL</th>
+                                    <th>ACCORDING TO RECORD COST</th>
+                                    <th>VARIATION</th>
+
+                                </tr>
+                            </thead>
+                            <div>
+                                <tbody>
+                                    <div class="page">
+                                        <tr>
+                                            <th colspan="3">
+                                                <t t-esc="moneda"/>
+                                            </th>
+                                            <th colspan="11"/>
+                                        </tr>
+                                        <t t-foreach="doc['datos']" t-as="doc0">
+                                            <tr>
+                                                <th colspan="3">
+                                                    <t t-esc="doc0['category']"/>
+                                                </th>
+                                                <th colspan="11"/>
+                                            </tr>
+
+                                            <t t-foreach="doc0['datos']" t-as="bom">
+                                                <tr>
+                                                    <th>
+                                                        <t t-esc="bom['bom']"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['produccion_uf']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['materias_p_real']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['materias_p_fcosto']))"/>
+                                                    </th>
+
+                                                    <t t-if="bom['materias_p_variacion'] > 0">
+                                                        <th style="color: red;">
+                                                            <t t-esc="'{0:.5f}'.format(float(bom['materias_p_variacion']))"/>
+                                                        </th>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <th style="color: blue;">
+                                                            <t t-esc="'{0:.5f}'.format(float(bom['materias_p_variacion']))"/>
+                                                        </th>
+                                                    </t>
+
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['sal_ft_real']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['sal_ft_fcosto']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['sal_ft_variacion']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['gastos_ip_real']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['gastos_ip_fcosto']))"/>
+                                                    </th>
+                                                    <t t-if="bom['gastos_ip_variacion'] > 0">
+                                                        <th style="color: red;">
+                                                            <t t-esc="'{0:.5f}'.format(float(bom['gastos_ip_variacion']))"/>
+                                                        </th>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <th style="color: blue;">
+                                                            <t t-esc="'{0:.5f}'.format(float(bom['gastos_ip_variacion']))"/>
+                                                        </th>
+                                                    </t>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['gastos_tc_real']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(bom['gastos_tc_fcosto']))"/>
+                                                    </th>
+                                                    <t t-if="bom['gastos_tc_variacion'] > 0">
+                                                        <th style="color: red;">
+                                                            <t t-esc="'{0:.5f}'.format(float(bom['gastos_tc_variacion']))"/>
+                                                        </th>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <th style="color: blue;">
+                                                            <t t-esc="'{0:.5f}'.format(float(bom['gastos_tc_variacion']))"/>
+                                                        </th>
+                                                    </t>
+                                                </tr>
+                                            </t>
+                                        </t>
+                                    </div>
+                                </tbody>
+                            </div>
+                        </table>
+                    </div>
+                    <div class="footer">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>MADE FOR</th>
+                                    <th>REVISED FOR</th>
+                                    <th>APPROVED FOR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <span>Esp. Contab. y Costos</span>
+                                    </th>
+                                    <th>
+                                        <span>J Económico</span>
+                                    </th>
+                                    <th>
+                                        <span>Director</span>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

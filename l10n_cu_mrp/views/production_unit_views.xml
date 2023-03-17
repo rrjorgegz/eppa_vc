@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="production_unit_form_view" model="ir.ui.view">
+            <field name="name">production_unit.form</field>
+            <field name="model">production.unit</field>
+            <field name="arch" type="xml">
+                <form string="Production Unit">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id" domain="[('is_company', '=', True)]"/>
+                                <field name="parent_id" domain="[('name', '!=', name)]"/>
+                                <field name="warehouse_id"/>
+                                <field name="level" />
+<!--                                readonly="1" invisible="1"/>-->
+                            </group>
+                        </group>
+                        <group>
+                            <field name="child_ids" mode="kanban" context="{'default_parent_id': id,}">
+                                <kanban>
+                                    <field name="name"/>
+                                    <field name="partner_id"/>
+                                    <field name="warehouse_id"/>
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div>
+                                                <div class="oe_kanban_details">
+                                                    <field name="name"/>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="production_unit_tree_view" model="ir.ui.view">
+            <field name="name">production_unit.tree</field>
+            <field name="model">production.unit</field>
+            <field name="arch" type="xml">
+                <tree string="Production Unit">
+                    <field name="name"/>
+                    <field name="partner_id" domain="[('is_company', '=', True)]"/>
+                    <field name="parent_id" domain="[('name', '!=', name)]"/>
+                    <field name="warehouse_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="production_unit_act_window" model="ir.actions.act_window">
+            <field name="name">Production Unit</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">production.unit</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click here to add new Production Unit.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Production Unit" id="production_unit_menu" parent="mrp.menu_mrp_configuration"
+                  action="production_unit_act_window"/>
+
+    </data>
+</odoo>

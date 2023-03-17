@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="l10n_cu_mrp_mrp_bom_form_view_inherited2" model="ir.ui.view">
+            <field name="name">mrp.bom.form</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="l10n_cu_mrp.l10n_cu_mrp_mrp_bom_form_view_inherited"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='salario_count']" position="attributes">
+                    <attribute name="groups">l10n_cu_eppa.group_eppa_planificacion_municipio</attribute>
+                </xpath>
+                <xpath expr="//field[@name='concepto_count']" position="attributes">
+                    <attribute name="groups">l10n_cu_eppa.group_eppa_planificacion_municipio</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

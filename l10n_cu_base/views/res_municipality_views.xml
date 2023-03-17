@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--
+        Municipality
+        -->
+        <record id="view_country_state_municipality_tree" model="ir.ui.view">
+            <field name="name">Municipality</field>
+            <field name="model">l10n_cu_base.res_municipality</field>
+            <field name="arch" type="xml">
+                <tree string="Municipality">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="dpa_code"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_country_state_municipality_search" model="ir.ui.view">
+            <field name="name">Municipality</field>
+            <field name="model">l10n_cu_base.res_municipality</field>
+            <field name="arch" type="xml">
+                <search string="Municipality">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="dpa_code"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_country_state_municipality_form" model="ir.ui.view">
+            <field name="name">Municipality</field>
+            <field name="model">l10n_cu_base.res_municipality</field>
+            <field name="arch" type="xml">
+                <form string="Municipality">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="dpa_code"/>
+                        <field name="state_id" options='{"no_open": True}'/>
+                        <field name="country_id" options='{"no_open": True}'/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_country_state_municipality" model="ir.actions.act_window">
+            <field name="name">Municipality</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_cu_base.res_municipality</field>
+            <field name="view_id" ref="view_country_state_municipality_tree"/>
+            <field name="help">If you are working on Cuban market, you can manage the different municipality you are working on from here. Each municipality is attached to one state.</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_country_state_municipality"
+        action="action_country_state_municipality"
+        name="Municipality" parent="contacts.menu_localisation"
+        sequence="3"/>
+    </data>
+</odoo>

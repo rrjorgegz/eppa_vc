@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mrp_department_product_rule" model="ir.rule">
+            <field name="name">Product Template multi Mrp Department rule</field>
+            <field name="model_id" ref="product.model_product_template"/>
+            <field name="domain_force">['|',('mrp_dep_id', '=', False),('mrp_dep_id', 'in', user.mrp_dep_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('mrp.group_mrp_user')),]"/>
+        </record>
+        <record id="mrp_department_mrp_bom_rule" model="ir.rule">
+            <field name="name">Mrp Bom multi Mrp Department rule</field>
+            <field name="model_id" ref="mrp.model_mrp_bom"/>
+            <field name="domain_force">['|',('mrp_dep_id', '=', False),('mrp_dep_id', 'in', user.mrp_dep_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('mrp.group_mrp_user')),]"/>
+        </record>
+        <record id="production_unit_product_rule" model="ir.rule">
+            <field name="name">Product Template multi Production Unit rule</field>
+            <field name="model_id" ref="product.model_product_template"/>
+            <field name="domain_force">['|',('prod_unit_id', '=', False),('prod_unit_id', 'in', user.prod_unit_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('mrp.group_mrp_user')),]"/>
+        </record>
+        <record id="production_unit_mrp_bom_rule" model="ir.rule">
+            <field name="name">Mrp Bom multi Production Unit rule</field>
+            <field name="model_id" ref="mrp.model_mrp_bom"/>
+            <field name="domain_force">['|',('prod_unit_id', '=', False),('prod_unit_id', 'in', user.prod_unit_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('mrp.group_mrp_user')),]"/>
+        </record>
+    </data>
+</odoo>

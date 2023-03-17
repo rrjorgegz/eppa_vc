@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_wage_worker" model="ir.actions.report">
+            <field name="name">Wage of the Worker</field>
+            <field name="model">l10n_cu_mrp.wage_worker</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">l10n_cu_eppa.wage_worker</field>
+            <field name="report_file">l10n_cu_eppa.wage_worker</field>
+            <field name="print_report_name">'Wage of the Worker'</field>
+            <field name="binding_model_id" ref="l10n_cu_mrp.model_l10n_cu_mrp_wage_worker"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="wage_worker">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+                        <head>
+                            <style>
+                            </style>
+                        </head>
+                        <div class="page">
+                            <div>
+                                <p class="text-center">
+                                    REMOVE OF THE EXPENSES OF
+                                </p>
+                                <p class="text-center">
+                                    "WAGE OF THE WORKERS OF THE PRODUCTION"
+                                </p>
+                                <p>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    COMPANY :
+                                                    <t t-esc="o.company_id.name"/>
+                                                </th>
+                                                <th>
+                                                    ORGANISM :
+                                                    <t t-esc="o.company_id.partner_id.organism_id.name"/>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </p>
+                                <p>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    DESCRIPTION OF THE PRODUCT OR SERVICE :
+                                                    <t t-esc="o.mrp_bom_id.product_tmpl_id.name"/>
+                                                </th>
+                                                <th>
+                                                    CODE
+                                                    <t t-esc="o.mrp_bom_id.code"/>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </p>
+                                <p class="text-center">
+                                    UNIT OF VALUE :
+                                    <t t-esc="o.currency_id.name"/>
+                                </p>
+
+                            </div>
+                            <div class="row mt32 mb32">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>JOB</th>
+                                            <th>QTY. OF WORKERS</th>
+                                            <th>CAT. OCCUPATIONAL</th>
+                                            <th>SCALE GROUP</th>
+                                            <th>WAGE / HOUR</th>
+                                            <th>NORMA TIME (h)</th>
+                                            <th>EXPENSE WAGE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="o.fuerza_ids" t-as="ft">
+                                            <tr>
+                                                <th>
+                                                    <t t-esc="ft.job.name"/>
+                                                </th>
+                                                <th>
+                                                    <t t-esc="ft.cant_trabajadores"/>
+                                                </th>
+                                                <th>
+                                                    <t t-esc="ft.category.name"/>
+                                                </th>
+                                                <th>
+                                                    <t t-esc="ft.grupo_escala.name"/>
+                                                </th>
+                                                <th>
+                                                    <t t-esc="'{0:.5f}'.format(ft.salario_hora )"/>
+                                                </th>
+                                                <th>
+                                                    <t t-esc="'{0:.5f}'.format(ft.norma_tiempo )"/>
+                                                </th>
+                                                <th>
+                                                    <t t-esc="'{0:.5f}'.format(ft.gasto_salario )"/>
+                                                </th>
+                                            </tr>
+                                        </t>
+                                        <tr>
+                                                <th colspan="5"/>
+                                                <th>
+                                                    TOTAL
+                                                </th>
+                                                <th>
+                                                    <t t-esc="'{0:.5f}'.format(o.total_salario )"/>
+                                                </th>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <p>
+                                    <strong>
+                                        Basic Wage :
+                                    </strong>
+                                    <t t-esc="'{0:.5f}'.format(o.total_salario)"/>
+                                    <span>/</span>
+                                    <t t-esc="'{0:.5f}'.format(o.a1)"/>
+                                    <span>*</span>
+                                    <t t-esc="'{0:.5f}'.format(o.a2)"/>
+                                    <span>=</span>
+                                    <t t-esc="'{0:.5f}'.format(o.salario_basico)"/>
+                                </p>
+                            </div>
+                            <div class="aprobado_por">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>MADE FOR</th>
+                                            <th>SIGNS</th>
+                                            <th>JOB</th>
+                                            <th>TELEPHONE</th>
+                                            <th>DATE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <t t-esc="o.confeccionado_por.name"/>
+                                            </th>
+                                            <th>
+
+                                            </th>
+                                            <th>
+                                                <t t-esc="o.confeccionado_por.job_id.name"/>
+                                            </th>
+                                            <th>
+                                                <t t-esc="o.confeccionado_por.phone"/>
+                                            </th>
+                                            <th rowspan="5">
+                                                <t t-esc="o.date"/>
+                                            </th>
+
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4"/>
+                                        </tr>
+                                        <tr>
+                                            <th>APPROVED FOR</th>
+                                            <th>SIGNS</th>
+                                            <th>JOB</th>
+                                            <th>TELEPHONE</th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <t t-esc="o.aprobado_por.name"/>
+                                            </th>
+                                            <th/>
+                                            <th>
+                                                <t t-esc="o.aprobado_por.job_id.name"/>
+                                            </th>
+                                            <th>
+                                                <t t-esc="o.aprobado_por.phone"/>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

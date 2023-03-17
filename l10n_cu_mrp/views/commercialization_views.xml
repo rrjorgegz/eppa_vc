@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="commercialization_form_view" model="ir.ui.view">
+            <field name="name">Form of Commercialization</field>
+            <field name="model">l10n_cu_mrp.commercialization</field>
+            <field name="arch" type="xml">
+                <form string="Form of Commercialization">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="currency_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="commercialization_tree_view" model="ir.ui.view">
+            <field name="name">Form of Commercialization</field>
+            <field name="model">l10n_cu_mrp.commercialization</field>
+            <field name="arch" type="xml">
+                <tree string="Form of Commercialization">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="currency_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="commercialization_graph_view" model="ir.ui.view">
+            <field name="name">Form of Commercialization</field>
+            <field name="model">l10n_cu_mrp.commercialization</field>
+            <field name="arch" type="xml">
+                <graph string="Form of Commercialization">
+                    <field name="name"/>
+                    <field name="currency_id" type="measure"/>
+                    <field name="code"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="commercialization_pivot_view" model="ir.ui.view">
+            <field name="name">Form of Commercialization</field>
+            <field name="model">l10n_cu_mrp.commercialization</field>
+            <field name="arch" type="xml">
+                <pivot string="Form of Commercialization">
+                    <field name="name" type="row"/>
+                    <field name="code" type="row"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="commercialization_search_view" model="ir.ui.view">
+            <field name="name">Form of Commercialization</field>
+            <field name="model">l10n_cu_mrp.commercialization</field>
+            <field name="arch" type="xml">
+                <search string="Form of Commercialization">
+                    <group expand="1" string="Group By">
+                        <field name="name"/>
+                        <field name="code"/>
+                        <filter string="Group By Name" name="name" domain="[]"
+                                context="{'group_by':'name'}"/>
+                        <filter string="Group By Code" name="code" domain="[]"
+                                context="{'group_by':'code'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="commercialization_kanban_view" model="ir.ui.view">
+            <field name="name">Form of Commercialization</field>
+            <field name="model">l10n_cu_mrp.commercialization</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_res_partner_kanban">
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title oe_partner_heading">
+                                        <field name="name"/>
+                                    </strong>
+                                </div>
+                                <div>
+                                    <field name="code"/>
+                                    <field name="currency_id"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="commercialization_act_window" model="ir.actions.act_window">
+            <field name="name">Form of Commercialization</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_cu_mrp.commercialization</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{"search_default_name":""}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Click here to add new Form of Commercialization.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Form of Commercialization" id="commercialization_menu" parent="mrp.menu_mrp_configuration"
+                  action="commercialization_act_window" sequence="40"/>
+
+    </data>
+</odoo>

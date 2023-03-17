@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="cat_0" model="l10n_cu_hr.occupational_category">
+            <field name="name">Ninguno</field>
+            <field name="code">NON</field>
+        </record>
+        <record id="cat_1" model="l10n_cu_hr.occupational_category">
+            <field name="name">Operario</field>
+            <field name="code">OPE</field>
+        </record>
+        <record id="cat_2" model="l10n_cu_hr.occupational_category">
+            <field name="name">Servicios</field>
+            <field name="code">SRV</field>
+        </record>
+        <record id="cat_3" model="l10n_cu_hr.occupational_category">
+            <field name="name">Administrativos</field>
+            <field name="code">ADM</field>
+        </record>
+        <record id="cat_4" model="l10n_cu_hr.occupational_category">
+            <field name="name">Técnicos</field>
+            <field name="code">TEC</field>
+        </record>
+        <record id="cat_5" model="l10n_cu_hr.occupational_category">
+            <field name="name">Ejecutivos</field>
+            <field name="code">EJE</field>
+        </record>
+    </data>
+</odoo>
