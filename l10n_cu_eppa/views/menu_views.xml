@@ -1,10 +1,9 @@
 <odoo>
     <data>
-        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_produccion_municipio"/>
-        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_produccion_provincia"/>
-        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_planificacion_municipio"/>
-        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_planificacion_provincia"/>
-        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_contabilidad_municipio"/>
-        <menuitem id="mrp.menu_mrp_root" groups="l10n_cu_eppa.group_eppa_contabilidad_provincia"/>
+        <menuitem id="mrp.menu_mrp_root"
+                  name="Manufacturing"
+                  groups="mrp.group_mrp_user,mrp.group_mrp_manager,l10n_cu_eppa.group_eppa_produccion_municipio,l10n_cu_eppa.group_eppa_produccion_provincia,l10n_cu_eppa.group_eppa_planificacion_municipio,l10n_cu_eppa.group_eppa_planificacion_provincia,l10n_cu_eppa.group_eppa_contabilidad_municipio,l10n_cu_eppa.group_eppa_contabilidad_provincia"
+                  web_icon="mrp,static/description/icon.png"
+                  sequence="35"/>
     </data>
 </odoo>
