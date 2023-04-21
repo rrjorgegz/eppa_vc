@@ -12,7 +12,8 @@ class MrpProduction(models.Model):
     weight = fields.Float(string='Weight', related='product_tmpl_id.weight', digits='Product Unit of Measure',
                           default=0)
     total = fields.Float(string='Cost of Production', default=0, digits='Product Unit of Measure', required=True)
-
+    prod_unit_id = fields.Many2one('production.unit', string='Production Unit', default=lambda self: self.env.user.prod_unit_id, required=True)
+ 
 
     @api.onchange('produccion')
     def get_product_qty(self):

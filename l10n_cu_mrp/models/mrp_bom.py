@@ -16,7 +16,6 @@ class MrpBom(models.Model):
                                     compute_sudo=False)
     confeccionado_por = fields.Many2one('hr.employee', string='Made for')
     aprobado_por = fields.Many2one('hr.employee', string='Approved for')
-    prod_unit_id = fields.Many2one('production.unit', string='Production Unit',default=lambda self: self.env.user.prod_unit_id)
     mrp_dep_id = fields.Many2one('mrp.department', string='Mrp Department',default=lambda self: self.env.user.mrp_dep_id)
 
     def _compute_salario_obrero_count(self):

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <record id="stock.warehouse0" model="stock.warehouse">
-            <field name="partner_id" ref="base.main_partner"/>
-            <field name="name">Almacen-EPPA</field>
-            <field name="code">EPPA</field>
-        </record>
+<!--        <record id="stock.warehouse0" model="stock.warehouse">-->
+<!--            <field name="partner_id" ref="base.main_partner"/>-->
+<!--            <field name="name">Almacen-EPPA</field>-->
+<!--            <field name="code">EPPA</field>-->
+<!--        </record>-->
 
 <!--        <record id="stock.seq_picking_internal" model="ir.sequence">-->
 <!--            <field name="name">Secuencia de Producción</field>-->
