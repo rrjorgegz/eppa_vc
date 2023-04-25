@@ -38,7 +38,6 @@
                     <field name="confeccionado_por"/>
                     <field name="aprobado_por"/>
                     <field name="mrp_dep_id"/>
-                    <field name="prod_unit_id"/>
                 </xpath>
                 <xpath expr="//field[@name='bom_line_ids']" position="after">
                     <group>
@@ -64,7 +63,6 @@
                     <field name="confeccionado_por"/>
                     <field name="aprobado_por"/>
                     <field name="mrp_dep_id"/>
-                    <field name="prod_unit_id"/>
                 </field>
             </field>
         </record>

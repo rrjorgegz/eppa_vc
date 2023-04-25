@@ -21,10 +21,8 @@ class MrpBomLine(models.Model):
         for t in self:
             quantity = 0
             if t.product_uom_id:
-                print("calculo  "+str(t.product_uom_id.name)+"  "+str(t.product_qty)+"   "+str(t.product_id.product_tmpl_id.uom_id.name))
                 quantity = t.product_uom_id._compute_quantity(qty=t.product_qty,
                                                               to_unit=t.product_id.product_tmpl_id.uom_id,
                                                               raise_if_failure=False)
-                print("calculo  cantidad :" +str(quantity)+"   precio :"+str(t.standard_price))
             t.total_importe = t.standard_price * quantity
         return

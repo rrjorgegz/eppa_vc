@@ -8,6 +8,9 @@
             <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
             <field name="arch" type="xml">
 
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="prod_unit_id"/>
+                </xpath>
                 <xpath expr="//field[@name='bom_id']" position="after">
 
                     <label for="produccion"/>
