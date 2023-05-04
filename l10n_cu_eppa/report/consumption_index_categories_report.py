@@ -43,14 +43,6 @@ class ConsumptionIndexCategoriesReport(models.AbstractModel):
         x = self.env.cr.fetchall()
 
 
-        print(company_id)
-        print(x[0][0])
-        for company in company_id:
-            z = self.env['mrp.production'].search([('date_planned_start','>=',start),('date_planned_start','<=',end)])
-            print(self.get_childs(company))
-        for prod_unit in prod_unit_id:
-            print(self.get_childs(prod_unit))
-
         docs = []
         comp = self.env.ref('base.main_company')
         return {

@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
+    <data noupdate="0">
         <record id="production_unit_eppa" model="production.unit">
 			<field name="name">Empresa Provincial Productora de Alimentos</field>
 			<field name="partner_id" ref="base.main_partner"/>
-			<field name="level">1</field>
 		</record>
-    </data>
+		<record id="ueb_quemado_eppa" model="production.unit">
+			<field name="name">UEB Quemado de Güines</field>
+			<field name="parent_id" ref="production_unit_eppa"/>
+		</record>
+		<record id="panaderia_dorado_eppa" model="production.unit">
+			<field name="name">PANADERIA EL DORADO</field>
+			<field name="parent_id" ref="ueb_quemado_eppa"/>
+		</record>
+		<record id="panaderia_flor_guines_eppa" model="production.unit">
+			<field name="name">PANADERIA FLOR DE GUINES</field>
+			<field name="parent_id" ref="ueb_quemado_eppa"/>
+		</record>
+		<record id="panaderia_especial_eppa" model="production.unit">
+			<field name="name">PANADERIA LA ESPECIAL</field>
+			<field name="parent_id" ref="ueb_quemado_eppa"/>
+		</record>
+		<record id="panaderia_social_eppa" model="production.unit">
+			<field name="name">PANADERIA LA SOCIAL</field>
+			<field name="parent_id" ref="ueb_quemado_eppa"/>
+		</record>
+		<record id="panaderia_salvadora_eppa" model="production.unit">
+			<field name="name">PANADERIA SALVADORA</field>
+			<field name="parent_id" ref="ueb_quemado_eppa"/>
+		</record>
+		<record id="panaderia_vanguardia_eppa" model="production.unit">
+			<field name="name">PANADERIA LA VANGUARDIA</field>
+			<field name="parent_id" ref="ueb_quemado_eppa"/>
+		</record>
+	</data>
 </odoo>

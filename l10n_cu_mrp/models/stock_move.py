@@ -22,6 +22,6 @@ class StockMove(models.Model):
     @api.depends('product_id', 'product_uom', 'product_qty')
     def get_total_cost(self):
         for t in self:
-            t.total_cost = t.product_id.uom_id._compute_quantity(qty=t.product_uom_qty, to_unit=t.product_uom,
-                                                                       raise_if_failure=False) * t.cost
+            t.total_cost = t.product_id.uom_id._compute_quantity(t.product_uom_qty ,to_unit=t.product_uom,
+                                                                       raise_if_failure=False)*t.cost
         return

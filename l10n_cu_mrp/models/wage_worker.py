@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from pip._vendor.urllib3 import fields
 from datetime import datetime
 from odoo import api, fields, models, _
 from odoo.exceptions import AccessError, UserError

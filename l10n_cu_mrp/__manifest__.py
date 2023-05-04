@@ -20,13 +20,6 @@
 
     # always loaded
     'data': [
-        'data/commercialization_data.xml',
-        'data/uom_data.xml',
-        'data/stock_data.xml',
-        'data/product_categories_data.xml',
-        'data/decimal_precision_data.xml',
-        'data/mrp_department_data.xml',
-        'data/production_unit_data.xml',
         'views/menu_views.xml',
         'views/commercialization_views.xml',
         'views/mrp_bom_line_views.xml',
@@ -40,8 +33,17 @@
         'views/res_users_views.xml',
         'views/mrp_department_views.xml',
         'views/product_template_views.xml',
+        'views/product_product_views.xml',
         'security/ir.model.access.csv',
         'security/security.xml',
+        'data/commercialization_data.xml',
+        'data/uom_data.xml',
+        'data/stock_data.xml',
+        'data/product_categories_data.xml',
+        'data/decimal_precision_data.xml',
+        'data/mrp_department_data.xml',
+        'data/production_unit_data.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [],

@@ -13,3 +13,4 @@ from . import prduction_unit
 from . import res_users
 from . import mrp_department
 from . import product_template
+from . import product_product
