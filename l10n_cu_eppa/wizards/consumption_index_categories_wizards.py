@@ -17,19 +17,16 @@ class ConsumptionIndexCategoriesWizards(models.TransientModel):
                           day=calendar.monthrange(year=datetime.today().year, month=datetime.today().month)[1]),
                       required=True)
 
-    is_todos_company = fields.Selection([('uno', 'A Company'), ('todos', 'All the Companies')],
-                                        'Select Companies',
-                                        help='To select Companies', default="todos",
-                                        required=True)
     company_id = fields.Many2one('res.company', string='Company',
                                  default=lambda self: self.env.user.company_id,
+                                 domain=lambda self: [('id','in',self.env.user.company_ids.ids)],
                                  required=True)
     is_todos_prod_unit = fields.Selection([('uno', 'A Production Unit'), ('todos', 'All the Production Units')],
-                                        'Select Production Unit',
-                                        help='To select Production Unit', default="todos",
-                                        required=True)
-    prod_unit_id = fields.Many2one('production.unit', string='Production Unit',required=True,
-                                 default=lambda self: self.env.user.prod_unit_id)
+                                          'Select Production Unit',
+                                          help='To select Production Unit', default="todos",
+                                          required=True)
+    prod_unit_id = fields.Many2one('production.unit', string='Production Unit', required=True,
+                                   default=lambda self: self.env.user.prod_unit_id)
 
     is_todos = fields.Selection([('uno', 'An Ingredient'), ('todos', 'All the Ingredients')],
                                 'Select Ingredients',
@@ -41,12 +38,13 @@ class ConsumptionIndexCategoriesWizards(models.TransientModel):
                                       help='Product', index=True)
     commercialization_id = fields.Many2one('l10n_cu_mrp.commercialization', help='Form of Commercialization',
                                            required=True, default=lambda self: self.env.ref('l10n_cu_mrp.MN').id)
-    is_category = fields.Selection(
-        [('uno', 'An Category'), ('todos', 'All the Category')],
-        'Select Category',
-        help='To select Category', default="todos",
-        required=True)
-    category_id = fields.Many2one('product.category', help='Category',index=True)
+
+    departament_id = fields.Many2one('mrp.department', help='MRP Departament', required=True,
+                                     default=lambda self: self.env.ref('l10n_cu_mrp.mrp_department_produccion').id)
+
+    is_category = fields.Selection([('uno', 'An Category'), ('todos', 'All the Category')], 'Select Category',
+                                   help='To select Category', default="todos", required=True)
+    category_id = fields.Many2one('product.category', help='Category', index=True)
 
     def get_report(self):
         data = {
@@ -56,7 +54,6 @@ class ConsumptionIndexCategoriesWizards(models.TransientModel):
                 'date': self.date,
                 'start': self.start,
                 'end': self.end,
-                'is_todos_company': self.is_todos_company,
                 'company_id': self.company_id.id,
                 'is_todos': self.is_todos,
                 'product_tmpl_id': self.product_tmpl_id.id,
@@ -65,7 +62,7 @@ class ConsumptionIndexCategoriesWizards(models.TransientModel):
                 'category_id': self.category_id.id,
                 'is_todos_prod_unit': self.is_todos_prod_unit,
                 'prod_unit_id': self.prod_unit_id.id,
-
+                'departament_id': self.departament_id.id,
             },
         }
         return self.env.ref('l10n_cu_eppa.action_report_consumption_index_categories').report_action(self, data=data)

@@ -48,8 +48,8 @@
         <field name="binding_model_id" ref="model_l10n_cu_eppa_consumption_index_products_wizards"/>
         <field name="target">new</field>
     </record>
-    <menuitem name="Consumption Index for Products" id="menu_consumption_index_products"
-              parent="mrp.menu_mrp_reporting"
-              action="consumption_index_products_action" sequence="50"/>
+<!--    <menuitem name="Consumption Index for Products" id="menu_consumption_index_products"-->
+<!--              parent="mrp.menu_mrp_reporting"-->
+<!--              action="consumption_index_products_action" sequence="50"/>-->
 
 </odoo>

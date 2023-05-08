@@ -25,224 +25,137 @@ class ConsumptionIndexCompaniesReport(models.AbstractModel):
             aux1 = "('')"
         return aux1
 
-    def convert_models_to_name(self, models):
-        aux1 = '('
-        aux2 = ''
-        count = 0
-        for x1 in models:
-            count = count + 1
-            aux2 = aux2 + "'" + str(x1.name) + "'"
-            if count != len(models):
-                aux2 = aux2 + ','
-        aux1 = aux1 + aux2 + ')'
-        if 0 == len(models):
-            aux1 = "('')"
-        return aux1
-
-    def convert_models_to_array_ids(self, models):
-        x = []
-        for x1 in models:
-            x.append(x1.id)
-        return x
-
     @api.model
     def _get_report_values(self, docids, data=None):
         date = datetime.strptime(data['form']['date'], DATE_FORMAT).date()
         start = datetime.strptime(data['form']['start'], DATE_FORMAT).date()
         end = datetime.strptime(data['form']['end'], DATE_FORMAT).date()
-
-        fi = datetime(year=start.year, month=start.month, day=start.day, tzinfo=None)
-        fe = datetime(year=end.year, month=end.month, day=end.day, hour=23, minute=59, second=59, microsecond=999999,
+        f1 = datetime(year=start.year, month=start.month, day=start.day, tzinfo=None)
+        f2 = datetime(year=end.year, month=end.month, day=end.day, hour=23, minute=59, second=59, microsecond=999999,
                       tzinfo=None)
-
-        # utiles para las condiciones de limitar
-        company_id = self.env.user.company_ids
-        is_todos_company = str(data['form']['is_todos_company'])
-        if is_todos_company == 'uno':
-            company_id = self.env['res.company'].search([('id', '=', data['form']['company_id'])])
-        is_ingredient = str(data['form']['is_ingredient'])
+        company_id = self.env['res.company'].search([('id', '=', data['form']['company_id'])])
+        is_ingredient = str(data['form']['is_todos'])
         ingredient_id = self.env['product.template'].search([])
         if is_ingredient == 'uno':
             ingredient_id = self.env['product.template'].search([('id', '=', data['form']['product_tmpl_id'])])
+        is_category = str(data['form']['is_category'])
+        category_id = self.env['product.category'].search([])
+        if is_category == 'uno':
+            category_id = self.env['product.category'].search([('id', '=', data['form']['category_id'])])
+        is_todos_prod_unit = str(data['form']['is_todos_prod_unit'])
+        prod_unit_id = self.env['production.unit'].search([])
+        if is_todos_prod_unit == 'uno':
+            prod_unit_id = self.env['production.unit'].search([('id', '=', data['form']['prod_unit_id'])])
         commercialization_id = self.env['l10n_cu_mrp.commercialization'].search(
             [('id', '=', data['form']['commercialization_id'])])
-        company = self.convert_models_to_array_ids(company_id)
-        commercialization = self.convert_models_to_ids(commercialization_id)
-        ingredient = self.convert_models_to_name(ingredient_id)
-
-        # Tabla de producción de cada empresa
-        query = """SELECT  pd.code,AVG(pd.indice_consumo) AS indice_consumo,AVG(pd.indice_consumo_plan) AS indice_consumo_plan,SUM(pd.consumo_plan)AS consumo_plan,SUM(pd.product_uom_qty)AS consumo_real,(SUM(pd.product_uom_qty) - SUM(pd.consumo_plan)) AS exceso,(SUM(pd.product_uom_qty) /nullif(SUM(pd.consumo_plan),0)*100) AS cumplimiento,pd.ingrediente,pd.ingrediente_id,pd.commercialization,pd.commercialization_id,pd.company,pd.company_id,pd.company_parent_id,pd.partner,pd.partner_parent_id,pd.partner_name
-                              FROM  (SELECT  ing.default_code AS code, sm.indice_consumo,sm.indice_consumo_plan,sm.consumo_plan,(sm.product_uom_qty / nullif(ui.factor,0)) AS product_uom_qty,ing.name AS ingrediente,ing.id AS ingrediente_id,co.name AS commercialization,co.id AS commercialization_id,rc.name AS company,rc.id AS company_id,rc.parent_id AS company_parent_id, rt.id AS partner, rt.patner_matriz_id AS partner_parent_id, rt.name AS partner_name
-                              FROM mrp_production mp  INNER JOIN mrp_bom mb  ON mp.bom_id = mb.id INNER JOIN res_company rc ON mp.company_id = rc.id
-                              INNER JOIN product_product pp ON mp.product_id = pp.id INNER JOIN product_template pt ON pp.product_tmpl_id = pt.id
-                              INNER JOIN stock_picking_type st ON mp.picking_type_id = st.id
-                              INNER JOIN stock_warehouse sw ON st.warehouse_id = sw.id
-                              INNER JOIN res_partner rt ON sw.partner_id = rt.id
-                              INNER JOIN stock_move sm ON  mp.id = sm.raw_material_production_id INNER JOIN l10n_cu_mrp_commercialization co ON  mb.forma_c = co.id
-                              INNER JOIN uom_uom  AS  ui ON sm.product_uom =ui.id INNER JOIN product_product ppt ON sm.product_id = ppt.id INNER JOIN product_template AS  ing ON  ppt.product_tmpl_id = ing.id 
-                               AND ing.purchase_ok=True AND ing.active=True AND ing.name IN """ + ingredient + """
-                              WHERE mp.date_planned_start >= ' """ + str(fi) + """ '
-                              AND mp.date_planned_start <=' """ + str(fe) + """ ' AND mp.state='done' OR mp.state='confirmed' 
-                              AND co.id IN """ + commercialization + """)AS pd 
-                              GROUP BY code,ingrediente,ingrediente_id,commercialization,commercialization_id,company,company_id,company_parent_id,partner,partner_parent_id,partner_name
-                              ORDER BY pd.company_id
-                        """
-        print(query)
+        departament_id = self.env['mrp.department'].search([('id', '=', data['form']['departament_id'])])
+        max_level_prod_unit = """ SELECT MAX(level) FROM  production_unit"""
         self.flush()
-        self.env.cr.execute(query)
-        x = self.env.cr.fetchall()
-
-        # Total de ingredientes q se utilizan
-        query1 = """SELECT  ingrediente FROM (""" + query + """) AS tabla1 GROUP BY ingrediente"""
+        self.env.cr.execute(max_level_prod_unit)
+        max_level = self.env.cr.fetchall()
+        prod_unit = """SELECT pu.name,pu.level FROM  production_unit pu"""
         self.flush()
-        self.env.cr.execute(query1)
-        x1 = self.env.cr.fetchall()
-        # Formas de comercialización q se utilizan
-        query1 = """SELECT  commercialization_id,commercialization FROM (""" + query + """) AS tabla1 GROUP BY commercialization_id,commercialization"""
+        self.env.cr.execute(prod_unit)
+        x_prod_unit = self.env.cr.fetchall()
+        padre_prod_unit = """SELECT pu.name,pu.level, pu1.name AS parent FROM  production_unit pu
+                            INNER JOIN production_unit pu1 ON pu.parent_id = pu1.id"""
         self.flush()
-        self.env.cr.execute(query1)
-        x2 = self.env.cr.fetchall()
+        self.env.cr.execute(padre_prod_unit)
+        x_padre_prod_unit = self.env.cr.fetchall()
 
-        # ordenar las compañías descendentemente para q se sume gradual y no tener un bucle interminable
-        aux_query = """SELECT id,name,parent_id FROM res_company ORDER BY id DESC"""
+        query_init = """SELECT t0.nombre_comp,t0.nombre_prod_unit,t0.prod_categ,t0.nombre_ingrediente, AVG(t0.indice_consumo) AS indice_consumo,AVG(t0.indice_consumo_plan) AS indice_consumo_plan,SUM(t0.product_uom_qty) AS consumo_real, SUM(t0.consumo_plan)AS consumo_plan, (SUM(t0.product_uom_qty) - SUM(t0.consumo_plan)) AS exceso,(SUM(t0.product_uom_qty) /nullif(SUM(t0.consumo_plan),0)*100) AS cumplimiento,SUM(t0.produccion) FROM
+                    (SELECT mp.produccion,rcmp.name AS nombre_comp, pcmp.name AS prod_categ, pump.id AS prod_unit_id,pump.name AS nombre_prod_unit, mdmp.name AS nombre_mrp_dep ,ptmp.name AS nombre_production,pcmp.name AS categoria_production,rcmp.name company_production,ptmb.name AS nombre_lista_material,ptsm.id AS ingrediente_id,ptsm.name AS nombre_ingrediente,sm.indice_consumo,bl.indice_consumo AS indice_consumo_plan,sm.product_uom_qty/uu.factor AS product_uom_qty,sm.consumo_plan/uu.factor AS consumo_plan
+                    FROM mrp_production mp 
+                    INNER JOIN stock_move sm ON  mp.id = sm.raw_material_production_id
+                    INNER JOIN mrp_bom mb ON mp.bom_id = mb.id
+                    INNER JOIN product_template ptmb ON mb.product_tmpl_id = ptmb.id
+                    INNER JOIN product_product ppsm ON sm.product_id = ppsm.id
+                    INNER JOIN product_template ptsm ON ppsm.product_tmpl_id = ptsm.id AND ptsm.id IN """ + f"{self.convert_models_to_ids(ingredient_id)}" + """
+                    INNER JOIN product_product ppmp ON mp.product_id = ppmp.id
+                    INNER JOIN product_template ptmp ON ppmp.product_tmpl_id = ptmp.id
+                    INNER JOIN product_category pcmp ON ptmp.categ_id = pcmp.id AND pcmp.id IN """ + f"{self.convert_models_to_ids(category_id)}" + """
+                    INNER JOIN res_company rcmp ON ptmp.company_id = rcmp.id AND rcmp.id = """ + f"{company_id.id}" + """
+                    INNER JOIN mrp_department mdmp ON ppmp.mrp_dep_id = mdmp.id AND mdmp.id = """ + f"{departament_id.id}" + """
+                    INNER JOIN production_unit pump ON mp.prod_unit_id = pump.id 
+                    INNER JOIN l10n_cu_mrp_commercialization  AS  lc ON mb.forma_c =lc.id AND lc.id = """ + f"{commercialization_id.id}" + """
+                    INNER JOIN mrp_bom_line bl ON mb.id = bl.bom_id
+                    INNER JOIN product_product ppbl ON bl.product_id = ppbl.id AND ppbl.id=ppsm.id
+                    INNER JOIN product_template ptbl ON ppbl.product_tmpl_id = ptbl.id
+                    INNER JOIN uom_uom  AS  uu ON sm.product_uom =uu.id
+                    WHERE mp.state='done' OR mp.state='confirmed'
+                    AND mp.date_planned_start <='""" + str(f2) + """'
+                    AND mp.date_planned_start >= '""" + str(f1) + """' ) AS t0
+                    GROUP BY t0.nombre_comp,t0.nombre_prod_unit,t0.prod_categ,t0.nombre_ingrediente
+
+                    """
+        print(query_init)
         self.flush()
-        self.env.cr.execute(aux_query)
-        aux_x = self.env.cr.fetchall()
+        self.env.cr.execute(query_init)
+        matrix_data = self.env.cr.fetchall()
 
-        query4 = """SELECT partner,partner_parent_id, partner_name,company FROM (""" + query + """) AS tabla1 GROUP BY partner,partner_parent_id,partner_name,company ORDER BY partner DESC"""
-        self.flush()
-        self.env.cr.execute(query4)
-        aux_4 = self.env.cr.fetchall()
+        s = max_level[0][0]
+        for i in range(max_level[0][0]):  # recorrer por level
+            for j in range(len(x_prod_unit)):  # recorrer unidad (lvl)
+                if x_prod_unit[j][1] == s:
+                    datos_padre = []
+                    for m in range(len(matrix_data)):  # recorrer datos para la unidad
+                        if x_prod_unit[j][0] == matrix_data[m][1]:
+                            datos_padre.append(matrix_data[m])  # datos para la unidad
+                    datos_hijo = []
+                    for k in range(len(x_padre_prod_unit)):  # recorrer hijos de cada unidad (lvl)
+                        if x_prod_unit[j][0] == x_padre_prod_unit[k][2]:
+                            for m in range(len(matrix_data)):  # recorrer datos para el hijo unidad
+                                if x_padre_prod_unit[k][0] == matrix_data[m][1]:
+                                    x1_hijo = (
+                                        matrix_data[m][0], x_padre_prod_unit[k][2], matrix_data[m][2],
+                                        matrix_data[m][3],
+                                        matrix_data[m][4], matrix_data[m][5], matrix_data[m][6], matrix_data[m][7],
+                                        matrix_data[m][8], matrix_data[m][9], matrix_data[m][10])
+                                    # print("x1_hijo :",x1_hijo)
+                                    datos_hijo.append(x1_hijo)  # recorrer datos para el hijo unidad
+                    matrix_data += datos_hijo
+            s -= 1
+        matrix_sql = ""
+        count = 0
+        for mat in matrix_data:
+            matrix_sql += f"{mat}"
+            count += 1
+            if count < len(matrix_data):
+                matrix_sql += f","
+        sql = ""
+        t1 = ""
+        if len(matrix_sql) > 0:
+            sql = """SELECT t0.dato0 AS nombre_comp,t0.dato1 AS nombre_prod_unit,t0.dato2 AS prod_categ,t0.dato3 AS nombre_ingrediente, AVG(t0.dato4) AS indice_consumo,AVG(t0.dato5) AS indice_consumo_plan,SUM(t0.dato6) AS consumo_real, SUM(t0.dato7)AS consumo_plan, (SUM(t0.dato6) - SUM(t0.dato7)) AS exceso,(SUM(t0.dato6) /nullif(SUM(t0.dato7),0)*100) AS cumplimiento ,SUM(t0.dato10) AS produccion FROM
+                    (SELECT t1.dato0,t1.dato1,t1.dato2,t1.dato3,t1.dato4,t1.dato5,t1.dato6,t1.dato7,t1.dato8,t1.dato9,t1.dato10 
+                    FROM (VALUES """ + matrix_sql + """)
+                    t1(dato0,dato1,dato2,dato3,dato4,dato5,dato6,dato7,dato8,dato9,dato10)) AS t0
+                    GROUP BY nombre_comp,nombre_prod_unit,prod_categ,nombre_ingrediente
+                    ORDER BY nombre_prod_unit
+                    """
+            t1 = """SELECT t5.prod_categ,t5.nombre_prod_unit, SUM(t5.produccion) FROM
+                    (SELECT t1.prod_categ,t1.nombre_prod_unit,t1.produccion FROM
+                    (""" + sql + """) AS t1
+                    GROUP BY t1.prod_categ,t1.nombre_prod_unit,t1.produccion) AS t5
+                    GROUP BY t5.prod_categ,t5.nombre_prod_unit
+                    """
+        matrix_docs = []
+        docs_categ = []
+        if len(sql) > 0:
+            self.flush()
+            self.env.cr.execute(sql)
+            matrix_docs = self.env.cr.fetchall()
 
-        # crear  una matrix en blanco  o 0 de columana i= cantidad de compañías y j= cantidad de datos
-        i = []
-        for i_company in aux_x:
-            for i_partner in aux_4:
-                for j_ingredientes in x1:
-                    j = {}
-                    j['code'] = None
-                    j['indice_consumo'] = 0
-                    j['indice_consumo_plan'] = 0
-                    j['consumo_plan'] = 0
-                    j['consumo_real'] = 0
-                    j['exceso'] = 0
-                    j['cumplimiento'] = 0
-                    j['ingrediente'] = j_ingredientes[0] or None
-                    j['commercialization'] = commercialization_id.name or None
-                    j['commercialization_id'] = commercialization_id.id or None
-                    j['company'] = i_company[1] or None
-                    j['company_id'] = i_company[0] or None
-                    j['company_parent_id'] = i_company[2] or None
-                    j['partner'] = i_partner[0] or None
-                    j['partner_parent_id'] = i_partner[1] or None
-                    j['partner_name'] = i_partner[2] or None
-                    i.append(j)
+            self.flush()
+            self.env.cr.execute(t1)
+            docs_categ = self.env.cr.fetchall()
+        docs = []
 
-        #     # llenando la matrix con datos obtnidos
-        for i_matriz in i:
-            for dato in x:
-                if dato[7] == i_matriz['ingrediente'] and dato[9] == i_matriz['commercialization'] and dato[11] == \
-                        i_matriz['company']:
-                    i_matriz['code'] = dato[0]
-                    if dato[0] == '':
-                        i_matriz['code'] = dato[9]
-                    i_matriz['indice_consumo'] = dato[1] or 0
-                    i_matriz['indice_consumo_plan'] = dato[2] or 0
-                    i_matriz['consumo_plan'] = dato[3] or 0
-                    i_matriz['consumo_real'] = dato[4] or 0
-                    i_matriz['exceso'] = dato[5] or 0
-                    i_matriz['cumplimiento'] = dato[6] or 0
-
-        # sumar de hijos a padres
-        for i_dato in i:
-            cont = 0
-            for buscando_dato in i:
-                if i_dato['partner'] == buscando_dato['partner_parent_id'] \
-                        and i_dato['commercialization_id'] == buscando_dato['commercialization_id'] \
-                        and i_dato['company'] == buscando_dato['company'] \
-                        and i_dato['ingrediente'] == buscando_dato['ingrediente']:
-                    i_dato['indice_consumo'] = i_dato['indice_consumo'] + buscando_dato['indice_consumo']
-                    i_dato['indice_consumo_plan'] = i_dato['indice_consumo_plan'] + buscando_dato['indice_consumo_plan']
-
-                    i_dato['consumo_real'] = i_dato['consumo_real'] + buscando_dato['consumo_real']
-
-                    i_dato['consumo_plan'] = i_dato['consumo_plan'] + buscando_dato['consumo_plan']
-                    i_dato['exceso'] = i_dato['consumo_real'] - i_dato['consumo_plan']
-
-                    i_dato['cumplimiento'] = 0
-                    aux = 0
-                    if i_dato['consumo_plan'] > 0:
-                        aux = i_dato['consumo_real'] / i_dato['consumo_plan']
-                    i_dato['cumplimiento'] = aux * 100
-
-                    if buscando_dato['consumo_real'] > 0:
-                        cont = cont + 1
-            if cont > 1:
-                i_dato['indice_consumo'] = i_dato['indice_consumo'] / cont
-                i_dato['indice_consumo_plan'] = i_dato['indice_consumo_plan'] / cont
-
-        for i_dato in i:
-            cont = 0
-            for buscando_dato in i:
-                if i_dato['company_id'] == buscando_dato['company_parent_id'] \
-                        and i_dato['commercialization_id'] == buscando_dato['commercialization_id'] \
-                        and i_dato['partner'] == buscando_dato['partner'] \
-                        and i_dato['ingrediente'] == buscando_dato['ingrediente']:
-                    i_dato['indice_consumo'] = i_dato['indice_consumo'] + buscando_dato['indice_consumo']
-                    i_dato['indice_consumo_plan'] = i_dato['indice_consumo_plan'] + buscando_dato['indice_consumo_plan']
-
-                    i_dato['consumo_real'] = i_dato['consumo_real'] + buscando_dato['consumo_real']
-
-                    i_dato['consumo_plan'] = i_dato['consumo_plan'] + buscando_dato['consumo_plan']
-                    i_dato['exceso'] = i_dato['consumo_real'] - i_dato['consumo_plan']
-
-                    i_dato['cumplimiento'] = 0
-                    aux = 0
-                    if i_dato['consumo_plan'] > 0:
-                        aux = i_dato['consumo_real'] / i_dato['consumo_plan']
-                    i_dato['cumplimiento'] = aux * 100
-
-                    if buscando_dato['consumo_real'] > 0:
-                        cont = cont + 1
-            if cont > 1:
-                i_dato['indice_consumo'] = i_dato['indice_consumo'] / cont
-                i_dato['indice_consumo_plan'] = i_dato['indice_consumo_plan'] / cont
-
-        # estructurando para mostrar a la vista
-
-        d = []
-        for aux_a in aux_x:
-            if aux_a[0] in company:
-                a = {}
-                a['company'] = aux_a[1]
-                a['company_id'] = aux_a[0]
-                a['company_parent_id'] = aux_a[2]
-                a['datos'] = []
-                for aux_c in aux_4:
-                    c = {}
-                    c['partner'] = aux_c[2]
-                    c['produccion'] = aux_c[3]
-                    c['datos'] = []
-                    for aux_d in i:
-                        if aux_d['partner'] == aux_c[0] and aux_d['company'] == aux_a[1] and float(
-                                aux_d['consumo_real']) > 0:
-                            j = {}
-                            j['code'] = aux_d['code']
-                            j['indice_consumo'] = aux_d['indice_consumo']
-                            j['indice_consumo_plan'] = aux_d['indice_consumo_plan']
-                            j['consumo_plan'] = aux_d['consumo_plan']
-                            j['consumo_real'] = aux_d['consumo_real']
-                            j['exceso'] = aux_d['exceso']
-                            j['cumplimiento'] = aux_d['cumplimiento']
-                            j['ingrediente'] = aux_d['ingrediente']
-                            j['commercialization'] = aux_d['commercialization']
-                            j['commercialization_id'] = aux_d['commercialization_id']
-                            c['datos'].append(j)
-                    if c['datos'] != []:
-                        a['datos'].append(c)
-                if a['datos'] != []:
-                    d.append(a)
-
+        docs_unit = []
+        for unit in prod_unit_id:
+            docs_unit.append(unit.name)
+        for j in range(len(matrix_docs)):
+            if matrix_docs[j][1] in docs_unit:
+                docs.append(matrix_docs[j])
         comp = self.env.ref('base.main_company')
         return {
             'description': self._description,
@@ -251,7 +164,7 @@ class ConsumptionIndexCompaniesReport(models.AbstractModel):
             'docids': docids,
             'docmodel': data['model'],
             'commercialization_id': commercialization_id,
-            'docs': d,
+            'docs': docs,
             'date': date,
             'start': start,
             'end': end,

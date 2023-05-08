@@ -8,10 +8,7 @@
                 <group>
                     <group>
                         <field name="date"/>
-                        <field name="is_todos_company"/>
-                        <field name="company_id"
-                               attrs="{'invisible': [('is_todos_company', '=', 'todos')], 'required': [('is_todos_company', '=', 'uno')]}"/>
-
+                        <field name="company_id"/>
                     </group>
                     <group>
                         <field name="start"/>
@@ -26,6 +23,10 @@
                     </group>
                     <group>
                         <field name="commercialization_id"/>
+                        <field name="departament_id"/>
+                        <field name="is_todos_prod_unit"/>
+                        <field name="prod_unit_id"
+                               attrs="{'invisible': [('is_todos_prod_unit', '=', 'todos')], 'required': [('is_todos_prod_unit', '=', 'uno')]}"/>
                     </group>
                 </group>
                 <footer>
@@ -45,8 +46,8 @@
         <field name="binding_model_id" ref="model_l10n_cu_eppa_consumption_index_companies_wizards"/>
         <field name="target">new</field>
     </record>
-    <menuitem name="Consumption Index for Companies" id="menu_consumption_index_companies"
-              parent="mrp.menu_mrp_reporting"
-              action="consumption_index_companies_action" sequence="30"/>
+<!--        <menuitem name="Consumption Index for Companies" id="menu_consumption_index_companies"-->
+<!--                  parent="mrp.menu_mrp_reporting"-->
+<!--                  action="consumption_index_companies_action" sequence="30"/>-->
 
 </odoo>

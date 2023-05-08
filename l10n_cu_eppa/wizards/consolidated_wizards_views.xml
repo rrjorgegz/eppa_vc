@@ -41,8 +41,8 @@
         <field name="target">new</field>
     </record>
 
-    <menuitem name="Model AC-03" id="menu_consolidated"
-              parent="mrp.menu_mrp_reporting"
-              action="consolidated_action" sequence="60"/>
+<!--    <menuitem name="Model AC-03" id="menu_consolidated"-->
+<!--              parent="mrp.menu_mrp_reporting"-->
+<!--              action="consolidated_action" sequence="60"/>-->
 
 </odoo>
