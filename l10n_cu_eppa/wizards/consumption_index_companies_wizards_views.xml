@@ -46,8 +46,8 @@
         <field name="binding_model_id" ref="model_l10n_cu_eppa_consumption_index_companies_wizards"/>
         <field name="target">new</field>
     </record>
-<!--        <menuitem name="Consumption Index for Companies" id="menu_consumption_index_companies"-->
-<!--                  parent="mrp.menu_mrp_reporting"-->
-<!--                  action="consumption_index_companies_action" sequence="30"/>-->
+<!--    <menuitem name="Consumption Index for Companies" id="menu_consumption_index_companies"-->
+<!--              parent="mrp.menu_mrp_reporting"-->
+<!--              action="consumption_index_companies_action" sequence="30"/>-->
 
 </odoo>

@@ -15,6 +15,7 @@
         'views/hr_job_views.xml',
         'views/menu_views.xml',
         'data/occupational_category_data.xml',
+        'data/decimal_precision_data.xml',
         # 'data/scale_group_data.xml',
     ],
     'demo': [

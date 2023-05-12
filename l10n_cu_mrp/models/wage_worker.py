@@ -21,11 +21,11 @@ class WageWorker(models.Model):
     currency_id = fields.Many2one('res.currency', string='Currency', store=True,
                                   related='mrp_bom_id.forma_c.currency_id', groups="base.group_multi_currency")
     fuerza_ids = fields.One2many('l10n_cu_mrp.forces_work', 'salario_id', 'Forces of Work', copy=True)
-    total_salario = fields.Float('Total', default=0, digits='Product Unit of Measure', help='Total',
+    total_salario = fields.Float('Total', default=0, digits='Price of the product', help='Total',
                                  compute='_compute_total_salario')
-    a1 = fields.Float('A1',default=0, digits='Product Unit of Measure', help='Volumen de Producción',required=True)
-    a2 = fields.Float('A2', store=True, related='mrp_bom_id.product_qty', digits='Product Unit of Measure', help='A2')
-    salario_basico = fields.Float('Basic wage', default=0, digits='Product Unit of Measure',
+    a1 = fields.Float('A1',store=True, related='mrp_bom_id.product_qty', digits='Price of the product',help='A1 :')
+    a2 = fields.Float('A2',default=0 , digits='Price of the product', help=' A2 : Volumen de Producción',required=True)
+    salario_basico = fields.Float('Basic wage', default=0, digits='Price of the product',
                                   help='Basic wage = Total / a1 * a2', compute='_compute_salario_basico')
     confeccionado_por = fields.Many2one('hr.employee', string='Made for')
     aprobado_por = fields.Many2one('hr.employee', string='Approved for')

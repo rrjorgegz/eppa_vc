@@ -22,7 +22,7 @@ class ConsumptionIndexCategoriesReport(models.AbstractModel):
                 aux2 = aux2 + ','
         aux1 = aux1 + aux2 + ')'
         if 0 == len(models):
-            aux1 = "('')"
+            aux1 = "('0')"
         return aux1
 
     @api.model

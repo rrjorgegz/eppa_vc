@@ -11,8 +11,8 @@ class MrpBomLine(models.Model):
                                   digits='Index of Consumption', default=0,
                                   required=True)
     standard_price = fields.Float('Standard Price',store=True, related='product_id.standard_price',
-                                  digits='Product Unit of Measure', default=0)
-    total_importe = fields.Float('Care Total', digits='Product Unit of Measure',
+                                  digits='Price of the product', default=0)
+    total_importe = fields.Float('Care Total', digits='Price of the product',
                                  compute='get_total_importe',
                                  default=0)
 

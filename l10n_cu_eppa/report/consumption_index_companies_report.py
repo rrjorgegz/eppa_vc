@@ -34,14 +34,10 @@ class ConsumptionIndexCompaniesReport(models.AbstractModel):
         f2 = datetime(year=end.year, month=end.month, day=end.day, hour=23, minute=59, second=59, microsecond=999999,
                       tzinfo=None)
         company_id = self.env['res.company'].search([('id', '=', data['form']['company_id'])])
-        is_ingredient = str(data['form']['is_todos'])
+        is_ingredient = str(data['form']['is_ingredient'])
         ingredient_id = self.env['product.template'].search([])
         if is_ingredient == 'uno':
             ingredient_id = self.env['product.template'].search([('id', '=', data['form']['product_tmpl_id'])])
-        is_category = str(data['form']['is_category'])
-        category_id = self.env['product.category'].search([])
-        if is_category == 'uno':
-            category_id = self.env['product.category'].search([('id', '=', data['form']['category_id'])])
         is_todos_prod_unit = str(data['form']['is_todos_prod_unit'])
         prod_unit_id = self.env['production.unit'].search([])
         if is_todos_prod_unit == 'uno':
@@ -73,7 +69,6 @@ class ConsumptionIndexCompaniesReport(models.AbstractModel):
                     INNER JOIN product_template ptsm ON ppsm.product_tmpl_id = ptsm.id AND ptsm.id IN """ + f"{self.convert_models_to_ids(ingredient_id)}" + """
                     INNER JOIN product_product ppmp ON mp.product_id = ppmp.id
                     INNER JOIN product_template ptmp ON ppmp.product_tmpl_id = ptmp.id
-                    INNER JOIN product_category pcmp ON ptmp.categ_id = pcmp.id AND pcmp.id IN """ + f"{self.convert_models_to_ids(category_id)}" + """
                     INNER JOIN res_company rcmp ON ptmp.company_id = rcmp.id AND rcmp.id = """ + f"{company_id.id}" + """
                     INNER JOIN mrp_department mdmp ON ppmp.mrp_dep_id = mdmp.id AND mdmp.id = """ + f"{departament_id.id}" + """
                     INNER JOIN production_unit pump ON mp.prod_unit_id = pump.id 

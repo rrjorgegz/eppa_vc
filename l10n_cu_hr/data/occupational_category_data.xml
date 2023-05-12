@@ -25,5 +25,9 @@
             <field name="name">Ejecutivos</field>
             <field name="code">EJE</field>
         </record>
+        <record id="cat_6" model="l10n_cu_hr.occupational_category">
+            <field name="name">Obrero</field>
+            <field name="code">OBR</field>
+        </record>
     </data>
 </odoo>
