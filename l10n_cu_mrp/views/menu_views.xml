@@ -3,5 +3,22 @@
         <menuitem name="Expenses" id="menu_gastos" parent="mrp.menu_mrp_root" sequence="40"/>
         <menuitem name="Precisión decimal" id="menu_precision_decimal" parent="mrp.menu_mrp_configuration"
                   action="base.action_decimal_precision_form" sequence="50"/>
+
+        <menuitem
+                id="mrp_menu_view_hr_job"
+                action="hr.action_hr_job"
+                parent="menu_gastos"
+                sequence="1"/>
+        <menuitem name="Occupational Category"
+                  id="mrp_occupational_category_menu"
+                  parent="menu_gastos"
+                  sequence="2"
+                  action="l10n_cu_hr.occupational_category_act_window"/>
+        <menuitem name="Scale Group"
+                  id="mrp_scale_group_menu"
+                  parent="menu_gastos"
+                  sequence="3"
+                  action="l10n_cu_hr.scale_group_act_window"/>
+
     </data>
 </odoo>

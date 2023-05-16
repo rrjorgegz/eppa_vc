@@ -254,28 +254,28 @@ class ConceptExpenses(models.Model):
         self.otros_gd = aux
         return
 
-    @api.depends('sal_ft')
+    @api.depends('sal_ft','coef_dep_gd')
     def get_dep_gd(self):
         aux = 0
         aux = self.sal_ft * self.coef_dep_gd
-        self.arr_equi_gd = aux
+        self.dep_gd = aux
         return
 
-    @api.depends('sal_ft')
+    @api.depends('sal_ft','coef_arr_equi_gd')
     def get_arr_equi_gd(self):
         aux = 0
         aux = self.sal_ft * self.coef_arr_equi_gd
         self.arr_equi_gd = aux
         return
 
-    @api.depends('sal_ft')
+    @api.depends('sal_ft','coef_rop_cal_gd')
     def get_rop_cal_gd(self):
         aux = 0
         aux = self.sal_ft * self.coef_rop_cal_gd
         self.rop_cal_gd = aux
         return
 
-    @api.depends('sal_ft')
+    @api.depends('sal_ft','coef_otro_gd')
     def get_otro_gd(self):
         aux = 0
         aux = self.sal_ft * self.coef_otro_gd

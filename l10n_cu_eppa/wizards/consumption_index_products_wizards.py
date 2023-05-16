@@ -31,6 +31,17 @@ class ConsumptionIndexProductsWizards(models.TransientModel):
                                       domain=[('purchase_ok', '=', True), ('uom_id', '>', 1), ('active', '=', True),
                                               ('type', '=', 'product')],
                                       help='Product', index=True)
+    is_todos_prod_unit = fields.Selection([('uno', 'A Production Unit'), ('todos', 'All the Production Units')],
+                                          'Select Production Unit',
+                                          help='To select Production Unit', default="todos",
+                                          required=True)
+    prod_unit_id = fields.Many2one('production.unit', string='Production Unit', required=True,
+                                   default=lambda self: self.env.user.prod_unit_id)
+
+    departament_id = fields.Many2one('mrp.department', help='MRP Departament', required=True,
+                                     default=lambda self: self.env.ref('l10n_cu_mrp.mrp_department_produccion').id)
+
+
     is_ingredient = fields.Selection([('uno', 'An Ingredient'), ('todos', 'All the Ingredients')],
                                 'Select Ingredients',
                                 help='To select ingredients', default="todos",
@@ -57,6 +68,9 @@ class ConsumptionIndexProductsWizards(models.TransientModel):
                 'is_ingredient': self.is_ingredient,
                 'ingredient_tmpl_id': self.ingredient_tmpl_id.id,
                 'commercialization_id': self.commercialization_id.id,
+                'is_todos_prod_unit': self.is_todos_prod_unit,
+                'prod_unit_id': self.prod_unit_id.id,
+                'departament_id': self.departament_id.id,
             },
         }
         return self.env.ref('l10n_cu_eppa.action_report_consumption_index_products').report_action(self, data=data)

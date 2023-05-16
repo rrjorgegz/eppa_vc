@@ -8,7 +8,6 @@
             <field name="arch" type="xml">
                 <form string="Concept of Expenses">
                     <header>
-
                     </header>
                     <sheet>
                         <div class="oe_title">
@@ -16,7 +15,6 @@
                             <h1>
                                 <field name="name" placeholder="Reference"/>
                             </h1>
-
                         </div>
                         <group>
                             <group>
@@ -51,13 +49,13 @@
                                 <group>
                                     <group>
                                         <field name="otros_gd"/>
-                                        <label for="coef_dep_gd"/>
+                                        <label for="dep_gd"/>
                                         <div class="o_row no-gutters d-flex">
                                             <field name="dep_gd"/>
                                             <span>Coefficient :</span>
                                             <field name="coef_dep_gd"/>
                                         </div>
-                                        <label for="coef_arr_equi_gd"/>
+                                        <label for="arr_equi_gd"/>
                                         <div class="o_row no-gutters d-flex">
                                             <field name="arr_equi_gd"/>
                                             <span>Coefficient :</span>
@@ -65,13 +63,13 @@
                                         </div>
                                     </group>
                                     <group>
-                                        <label for="coef_rop_cal_gd"/>
+                                        <label for="rop_cal_gd"/>
                                         <div class="o_row no-gutters d-flex">
                                             <field name="rop_cal_gd"/>
                                             <span>Coefficient :</span>
                                             <field name="coef_rop_cal_gd"/>
                                         </div>
-                                        <label for="coef_otro_gd"/>
+                                        <label for="otro_gd"/>
                                         <div class="o_row no-gutters d-flex">
                                             <field name="otro_gd"/>
                                             <span>Coefficient :</span>
@@ -125,7 +123,6 @@
                                 </group>
                             </page>
                             <page string="General Expenses and Administration" name="general_administracion">
-
                                 <group>
                                     <group>
                                         <label for="gastos_ga"/>

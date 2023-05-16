@@ -8,7 +8,7 @@ class MrpBom(models.Model):
     produccion = fields.Float('Production', default=0, digits='Product Unit of Measure')
     forma_c = fields.Many2one('l10n_cu_mrp.commercialization', string='Commercialization',
                               help='Form of Commercialization', index=1, required=True)
-    total = fields.Float(string='Cost', default=0, digits='Product Unit of Measure', required=True)
+    total = fields.Float(string='Cost', default=0,compute='get_total',store=True, digits='Product Unit of Measure')
     metodo = fields.Selection([('directo', 'Direct'), ('none', 'None')], 'Method', default="directo", required=True)
     descripcion = fields.Text('Description')
     salario_count = fields.Integer('# Labor Wage', compute='_compute_salario_obrero_count', compute_sudo=False)
@@ -48,7 +48,7 @@ class MrpBom(models.Model):
             self.product_qty = self.produccion / self.weight
         return
 
-    @api.constrains('bom_line_ids')
+    @api.depends('bom_line_ids')
     def get_total(self):
         for t in self:
             aux = 0

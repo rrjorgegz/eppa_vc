@@ -64,7 +64,7 @@ class ConsumptionIndexCategoriesReport(models.AbstractModel):
         x_padre_prod_unit = self.env.cr.fetchall()
 
         query_init = """SELECT t0.nombre_comp,t0.nombre_prod_unit,t0.prod_categ,t0.nombre_ingrediente, AVG(t0.indice_consumo) AS indice_consumo,AVG(t0.indice_consumo_plan) AS indice_consumo_plan,SUM(t0.product_uom_qty) AS consumo_real, SUM(t0.consumo_plan)AS consumo_plan, (SUM(t0.product_uom_qty) - SUM(t0.consumo_plan)) AS exceso,(SUM(t0.product_uom_qty) /nullif(SUM(t0.consumo_plan),0)*100) AS cumplimiento,SUM(t0.produccion) FROM
-                    (SELECT mp.produccion,rcmp.name AS nombre_comp, pcmp.name AS prod_categ, pump.id AS prod_unit_id,pump.name AS nombre_prod_unit, mdmp.name AS nombre_mrp_dep ,ptmp.name AS nombre_production,pcmp.name AS categoria_production,rcmp.name company_production,ptmb.name AS nombre_lista_material,ptsm.id AS ingrediente_id,ptsm.name AS nombre_ingrediente,sm.indice_consumo,bl.indice_consumo AS indice_consumo_plan,sm.product_uom_qty/uu.factor AS product_uom_qty,sm.consumo_plan/uu.factor AS consumo_plan
+                    (SELECT mp.produccion,rcmp.name AS nombre_comp, pcmp.name AS prod_categ, pump.id AS prod_unit_id,pump.name AS nombre_prod_unit, mdmp.name AS nombre_mrp_dep ,ptmp.name AS nombre_production,pcmp.name AS categoria_production,rcmp.name company_production,ptmb.name AS nombre_lista_material,ptsm.id AS ingrediente_id,ptsm.name AS nombre_ingrediente,sm.indice_consumo,bl.indice_consumo AS indice_consumo_plan,sm.product_uom_qty/uu.factor AS product_uom_qty, bl.product_qty/uo.factor*(mp.product_qty/mb.product_qty) AS consumo_plan
                     FROM mrp_production mp 
                     INNER JOIN stock_move sm ON  mp.id = sm.raw_material_production_id
                     INNER JOIN mrp_bom mb ON mp.bom_id = mb.id
@@ -82,6 +82,7 @@ class ConsumptionIndexCategoriesReport(models.AbstractModel):
                     INNER JOIN product_product ppbl ON bl.product_id = ppbl.id AND ppbl.id=ppsm.id
                     INNER JOIN product_template ptbl ON ppbl.product_tmpl_id = ptbl.id
                     INNER JOIN uom_uom  AS  uu ON sm.product_uom =uu.id
+                    INNER JOIN uom_uom  AS  uo ON bl.product_uom_id =uo.id
                     WHERE mp.state='done' OR mp.state='confirmed'
                     AND mp.date_planned_start <='""" + str(f2) + """'
                     AND mp.date_planned_start >= '""" + str(f1) + """' ) AS t0
@@ -137,8 +138,15 @@ class ConsumptionIndexCategoriesReport(models.AbstractModel):
                     GROUP BY t1.prod_categ,t1.nombre_prod_unit,t1.produccion) AS t5
                     GROUP BY t5.prod_categ,t5.nombre_prod_unit
                     """
+            t2 = """SELECT t5.nombre_prod_unit, SUM(t5.produccion) FROM
+                                (SELECT t1.nombre_prod_unit,t1.produccion FROM
+                                (""" + sql + """) AS t1
+                                GROUP BY t1.nombre_prod_unit,t1.produccion) AS t5
+                                GROUP BY t5.nombre_prod_unit
+                                """
         matrix_docs=[]
         docs_categ=[]
+        docs_prod=[]
         if len(sql)>0:
             self.flush()
             self.env.cr.execute(sql)
@@ -147,10 +155,18 @@ class ConsumptionIndexCategoriesReport(models.AbstractModel):
             self.flush()
             self.env.cr.execute(t1)
             docs_categ = self.env.cr.fetchall()
-        docs = []
 
+            self.flush()
+            self.env.cr.execute(t2)
+            docs_prod = self.env.cr.fetchall()
+
+        docs = []
         docs_unit = []
+        conj_unit = []
         for unit in prod_unit_id:
+            for prd in docs_prod:
+                if prd[0] == unit.name:
+                    conj_unit.append(prd)
             docs_unit.append(unit.name)
         for j in range(len(matrix_docs)):
             if  matrix_docs[j][1] in docs_unit:
@@ -164,7 +180,7 @@ class ConsumptionIndexCategoriesReport(models.AbstractModel):
             'docmodel': data['model'],
             'commercialization_id': commercialization_id,
             'data': docs,
-            'docs_unit': docs_unit,
+            'docs_unit': conj_unit,
             'docs_categ': docs_categ,
             'date': date,
             'start': start,

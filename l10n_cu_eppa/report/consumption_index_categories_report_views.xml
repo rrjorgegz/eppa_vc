@@ -91,12 +91,12 @@
                                         <tr>
                                             <th>PRODUCTION UNIT</th>
                                             <th colspan="2">
-                                                <t t-esc="unit"/>
+                                                <t t-esc="unit[0]"/>
                                             </th>
                                             <th colspan="4"/>
                                         </tr>
                                         <t t-foreach="docs_categ" t-as="catg">
-                                            <t t-if="unit == catg[1]">
+                                            <t t-if="unit[0] == catg[1]">
                                                 <tr>
                                                     <th>
                                                         <t t-esc="catg[0]"/>
@@ -111,7 +111,7 @@
                                                 </tr>
 
                                                 <t t-foreach="data" t-as="dat">
-                                                    <t t-if="unit == dat[1] and catg[0] == dat[2]">
+                                                    <t t-if="unit[0] == dat[1] and catg[0] == dat[2]">
                                                         <tr>
                                                             <th>
                                                                 <t t-esc="dat[3]"/>

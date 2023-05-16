@@ -42,7 +42,7 @@
                                                         </th>
                                                     </tr>
                                                     <tr>
-                                                        <th  colspan="2">
+                                                        <th colspan="2">
                                                             ORGANISM :
                                                             <t t-esc="o.company_id.partner_id.organism_id.name"/>
                                                         </th>
@@ -51,7 +51,7 @@
                                                         </th>
                                                     </tr>
                                                     <tr>
-                                                        <th  colspan="2">
+                                                        <th colspan="2">
                                                             Currency Components:
                                                         </th>
                                                         <th>Code :
@@ -65,16 +65,16 @@
                                                         </th>
                                                     </tr>
                                                     <tr>
-                                                        <th> Installed Capacity:
+                                                        <th>Installed Capacity:
                                                         </th>
-                                                        <th> % of Used Capacity:
+                                                        <th>% of Used Capacity:
                                                         </th>
                                                         <th>
                                                             <t t-esc="o.company_id.name"/>
                                                         </th>
                                                     </tr>
                                                     <tr>
-                                                        <th  colspan="3">Level of Production:</th>
+                                                        <th colspan="3">Level of Production:</th>
                                                     </tr>
                                                 </thead>
                                             </table>
@@ -92,79 +92,87 @@
                                         <tbody>
                                             <tr>
                                                 <th>
-                                                    Matter Prevails and Materials
+                                                    <strong>
+                                                        Matter Prevails and Materials
+                                                    </strong>
                                                 </th>
                                                 <th>1</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.materias_p )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.materias_p )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Matter Prevails and Fundamental Materials
+                                                <th>Matter Prevails and Fundamental Materials
                                                 </th>
                                                 <th>1.1</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.materias_pf )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.materias_pf )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Fuels and Lubricant
+                                                <th>Fuels and Lubricant
                                                 </th>
                                                 <th>1.2</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.lubicante_mp )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.lubicante_mp )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Electric Power
+                                                <th>Electric Power
                                                 </th>
                                                 <th>1.3</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.energia_mp )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.energia_mp )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Water
+                                                <th>Water
                                                 </th>
                                                 <th>1.4</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.agua_mp )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.agua_mp )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>Subtotal (Expenses of Elaboration)
+                                                <th>
+                                                    <strong>
+                                                        Subtotal (Expenses of Elaboration)
+                                                    </strong>
                                                 </th>
                                                 <th>2</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.subtotal_ge )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.subtotal_ge )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>Other Direct Expenses
+                                                <th>
+                                                    <strong>
+                                                        Other Direct Expenses
+                                                    </strong>
                                                 </th>
                                                 <th>3</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.otros_gd )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.otros_gd )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Depreciation
+                                                <th>Depreciation
                                                 </th>
                                                 <th>3.1</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.dep_gd )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.dep_gd )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Lease of Teams
+                                                <th>Lease of Teams
                                                 </th>
                                                 <th>3.2</th>
                                                 <th>
@@ -173,47 +181,50 @@
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Clothes and Footwear (Direct Workers)
+                                                <th>Clothes and Footwear (Direct Workers)
                                                 </th>
                                                 <th>3.3</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.rop_cal_gd )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.rop_cal_gd )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Others
+                                                <th>Others
                                                 </th>
                                                 <th>3.4</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.otro_gd )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.otro_gd )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>Expenses of Force of Work
+                                                <th>
+                                                    <strong>
+                                                        Expenses of Force of Work
+                                                    </strong>
                                                 </th>
                                                 <th>4</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.gasto_ft )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.gasto_ft )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Wages
+                                                <th>Wages
                                                 </th>
                                                 <th>4.1</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.sal_ft )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.sal_ft )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Vacations
+                                                <th>Vacations
                                                 </th>
                                                 <th>4.2</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.vac_ft )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.vac_ft )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
@@ -230,192 +241,210 @@
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Stimulation in Convertible Money
+                                                <th>Stimulation in Convertible Money
                                                 </th>
                                                 <th>4.5</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.est_pc )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.est_pc )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>Indirect expenses of Production
+                                                <th>
+                                                    <strong>
+                                                        Indirect expenses of Production
+                                                    </strong>
                                                 </th>
                                                 <th>5</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.gastos_ip )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.gastos_ip )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Depreciation
+                                                <th>Depreciation
                                                 </th>
                                                 <th>5.1</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.depre_ip )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.depre_ip )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Maintenance and Repair
+                                                <th>Maintenance and Repair
                                                 </th>
                                                 <th>5.2</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.mant_rep_ip )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.mant_rep_ip )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Others
+                                                <th>Others
                                                 </th>
                                                 <th>5.3</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.otros_ip )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.otros_ip )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>General expenses and of Administration
+                                                <th>
+                                                    <strong>
+                                                        General expenses and of Administration
+                                                    </strong>
                                                 </th>
                                                 <th>6</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.gastos_ga )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.gastos_ga )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Fuel and Lubricant
+                                                <th>Fuel and Lubricant
                                                 </th>
                                                 <th>6.1</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.com_lubi_ga )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.com_lubi_ga )"/>
                                                 </th>
                                                 <th/>
 
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Electric Power
+                                                <th>Electric Power
                                                 </th>
                                                 <th>6.2</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.ene_ele_ga )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.ene_ele_ga )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Depreciation
+                                                <th>Depreciation
                                                 </th>
                                                 <th>6.3</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.dep_ga )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.dep_ga )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Clothes and Footwear
+                                                <th>Clothes and Footwear
                                                 </th>
                                                 <th>6.4</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.rop_cal_ga )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.rop_cal_ga )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Foods
+                                                <th>Foods
                                                 </th>
                                                 <th>6.5</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.alimentos_ga )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.alimentos_ga )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Others
+                                                <th>Others
                                                 </th>
                                                 <th>6.6</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.otros_ga )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.otros_ga )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>Expenses of Distribution and Sales
+                                                <th>
+                                                    <strong>
+                                                        Expenses of Distribution and Sales
+                                                    </strong>
                                                 </th>
                                                 <th>7</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.gastos_dv )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.gastos_dv )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Fuel and Lubricant
+                                                <th>Fuel and Lubricant
                                                 </th>
                                                 <th>7.1</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.com_lub_dv )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.com_lub_dv )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Electric Power
+                                                <th>Electric Power
                                                 </th>
                                                 <th>7.2</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.ene_ele_dv )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.ene_ele_dv )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Depreciation
+                                                <th>Depreciation
                                                 </th>
                                                 <th>7.3</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.dep_dv )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.dep_dv )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Clothes and Footwear
+                                                <th>Clothes and Footwear
                                                 </th>
                                                 <th>7.4</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.rop_cal_dv )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.rop_cal_dv )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th class="text-center">Others
+                                                <th>Others
                                                 </th>
                                                 <th>7.5</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.otro_dv )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.otro_dv )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>Bank expenses
+                                                <th>
+                                                    <strong>
+                                                        Bank expenses
+                                                    </strong>
                                                 </th>
                                                 <th>8</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.gastos_ba )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.gastos_ba )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>Total Expenses or Cost of Production
+                                                <th>
+                                                    <strong>
+                                                        Total Expenses or Cost of Production
+                                                    </strong>
                                                 </th>
                                                 <th>9</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.gastos_tc )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.gastos_tc )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>Margin Utility s / it Bases Authorized %
+                                                <th>
+                                                    <strong>
+                                                        Margin Utility s / it Bases Authorized %
+                                                    </strong>
                                                 </th>
                                                 <th>10</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.margen_ub )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.margen_ub )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
@@ -424,7 +453,7 @@
                                                 </th>
                                                 <th>11</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.impuesto_ub )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.impuesto_ub )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
@@ -433,24 +462,31 @@
                                                 </th>
                                                 <th>12</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.con_ub )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.con_ub )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th>Price:
+                                                <th>
+                                                    <strong>
+                                                        Price:
+                                                    </strong>
                                                 </th>
                                                 <th>13</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.precio )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.precio )"/>
                                                 </th>
                                                 <th/>
                                             </tr>
                                             <tr>
-                                                <th/>
+                                                <th>
+                                                    <strong>
+                                                        Calculated Retail Price:
+                                                    </strong>
+                                                </th>
                                                 <th>14</th>
                                                 <th>
-                                                    <t t-esc="'{0:.5f}'.format(o.precio1 )"/>
+                                                    <t t-esc="'{0:.4f}'.format(o.precio1 )"/>
                                                 </th>
                                                 <th/>
                                             </tr>

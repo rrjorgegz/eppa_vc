@@ -25,7 +25,7 @@ class WageWorker(models.Model):
                                  compute='_compute_total_salario')
     a1 = fields.Float('A1',store=True, related='mrp_bom_id.product_qty', digits='Price of the product',help='A1 :')
     a2 = fields.Float('A2',default=0 , digits='Price of the product', help=' A2 : Volumen de Producción',required=True)
-    salario_basico = fields.Float('Basic wage', default=0, digits='Price of the product',
+    salario_basico = fields.Float('Basic wage', default=0, digits='Index of Consumption',
                                   help='Basic wage = Total / a1 * a2', compute='_compute_salario_basico')
     confeccionado_por = fields.Many2one('hr.employee', string='Made for')
     aprobado_por = fields.Many2one('hr.employee', string='Approved for')

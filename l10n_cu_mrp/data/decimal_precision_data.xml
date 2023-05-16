@@ -3,7 +3,7 @@
     <data noupdate="1">
         <record id="concept_expenses" model="decimal.precision">
             <field name="name">Concept of Expenses</field>
-            <field name="digits" eval="5"/>
+            <field name="digits" eval="6"/>
         </record>
         <record id="ic" model="decimal.precision">
             <field name="name">Index of Consumption</field>
