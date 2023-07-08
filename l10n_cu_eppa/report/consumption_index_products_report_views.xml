@@ -89,56 +89,59 @@
                             </thead>
                             <tbody>
                                 <div class="page">
-<!--                                    <t t-foreach="docs" t-as="doc1">-->
-<!--                                        <tr>-->
-<!--                                            <th colspan="8">-->
-<!--                                                <t t-esc="doc1['company']"/>-->
-<!--                                            </th>-->
-<!--                                        </tr>-->
-<!--                                        <t t-foreach="doc1['datos']" t-as="doc3">-->
-<!--                                            <tr>-->
-<!--                                                <th colspan="8">-->
-<!--                                                    <t t-esc="doc3['partner']"/>-->
-<!--                                                </th>-->
-<!--                                            </tr>-->
-<!--                                            <t t-foreach="doc3['datos']" t-as="doc0">-->
-<!--                                                <tr>-->
-<!--                                                    <th colspan="3">-->
-<!--                                                        <t t-esc="doc0['product']"/>-->
-<!--                                                    </th>-->
-<!--                                                    <th>PRODUCTION</th>-->
-<!--                                                    <th colspan="4">-->
-<!--                                                        <t t-esc="'{0:.5f}'.format(float(doc0['produccion']))"/>-->
-<!--                                                    </th>-->
-<!--                                                </tr>-->
-<!--                                                <t t-foreach="doc0['datos']" t-as="doc">-->
-<!--                                                    <tr>-->
-<!--                                                        <th>-->
-<!--                                                            <t t-esc="doc['ingrediente']"/>-->
-<!--                                                        </th>-->
-<!--                                                        <th>-->
-<!--                                                            <t t-esc="'{0:.5f}'.format(float(doc['indice_consumo_plan']))"/>-->
-<!--                                                        </th>-->
-<!--                                                        <th>-->
-<!--                                                            <t t-esc="'{0:.5f}'.format(float(doc['consumo_plan']))"/>-->
-<!--                                                        </th>-->
-<!--                                                        <th>-->
-<!--                                                            <t t-esc="'{0:.5f}'.format(float(doc['consumo_real']))"/>-->
-<!--                                                        </th>-->
-<!--                                                        <th>-->
-<!--                                                            <t t-esc="'{0:.5f}'.format(float(doc['indice_consumo']))"/>-->
-<!--                                                        </th>-->
-<!--                                                        <th>-->
-<!--                                                            <t t-esc="'{0:.5f}'.format(float(doc['exceso']))"/>-->
-<!--                                                        </th>-->
-<!--                                                        <th>-->
-<!--                                                            <t t-esc="'{0:.5f}'.format(float(doc['cumplimiento']))"/>-->
-<!--                                                        </th>-->
-<!--                                                    </tr>-->
-<!--                                                </t>-->
-<!--                                            </t>-->
-<!--                                        </t>-->
-<!--                                    </t>-->
+                                    <t t-foreach="docs_unit" t-as="unit">
+                                        <tr>
+                                            <th>PRODUCTION UNIT</th>
+                                            <th colspan="2">
+                                                <t t-esc="unit[0]"/>
+                                            </th>
+                                            <th colspan="4"/>
+                                        </tr>
+                                        <t t-foreach="docs_prod" t-as="prod">
+                                            <t t-if="unit[0] == prod[1]">
+                                                <tr>
+                                                    <th>
+                                                        <t t-esc="prod[0]"/>
+                                                    </th>
+                                                    <th colspan="2"/>
+                                                    <th>
+                                                        PRODUCTION
+                                                    </th>
+                                                    <th colspan="3">
+                                                        <t t-esc="'{0:.5f}'.format(float(prod[2]))"/>
+                                                    </th>
+                                                </tr>
+
+                                                <t t-foreach="data" t-as="dat">
+                                                    <t t-if="unit[0] == dat[1] and prod[0] == dat[2]">
+                                                        <tr>
+                                                            <th>
+                                                                <t t-esc="dat[3]"/>
+                                                            </th>
+                                                            <th>
+                                                                <t t-esc="'{0:.5f}'.format(float(dat[5]))"/>
+                                                            </th>
+                                                            <th>
+                                                                <t t-esc="'{0:.5f}'.format(float(dat[7]))"/>
+                                                            </th>
+                                                            <th>
+                                                                <t t-esc="'{0:.5f}'.format(float(dat[6]))"/>
+                                                            </th>
+                                                            <th>
+                                                                <t t-esc="'{0:.5f}'.format(float(dat[4]))"/>
+                                                            </th>
+                                                            <th>
+                                                                <t t-esc="'{0:.5f}'.format(float(dat[8]))"/>
+                                                            </th>
+                                                            <th>
+                                                                <t t-esc="'{0:.5f}'.format(float(dat[9]))"/>
+                                                            </th>
+                                                        </tr>
+                                                    </t>
+                                                </t>
+                                            </t>
+                                        </t>
+                                    </t>
                                 </div>
                             </tbody>
                         </table>

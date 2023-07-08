@@ -35,7 +35,7 @@ class MrpProduction(models.Model):
                 raw.indice_consumo = (raw.product_uom_qty / self.produccion) or 0
                 raw.indice_consumo_plan = (self.bom_id.bom_line_ids.search(
                     [('bom_id','=',self.bom_id.id),('product_tmpl_id', '=', raw.product_id.product_tmpl_id.id)], limit=1).indice_consumo) or 0
-                raw.consumo_plan = (self.produccion / self.bom_id.produccion) * ((self.bom_id.bom_line_ids.search(
-                    [('bom_id','=',self.bom_id.id),('product_tmpl_id', '=', raw.product_id.product_tmpl_id.id)], limit=1).product_qty) or 0)
+                raw.consumo_plan = (self.produccion  * ((self.bom_id.bom_line_ids.search(
+                    [('bom_id','=',self.bom_id.id),('product_tmpl_id', '=', raw.product_id.product_tmpl_id.id)], limit=1).product_qty) or 0))/ self.bom_id.produccion
                 raw.porciento = (raw.product_uom_qty / raw.consumo_plan) * 100
                 self.total = self.total + raw.total_cost
