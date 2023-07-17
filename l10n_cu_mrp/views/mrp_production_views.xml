@@ -36,5 +36,31 @@
                 </field>
             </field>
         </record>
+
+        <record id="mrp_production_tree_view_inherit" model="ir.ui.view">
+            <field name="name">mrp.production.tree.inherit</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_qty']" position="after">
+                    <field name="produccion"/>
+                    <field name="prod_unit_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_production_pivot_inherit" model="ir.ui.view">
+            <field name="name">mrp.production.pivot.inherit</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.view_production_pivot"/>
+            <field name="arch" type="xml">
+                <field name="date_planned_start" position="replace">
+                    <field name="product_qty" type="measure"/>
+                    <field name="produccion" string="Produccion (Kg)" type="measure"/>
+                    <field name="prod_unit_id" type="row"/>
+                    <field name="product_id" type="row"/>
+                </field>
+            </field>
+        </record>
     </data>
 </odoo>

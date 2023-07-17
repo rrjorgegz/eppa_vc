@@ -86,10 +86,9 @@ class ConsumptionIndexIngredientsReport(models.AbstractModel):
                     WHERE mp.state='done' OR mp.state='confirmed'
                     AND mp.date_planned_start <='""" + str(f2) + """'
                     AND mp.date_planned_start >= '""" + str(f1) + """' ) AS t0
-                    GROUP BY t0.nombre_comp,t0.nombre_prod_unit,t0.nombre_production,t0.nombre_ingrediente
-
+                    GROUP BY t0.nombre_comp,t0.nombre_prod_unit,t0.nombre_production,t0.nombre_ingrediente 
                     """
-        # print(query_init)
+        print(query_init)
         self.flush()
         self.env.cr.execute(query_init)
         matrix_data = self.env.cr.fetchall()
@@ -112,7 +111,6 @@ class ConsumptionIndexIngredientsReport(models.AbstractModel):
                                         matrix_data[m][3],
                                         matrix_data[m][4], matrix_data[m][5], matrix_data[m][6], matrix_data[m][7],
                                         matrix_data[m][8], matrix_data[m][9], matrix_data[m][10])
-                                    # print("x1_hijo :",x1_hijo)
                                     datos_hijo.append(x1_hijo)  # recorrer datos para el hijo unidad
                     matrix_data += datos_hijo
             s -= 1
@@ -133,11 +131,27 @@ class ConsumptionIndexIngredientsReport(models.AbstractModel):
                     GROUP BY nombre_comp,nombre_prod_unit,nombre_production,nombre_ingrediente
                     ORDER BY nombre_prod_unit
                     """
-            t1 = """SELECT t5.nombre_production,t5.nombre_prod_unit, SUM(t5.produccion) FROM
-                    (SELECT t1.nombre_production,t1.nombre_prod_unit,t1.produccion FROM
-                    (""" + sql + """) AS t1
-                    GROUP BY t1.nombre_production,t1.nombre_prod_unit,t1.produccion) AS t5
-                    GROUP BY t5.nombre_production,t5.nombre_prod_unit
+            t1 = """(SELECT mp.produccion,rcmp.name AS nombre_comp, pump.id AS prod_unit_id,pump.name AS nombre_prod_unit, mdmp.name AS nombre_mrp_dep ,ptmp.name AS nombre_production,rcmp.name company_production,ptmb.name AS nombre_lista_material,ptsm.id AS ingrediente_id,ptsm.name AS nombre_ingrediente,sm.indice_consumo,bl.indice_consumo AS indice_consumo_plan,sm.product_uom_qty/uu.factor AS product_uom_qty, bl.product_qty/uo.factor*(mp.product_qty/mb.product_qty) AS consumo_plan
+                    FROM mrp_production mp 
+                    INNER JOIN stock_move sm ON  mp.id = sm.raw_material_production_id
+                    INNER JOIN mrp_bom mb ON mp.bom_id = mb.id
+                    INNER JOIN product_template ptmb ON mb.product_tmpl_id = ptmb.id
+                    INNER JOIN product_product ppsm ON sm.product_id = ppsm.id
+                    INNER JOIN product_template ptsm ON ppsm.product_tmpl_id = ptsm.id AND ptsm.id IN """ + f"{self.convert_models_to_ids(ingredient_id)}" + """
+                    INNER JOIN product_product ppmp ON mp.product_id = ppmp.id
+                    INNER JOIN product_template ptmp ON ppmp.product_tmpl_id = ptmp.id AND ptmp.id IN """ + f"{self.convert_models_to_ids(product_id)}" + """
+                    INNER JOIN res_company rcmp ON ptmp.company_id = rcmp.id AND rcmp.id = """ + f"{company_id.id}" + """
+                    INNER JOIN mrp_department mdmp ON ppmp.mrp_dep_id = mdmp.id AND mdmp.id = """ + f"{departament_id.id}" + """
+                    INNER JOIN production_unit pump ON mp.prod_unit_id = pump.id 
+                    INNER JOIN l10n_cu_mrp_commercialization  AS  lc ON mb.forma_c =lc.id AND lc.id = """ + f"{commercialization_id.id}" + """
+                    INNER JOIN mrp_bom_line bl ON mb.id = bl.bom_id
+                    INNER JOIN product_product ppbl ON bl.product_id = ppbl.id AND ppbl.id=ppsm.id
+                    INNER JOIN product_template ptbl ON ppbl.product_tmpl_id = ptbl.id
+                    INNER JOIN uom_uom  AS  uu ON sm.product_uom =uu.id
+                    INNER JOIN uom_uom  AS  uo ON bl.product_uom_id =uo.id
+                    WHERE mp.state='done' OR mp.state='confirmed'
+                    AND mp.date_planned_start <='""" + str(f2) + """'
+                    AND mp.date_planned_start >= '""" + str(f1) + """' ) 
                     """
             t2 = """SELECT t5.nombre_prod_unit, SUM(t5.produccion) FROM
                                 (SELECT t1.nombre_prod_unit,t1.produccion FROM
@@ -146,7 +160,7 @@ class ConsumptionIndexIngredientsReport(models.AbstractModel):
                                 GROUP BY t5.nombre_prod_unit
                                 """
 
-        print(sql)
+        # print(sql)
         # matrix_docs = []
         # docs_categ = []
         # docs_prod = []

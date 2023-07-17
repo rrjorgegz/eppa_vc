@@ -101,19 +101,20 @@
                                             <t t-if="unit[0] == prod[1]">
                                                 <tr>
                                                     <th>
-                                                        <t t-esc="prod[0]"/>
+                                                        <t t-esc="prod[2]"/>
                                                     </th>
                                                     <th colspan="2"/>
                                                     <th>
                                                         PRODUCTION
                                                     </th>
                                                     <th colspan="3">
-                                                        <t t-esc="'{0:.5f}'.format(float(prod[2]))"/>
+                                                        <t t-esc="'{0:.5f}'.format(float(prod[3]))"/>
+                                                        (Kg)
                                                     </th>
                                                 </tr>
 
                                                 <t t-foreach="data" t-as="dat">
-                                                    <t t-if="unit[0] == dat[1] and prod[0] == dat[2]">
+                                                    <t t-if="unit[0] == dat[1] and prod[2] == dat[2]">
                                                         <tr>
                                                             <th>
                                                                 <t t-esc="dat[3]"/>

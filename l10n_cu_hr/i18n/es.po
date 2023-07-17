@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20201114\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-07 07:08+0000\n"
-"PO-Revision-Date: 2022-03-07 07:08+0000\n"
+"POT-Creation-Date: 2023-07-16 05:51+0000\n"
+"PO-Revision-Date: 2023-07-16 05:51+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -31,11 +31,6 @@ msgid "<span>Salary :</span>"
 msgstr "<span>Salario :</span>"
 
 #. module: l10n_cu_hr
-#: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_scale_group__category
-msgid "Category"
-msgstr "Categoría"
-
-#. module: l10n_cu_hr
 #: model_terms:ir.actions.act_window,help:l10n_cu_hr.occupational_category_act_window
 msgid "Click here to add new Occupational Category."
 msgstr "Presiona aquí para adicionar una Categoría Ocupacional"
@@ -47,7 +42,6 @@ msgstr "Presiona aquí para adicionar un Grupo de Escala"
 
 #. module: l10n_cu_hr
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_occupational_category__code
-#: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_scale_group__code
 msgid "Code"
 msgstr "Código"
 
@@ -79,11 +73,6 @@ msgstr "Moneda"
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_scale_group__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
-
-#. module: l10n_cu_hr
-#: model:ir.ui.menu,name:l10n_cu_hr.menu_formato_papel
-msgid "Paper Format Config"
-msgstr "Formato de Papel"
 
 #. module: l10n_cu_hr
 #: model_terms:ir.ui.view,arch_db:l10n_cu_hr.occupational_category_search_view
@@ -118,6 +107,11 @@ msgid "Hour"
 msgstr "Hora"
 
 #. module: l10n_cu_hr
+#: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_scale_group__hourly_rate
+msgid "Hourly Rate"
+msgstr "Tarifa por hora"
+
+#. module: l10n_cu_hr
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_hr_job__id
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_occupational_category__id
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_scale_group__id
@@ -135,7 +129,7 @@ msgstr "Puesto de trabajo"
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_occupational_category____last_update
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_scale_group____last_update
 msgid "Last Modified on"
-msgstr "Última modificación en"
+msgstr "Última modificación el"
 
 #. module: l10n_cu_hr
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_occupational_category__write_uid
@@ -172,6 +166,11 @@ msgid "Occupational Category"
 msgstr "Categoría Ocupacional"
 
 #. module: l10n_cu_hr
+#: model:ir.ui.menu,name:l10n_cu_hr.menu_formato_papel
+msgid "Paper Format Config"
+msgstr "Formato de Papel"
+
+#. module: l10n_cu_hr
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_l10n_cu_hr_scale_group__salary
 msgid "Salary"
 msgstr "Salario"
@@ -191,6 +190,6 @@ msgid "Scale Group"
 msgstr "Grupo Escala"
 
 #. module: l10n_cu_hr
-#: model:ir.model.constraint,message:l10n_cu_hr.constraint_l10n_cu_hr_scale_group_code_uniq
-msgid "The Scale Group must be unique!"
-msgstr "El Grupo Escala debe ser único!"
+#: model:ir.model.constraint,message:l10n_cu_hr.constraint_l10n_cu_hr_scale_group_name_uniq
+msgid "The name of the Scale Group must be unique!"
+msgstr ""
