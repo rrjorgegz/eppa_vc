@@ -82,7 +82,7 @@ class ConsumptionIndexProductsReport(models.AbstractModel):
                     INNER JOIN product_template ptbl ON ppbl.product_tmpl_id = ptbl.id
                     INNER JOIN uom_uom  AS  uu ON sm.product_uom =uu.id
                     INNER JOIN uom_uom  AS  uo ON bl.product_uom_id =uo.id
-                    WHERE mp.state='done' OR mp.state='confirmed'
+                    WHERE mp.state='done' OR mp.state='confirmed' OR mp.state='draft'
                     AND mp.date_planned_start <='""" + str(f2) + """'
                     AND mp.date_planned_start >= '""" + str(f1) + """' ) AS t0
                     GROUP BY t0.nombre_comp,t0.nombre_prod_unit,t0.nombre_ingrediente,t0.nombre_production
@@ -154,7 +154,7 @@ class ConsumptionIndexProductsReport(models.AbstractModel):
                     INNER JOIN product_template ptbl ON ppbl.product_tmpl_id = ptbl.id
                     INNER JOIN uom_uom  AS  uu ON sm.product_uom =uu.id
                     INNER JOIN uom_uom  AS  uo ON bl.product_uom_id =uo.id
-                    WHERE mp.state='done' OR mp.state='confirmed'
+                    WHERE mp.state='done' OR mp.state='confirmed' OR mp.state='draft'
                     AND mp.date_planned_start <='""" + str(f2) + """'
                     AND mp.date_planned_start >= '""" + str(f1) + """' 
 				) AS t0
