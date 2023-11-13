@@ -34,14 +34,14 @@ class ConsumptionIndexProductsReport(models.AbstractModel):
                 array_unit.append({"prod_unit_id": child.id,"mrp_prod": self.get_mrp_prods_ids_from_prod_unit(child, filters)})
         return array_unit
 
-    def get_info_prod_unit(self,mrp_produccion_unit_prod):
+    def get_info_prod_unit(self,mrp_produccion_unit_prod,filters):
         # obtener las operaciones de todas las unidades
         result= []
         for punit in mrp_produccion_unit_prod:
-            result.append(self.get_info_per_prod_unit(punit))
+            result.append(self.get_info_per_prod_unit(punit,filters))
         return result
 
-    def get_info_per_prod_unit(self,unit_data):
+    def get_info_per_prod_unit(self,unit_data,filters):
         result = []
         # obtener las operaciones de cada unidad
         prod_unit_main = self.env['production.unit'].search([('id', '=', unit_data["prod_unit_id"])])
@@ -62,8 +62,12 @@ class ConsumptionIndexProductsReport(models.AbstractModel):
             ingredientes_ids = self.get_ingredientes_in_move_raw_ids(move_raw_ids)
             # 3.2 - agrupar move_raw_ids por ingredientes
             raw_ingredient = []
-            for x2 in ingredientes_ids:
-                raw_ing = self.env['stock.move'].search([('id', 'in', move_raw_ids.ids), ('product_id', '=', x2.id)])
+            for ingrediente_group in ingredientes_ids:
+                moves_ids = []
+                for ingredientes in move_raw_ids:
+                    if ingrediente_group == ingredientes.product_id:
+                        moves_ids += ingredientes
+                raw_ing = self.env['stock.move'].search([('id', 'in', moves_ids.ids), ('product_id', '=', ingrediente_group.id)])
                 indice_consumo = []
                 indice_consumo_plan = []
                 consumo = []
@@ -74,12 +78,10 @@ class ConsumptionIndexProductsReport(models.AbstractModel):
                     if count == 0:
                         unit = x3.product_uom
                     aux_qty = x3.product_uom._compute_quantity(x3.product_uom_qty, unit, raise_if_failure=False)
-
                     indice_consumo.append(x3.indice_consumo)
                     indice_consumo_plan.append(x3.indice_consumo_plan)
                     consumo.append(aux_qty)
                     consumo_plan.append(x3.consumo_plan)
-
                     count +=1
                 # 3 - calcular los datos por ingredientes
                 ic = sum(indice_consumo)/len(indice_consumo)
@@ -88,17 +90,20 @@ class ConsumptionIndexProductsReport(models.AbstractModel):
                 cop = sum(consumo_plan)
                 exc = sum(consumo) - sum(consumo_plan)
                 cum = sum(consumo) / sum(consumo_plan) *100
-                raw_ingredient.append({"ing":x2,"indice_consumo":ic,"indice_consumo_plan":icp,"consumo":co,"consumo_plan":cop,"exceso":exc,"cumplido":cum})
+
+                pp = self.env['product.product'].search([('id', '=', ingrediente_group.id)])
+                pt = self.env['product.template'].search([('product_tmpl_id', '=', pp.id)])
+                raw_ingredient.append({"ing":pt.name,"indice_consumo":ic,"indice_consumo_plan":icp,"consumo":co,"consumo_plan":cop,"exceso":exc,"cumplido":cum})
             produccion_kg += d.product_qty
             result.append({"unit":prod_unit_main,"produccion":produccion_kg,"raw":raw_ingredient})
         return result
 
     def get_ingredientes_in_move_raw_ids(self,move_raw_ids):
-        ingredientes_id = []
+        ingredientes_ids = []
         for x2 in move_raw_ids:
-            if not x2.product_id in ingredientes_id:
-                ingredientes_id.append(x2.product_id)
-        return ingredientes_id
+            if not x2.product_id in ingredientes_ids:
+                ingredientes_ids.append(x2.product_id)
+        return ingredientes_ids
 
     def get_productos_from_mrp_prod(self,prod):
         productos_id = []
@@ -144,7 +149,7 @@ class ConsumptionIndexProductsReport(models.AbstractModel):
         filters["departament_id"] = departament_id
         aux_unit = self.env['production.unit'].search([("id","in",prod_unit_id.ids)], order="level asc", limit=1)
         mrp_produccion_unit_prod = self.get_array_unit_mrp_prod_from_prod_unit(aux_unit,filters)
-        docs = self.get_info_prod_unit(mrp_produccion_unit_prod)
+        docs = self.get_info_prod_unit(mrp_produccion_unit_prod,filters)
         comp = self.env.ref('base.main_company')
         return {
             'description': self._description,
