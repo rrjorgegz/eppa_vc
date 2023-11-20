@@ -16,10 +16,6 @@ class ConsumptionIndexProductsWizards(models.TransientModel):
                       default=datetime.today().replace(
                           day=calendar.monthrange(year=datetime.today().year, month=datetime.today().month)[1]),
                       required=True)
-    is_todos_company = fields.Selection([('uno', 'A Company'), ('todos', 'All the Companies')],
-                                        'Select Companies',
-                                        help='To select Companies', default="todos",
-                                        required=True)
     company_id = fields.Many2one('res.company', string='Company',
                                  default=lambda self: self.env.user.company_id,
                                  required=True)
@@ -27,8 +23,9 @@ class ConsumptionIndexProductsWizards(models.TransientModel):
                                 'Select Products',
                                 help='To select Product', default="todos",
                                 required=True)
+    domain = "{}"
     product_tmpl_id = fields.Many2one('product.template', string='Product',
-                                      domain=[('sale_ok', '=', True), ('active', '=', True), ('type', '=', 'product')],
+                                      domain=[('sale_ok', '=', 1), ('active', '=', True), ('type', '=', 'product')],
                                       help='Product', index=True)
     is_todos_prod_unit = fields.Selection([('uno', 'A Production Unit'), ('todos', 'All the Production Units')],
                                           'Select Production Unit',
@@ -46,7 +43,7 @@ class ConsumptionIndexProductsWizards(models.TransientModel):
                                 help='To select ingredients', default="todos",
                                 required=True)
     ingredient_tmpl_id = fields.Many2one('product.template', string='Ingredient',
-                                      domain=[('purchase_ok', '=', True), ('active', '=', True), ('type', '=', 'product')],
+                                      domain=[('purchase_ok', '=', 1), ('active', '=', True), ('type', '=', 'product')],
                                       help='Product', index=True)
     commercialization_id = fields.Many2one('l10n_cu_mrp.commercialization', help='Form of Commercialization',
                                            required=True, default=lambda self: self.env.ref('l10n_cu_mrp.MN').id)
@@ -59,7 +56,6 @@ class ConsumptionIndexProductsWizards(models.TransientModel):
                 'date': self.date,
                 'start': self.start,
                 'end': self.end,
-                'is_todos_company': self.is_todos_company,
                 'company_id': self.company_id.id,
                 'is_product': self.is_product,
                 'product_tmpl_id': self.product_tmpl_id.id,

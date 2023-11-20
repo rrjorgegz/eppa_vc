@@ -8,9 +8,7 @@
                 <group>
                     <group>
                         <field name="date"/>
-                        <field name="is_todos_company"/>
-                        <field name="company_id"
-                               attrs="{'invisible': [('is_todos_company', '=', 'todos')], 'required': [('is_todos_company', '=', 'uno')]}"/>
+                        <field name="company_id"/>
 
                     </group>
                     <group>
@@ -22,10 +20,12 @@
                     <group>
                         <field name="is_product"/>
                         <field name="product_tmpl_id"
+                               domain="[('mrp_dep_id','=', departament_id)]"
                                attrs="{'invisible': [('is_product', '=', 'todos')], 'required': [('is_product', '=', 'uno')]}"/>
 
                         <field name="is_ingredient"/>
                         <field name="ingredient_tmpl_id"
+                               domain="[]"
                                attrs="{'invisible': [('is_ingredient', '=', 'todos')], 'required': [('is_ingredient', '=', 'uno')]}"/>
                     </group>
                     <group>
@@ -52,8 +52,8 @@
         <field name="binding_model_id" ref="model_l10n_cu_eppa_consumption_index_ingredients_wizards"/>
         <field name="target">new</field>
     </record>
-<!--    <menuitem name="Consumption Index for Ingredients" id="menu_consumption_index_ingredients"-->
-<!--              parent="mrp.menu_mrp_reporting"-->
-<!--              action="consumption_index_ingredients_action" sequence="40"/>-->
+    <menuitem name="Consumption Index for Ingredients" id="menu_consumption_index_ingredients"
+              parent="mrp.menu_mrp_reporting"
+              action="consumption_index_ingredients_action" sequence="40"/>
 
 </odoo>

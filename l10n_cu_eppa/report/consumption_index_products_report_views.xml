@@ -49,7 +49,8 @@
                                     </tr>
                                     <tr>
                                         <th colspan="4">
-                                            <t t-esc="description.upper()"/>
+                                            CONSUMPTION INDEX FOR PRODUCTS
+                                            <!--                                            <t t-esc="description.upper()"/>-->
                                         </th>
                                     </tr>
                                     <tr>
@@ -95,53 +96,53 @@
                                             <th colspan="2">
                                                 <t t-esc="data['unit'].name"/>
                                             </th>
-                                            <th colspan="4"/>
+                                            <th colspan="4"></th>
                                         </tr>
-<!--                                        <t t-foreach="docs_prod" t-as="prod">-->
-<!--                                            <t t-if="unit[0] == prod[1]">-->
-<!--                                                <tr>-->
-<!--                                                    <th>-->
-<!--                                                        <t t-esc="prod[2]"/>-->
-<!--                                                    </th>-->
-<!--                                                    <th colspan="2"/>-->
-<!--                                                    <th>-->
-<!--                                                        PRODUCTION-->
-<!--                                                    </th>-->
-<!--                                                    <th colspan="3">-->
-<!--                                                        <t t-esc="'{0:.5f}'.format(float(prod[3]))"/>-->
-<!--                                                        (Kg)-->
-<!--                                                    </th>-->
-<!--                                                </tr>-->
 
-<!--                                                <t t-foreach="data" t-as="dat">-->
-<!--                                                    <t t-if="unit[0] == dat[1] and prod[2] == dat[2]">-->
-<!--                                                        <tr>-->
-<!--                                                            <th>-->
-<!--                                                                <t t-esc="dat[3]"/>-->
-<!--                                                            </th>-->
-<!--                                                            <th>-->
-<!--                                                                <t t-esc="'{0:.5f}'.format(float(dat[5]))"/>-->
-<!--                                                            </th>-->
-<!--                                                            <th>-->
-<!--                                                                <t t-esc="'{0:.5f}'.format(float(dat[7]))"/>-->
-<!--                                                            </th>-->
-<!--                                                            <th>-->
-<!--                                                                <t t-esc="'{0:.5f}'.format(float(dat[6]))"/>-->
-<!--                                                            </th>-->
-<!--                                                            <th>-->
-<!--                                                                <t t-esc="'{0:.5f}'.format(float(dat[4]))"/>-->
-<!--                                                            </th>-->
-<!--                                                            <th>-->
-<!--                                                                <t t-esc="'{0:.5f}'.format(float(dat[8]))"/>-->
-<!--                                                            </th>-->
-<!--                                                            <th>-->
-<!--                                                                <t t-esc="'{0:.5f}'.format(float(dat[9]))"/>-->
-<!--                                                            </th>-->
-<!--                                                        </tr>-->
-<!--                                                    </t>-->
-<!--                                                </t>-->
-<!--                                            </t>-->
-<!--                                        </t>-->
+                                        <t t-foreach="data['productos']" t-as="prod">
+                                            <tr>
+                                                <th>
+                                                    <t t-esc="prod['producto'].name"/>
+                                                </th>
+                                                <th colspan="2"/>
+                                                <th>
+                                                    PRODUCTION
+                                                </th>
+                                                <th colspan="3">
+                                                    <t t-esc="'{0:.5f}'.format(float(prod['produccion']))"/>
+                                                    (Kg)
+                                                </th>
+                                            </tr>
+                                            <t t-foreach="prod['raw']" t-as="raw">
+                                                <tr>
+                                                    <th>
+                                                        <t t-esc="raw['ing']"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(raw['indice_consumo_plan']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(raw['consumo_plan']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(raw['consumo']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(raw['indice_consumo']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(raw['exceso']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(raw['cumplido']))"/>
+                                                    </th>
+
+                                                </tr>
+                                            </t>
+                                        </t>
+                                        <tr>
+                                            <th colspan="7"></th>
+                                        </tr>
                                     </t>
                                 </div>
                             </tbody>
