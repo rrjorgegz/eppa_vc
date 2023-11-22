@@ -25,7 +25,7 @@ class ConsumptionIndexProductsWizards(models.TransientModel):
                                 required=True)
     domain = "{}"
     product_tmpl_id = fields.Many2one('product.template', string='Product',
-                                      domain=[('sale_ok', '=', 1), ('active', '=', True), ('type', '=', 'product')],
+                                      # domain=[('mrp_dep_id','=', 'departament_id'),('sale_ok', '=', True), ('active', '=', True), ('type', '=', 'product')],
                                       help='Product', index=True)
     is_todos_prod_unit = fields.Selection([('uno', 'A Production Unit'), ('todos', 'All the Production Units')],
                                           'Select Production Unit',
@@ -43,7 +43,8 @@ class ConsumptionIndexProductsWizards(models.TransientModel):
                                 help='To select ingredients', default="todos",
                                 required=True)
     ingredient_tmpl_id = fields.Many2one('product.template', string='Ingredient',
-                                      domain=[('purchase_ok', '=', 1), ('active', '=', True), ('type', '=', 'product')],
+                                        # domain=[('purchase_ok', '=', True), ('active', '=', True), ('type', '=', 'product')],
+                                      # domain=[('mrp_dep_id','=', 'departament_id')],
                                       help='Product', index=True)
     commercialization_id = fields.Many2one('l10n_cu_mrp.commercialization', help='Form of Commercialization',
                                            required=True, default=lambda self: self.env.ref('l10n_cu_mrp.MN').id)

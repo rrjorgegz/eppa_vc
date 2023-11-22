@@ -20,12 +20,12 @@
                     <group>
                         <field name="is_product"/>
                         <field name="product_tmpl_id"
-                               domain="[('mrp_dep_id','=', departament_id)]"
+                               domain="[('mrp_dep_id','=', departament_id),('sale_ok', '=', True), ('active', '=', True), ('type', '=', 'product')]"
                                attrs="{'invisible': [('is_product', '=', 'todos')], 'required': [('is_product', '=', 'uno')]}"/>
 
                         <field name="is_ingredient"/>
                         <field name="ingredient_tmpl_id"
-                               domain="[]"
+                               domain="[('mrp_dep_id','=', departament_id),('purchase_ok', '=', True), ('active', '=', True), ('type', '=', 'product')]"
                                attrs="{'invisible': [('is_ingredient', '=', 'todos')], 'required': [('is_ingredient', '=', 'uno')]}"/>
                     </group>
                     <group>

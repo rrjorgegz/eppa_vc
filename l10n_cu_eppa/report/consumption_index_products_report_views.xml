@@ -38,11 +38,11 @@
                                         <th style="width:  10px;">
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">
-                                                    <span class="page"/>
+                                                    <div class="page"/>
                                                 </li>
                                                 <li class="list-inline-item">of</li>
                                                 <li class="list-inline-item">
-                                                    <span class="topage"/>
+                                                    <div class="topage"/>
                                                 </li>
                                             </ul>
                                         </th>

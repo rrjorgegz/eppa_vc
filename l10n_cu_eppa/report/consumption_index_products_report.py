@@ -38,9 +38,10 @@ class ConsumptionIndexProductsReport(models.AbstractModel):
         # obtener las operaciones de todas las unidades
         result = []
         for punit in mrp_produccion_unit_prod:
+            aux = {}
             aux = self.get_info_per_prod_unit(punit, filters)
             if not aux == {}:
-                result.append(self.aux)
+                result.append(aux)
         return result
 
     def get_info_per_prod_unit(self,unit_data,filters):
