@@ -19,6 +19,7 @@
                     <group>
                         <field name="is_todos"/>
                         <field name="product_tmpl_id"
+                               domain="[('mrp_dep_id','=', departament_id),('sale_ok', '=', True), ('active', '=', True), ('type', '=', 'product')]"
                                attrs="{'invisible': [('is_todos', '=', 'todos')], 'required': [('is_todos', '=', 'uno')]}"/>
                         <field name="is_category"/>
                         <field name="category_id"
@@ -49,8 +50,8 @@
         <field name="binding_model_id" ref="model_l10n_cu_eppa_consumption_index_categories_wizards"/>
         <field name="target">new</field>
     </record>
-<!--    <menuitem name="Consumption Index for Categories" id="menu_consumption_index_categories"-->
-<!--              parent="mrp.menu_mrp_reporting"-->
-<!--              action="consumption_index_categories_action" sequence="20"/>-->
+    <menuitem name="Consumption Index for Categories" id="menu_consumption_index_categories"
+              parent="mrp.menu_mrp_reporting"
+              action="consumption_index_categories_action" sequence="20"/>
 
 </odoo>

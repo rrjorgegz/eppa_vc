@@ -87,58 +87,60 @@
                             </thead>
                             <tbody>
                                 <div class="page">
-                                    <t t-foreach="docs_unit" t-as="unit">
+                                    <t t-foreach="docs" t-as="doc">
                                         <tr>
                                             <th>PRODUCTION UNIT</th>
                                             <th colspan="2">
-                                                <t t-esc="unit[0]"/>
+                                                <t t-esc="doc['unit'].name"/>
                                             </th>
                                             <th colspan="4"/>
                                         </tr>
-                                        <t t-foreach="docs_categ" t-as="catg">
-                                            <t t-if="unit[0] == catg[1]">
+                                        <t t-foreach="doc['raw']" t-as="catg">
+                                            <!--                                            <t t-if="unit[0] == catg[1]">-->
+                                            <tr>
+                                                <th>
+                                                    CATEGORY
+                                                </th>
+                                                <th colspan="2">
+                                                    <t t-esc="catg['category'].name"/>
+                                                </th>
+                                                <th>
+                                                    PRODUCTION
+                                                </th>
+                                                <th colspan="3">
+                                                    <t t-esc="'{0:.5f}'.format(float(catg['produccion']))"/>
+                                                </th>
+                                            </tr>
+
+                                            <t t-foreach="catg['produ']" t-as="dat">
+                                                <!--                                                <t t-if="unit[0] == dat[1] and catg[0] == dat[2]">-->
                                                 <tr>
                                                     <th>
-                                                        <t t-esc="catg[0]"/>
+                                                        <t t-esc="dat['ing']"/>
                                                     </th>
-                                                    <th colspan="2"/>
                                                     <th>
-                                                        PRODUCTION
+                                                        <t t-esc="'{0:.5f}'.format(float(dat['indice_consumo']))"/>
                                                     </th>
-                                                    <th colspan="3">
-                                                        <t t-esc="'{0:.5f}'.format(float(catg[2]))"/>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(dat['indice_consumo_plan']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(dat['consumo']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(dat['consumo_plan']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(dat['exceso']))"/>
+                                                    </th>
+                                                    <th>
+                                                        <t t-esc="'{0:.5f}'.format(float(dat['cumplido']))"/>
                                                     </th>
                                                 </tr>
-
-                                                <t t-foreach="data" t-as="dat">
-                                                    <t t-if="unit[0] == dat[1] and catg[0] == dat[2]">
-                                                        <tr>
-                                                            <th>
-                                                                <t t-esc="dat[3]"/>
-                                                            </th>
-                                                            <th>
-                                                                <t t-esc="'{0:.5f}'.format(float(dat[5]))"/>
-                                                            </th>
-                                                            <th>
-                                                                <t t-esc="'{0:.5f}'.format(float(dat[7]))"/>
-                                                            </th>
-                                                            <th>
-                                                                <t t-esc="'{0:.5f}'.format(float(dat[6]))"/>
-                                                            </th>
-                                                            <th>
-                                                                <t t-esc="'{0:.5f}'.format(float(dat[4]))"/>
-                                                            </th>
-                                                            <th>
-                                                                <t t-esc="'{0:.5f}'.format(float(dat[8]))"/>
-                                                            </th>
-                                                            <th>
-                                                                <t t-esc="'{0:.5f}'.format(float(dat[9]))"/>
-                                                            </th>
-                                                        </tr>
-                                                    </t>
-                                                </t>
+                                                <!--                                                </t>-->
                                             </t>
                                         </t>
+                                        <!--                                                                                </t>-->
                                     </t>
                                 </div>
                             </tbody>
