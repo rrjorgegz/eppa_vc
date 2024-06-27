@@ -16,3 +16,5 @@ __pycache__
 .vscode/
 node_modules/
 ^.gitignore
+**/__pycache__/
+/**/__pycache__/
