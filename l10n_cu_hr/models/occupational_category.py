@@ -1,12 +1,9 @@
-from odoo import fields, models, api
+from odoo import fields, models
 
 
-class OccupationalCategory (models.Model):
-    _name = 'l10n_cu_hr.occupational_category'
-    _description = 'Occupational Category'
+class OccupationalCategory(models.Model):
+    _name = "l10n_cu_hr.occupational_category"
+    _description = "Occupational Category"
 
-    name = fields.Char('Name',required=1)
-    code = fields.Char('Code',required=1,size=3)
-    
-
-
+    name = fields.Char("Name", required=1)
+    code = fields.Char("Code", required=1, size=3)
