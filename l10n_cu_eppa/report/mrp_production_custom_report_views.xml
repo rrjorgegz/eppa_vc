@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="mrp_production_custom_report" model="ir.actions.act_window">
+        <field name="name">Manufacturing Orders Organizate</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mrp.production</field>
+        <field name="view_mode">tree,pivot</field>
+        <field name="target">current</field>
+        <field name="context">{'group_by':['prod_unit_id','date_planned_start:year','date_planned_start:month','product_id']}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No data yet!
+            </p><p>
+                Create a new manufacturing order
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_mrp_production_custom_report"
+            name="Manufacturing Orders Organizate"
+            parent="mrp.menu_mrp_reporting"
+            action="mrp_production_custom_report"
+            sequence="15"/>
+</odoo>

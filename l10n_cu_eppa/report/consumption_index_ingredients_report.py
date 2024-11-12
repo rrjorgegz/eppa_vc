@@ -163,7 +163,7 @@ class ConsumptionIndexIngredientsReport(models.AbstractModel):
         # return  self.env['product.product'].search([('id', 'in', productos_id)])
 
     @api.model
-    def _get_report_values(self, docids, data=None):
+    def _get_report_values(self, docids, data={}):
         docs = []
         filters = {}
         date = datetime.strptime(data["form"]["date"], DATE_FORMAT).date()

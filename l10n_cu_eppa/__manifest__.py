@@ -37,6 +37,7 @@
         "wizards/consumption_index_companies_wizards_views.xml",
         "wizards/consumption_index_ingredients_wizards_views.xml",
         "wizards/consumption_index_products_wizards_views.xml",
+        "report/mrp_production_custom_report_views.xml",
     ],
     # only loaded in demonstration mode
     "demo": [],

@@ -32,3 +32,12 @@ class MrpProduction(models.Model):
             ) / self.bom_id.produccion
             raw.porciento = (raw.product_uom_qty / raw.consumo_plan) * 100
             self.total = self.total + raw.total_cost
+
+    def action_draft(self):
+        self._check_company()
+        for production in self:
+            if production.is_locked:
+                production.write({"is_locked": False})
+            production.write({"state": "draft"})
+            for raw in production.move_raw_ids:
+                raw.write({"state": "draft"})

@@ -7,7 +7,9 @@
             <field name="model">mrp.production</field>
             <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
             <field name="arch" type="xml">
-
+                <header position="inside">
+                    <button name="action_draft" attrs="{'invisible': [('state', 'in', ['draft'])]}" string="Draft" type="object" class="oe_highlight"/>
+                </header>
                 <xpath expr="//field[@name='company_id']" position="after">
                     <field name="prod_unit_id"/>
                     <field name="allowed_product_ids" invisible="1"/>
